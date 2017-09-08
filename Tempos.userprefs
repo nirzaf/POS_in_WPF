@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug_Gtk" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PosModels/Types/DataModelBase.cs">
+    <Files>
+      <File FileName="PosModels/LocalSetting.cs" Line="273" Column="17" />
+      <File FileName="PosModels/Helpers/Fingerprint.cs" Line="1" Column="1" />
+      <File FileName="PosModels/Item.cs" Line="764" Column="56" />
+      <File FileName="PosModels/Types/DataModelBase.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

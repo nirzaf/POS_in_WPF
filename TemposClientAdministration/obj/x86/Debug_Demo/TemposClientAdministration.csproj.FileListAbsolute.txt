@@ -1,0 +1,15 @@
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\TemposClientAdministration.csprojResolveAssemblyReference.cache
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\App.baml
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\CrashReportControl.g.cs
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\CustomerDetailsControl.g.cs
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\CustomerSetupControl.g.cs
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\LicenseSetupControl.g.cs
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\LicenseDetailsControl.g.cs
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\TaskbarWindow.g.cs
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\TrayContextMenuControl.g.cs
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\UpdateBuilderControl.g.cs
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\UpdateServiceControl.g.cs
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\App.g.cs
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\GeneratedInternalTypeHelper.g.cs
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\TemposClientAdministration_MarkupCompile.cache
+K:\Viipe.com\TemPOS\TemposClientAdministration\obj\x86\Debug_Demo\TemposClientAdministration_MarkupCompile.lref

@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="TemposClientAdministration.CustomerDetailsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemposClientAdministration"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="700">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableApplicationBackgroundBrush" />
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="314*" />
+                <ColumnDefinition Width="314*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+            </Grid.RowDefinitions>
+            <Label Content="Business Name" VerticalAlignment="Center" FontSize="16" />
+            <Label Content="Contact Name" FontSize="16" VerticalAlignment="Center" Grid.Row="1" />
+            <Label Content="Address" FontSize="16" VerticalAlignment="Center" Grid.Row="2" />
+            <Label Content="City" VerticalAlignment="Center" FontSize="16" Grid.Row="3" />
+            <Label Content="State" VerticalAlignment="Center" FontSize="16" Grid.Row="4" />
+            <Label Content="Zip Code" FontSize="16" VerticalAlignment="Center" Grid.Row="5" />
+            <Label Content="Phone #1" FontSize="16" VerticalAlignment="Center" Grid.Row="6" />
+            <Label Content="Phone #2" FontSize="16" VerticalAlignment="Center" Grid.Row="7" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxBusinessName" UseContextMenuEditing="True" PromptType="Keyboard" FontSize="16" Grid.Column="1" TouchOpenDelay="0" TextChanged="textBoxBusinessName_TextChanged" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxContactsName" UseContextMenuEditing="True" PromptType="Keyboard" FontSize="16" Grid.Row="1" Grid.Column="1" TouchOpenDelay="0" TextChanged="textBoxContactsName_TextChanged" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxAddress" UseContextMenuEditing="True" PromptType="Keyboard" FontSize="16" Grid.Row="2" Grid.Column="1" TouchOpenDelay="0" TextChanged="textBoxAddress_TextChanged" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxCity" UseContextMenuEditing="True" PromptType="Keyboard" FontSize="16" Grid.Row="3" Grid.Column="1" TouchOpenDelay="0" TextChanged="textBoxCity_TextChanged" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxState" UseContextMenuEditing="True" PromptType="Keyboard" FontSize="16" Grid.Row="4" Grid.Column="1" TouchOpenDelay="0" TextChanged="textBoxState_TextChanged" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxZip" UseContextMenuEditing="True" PromptType="Keyboard" FontSize="16" Grid.Row="5" Grid.Column="1" TouchOpenDelay="0" TextChanged="textBoxZip_TextChanged" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxPhone1" UseContextMenuEditing="True" PromptType="PhoneNumber" FontSize="16" Grid.Row="6" Grid.Column="1" TouchOpenDelay="0" TextChanged="textBoxPhone1_TextChanged" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxPhone2" UseContextMenuEditing="True" PromptType="PhoneNumber" FontSize="16" Grid.Row="7" Grid.Column="1" TouchOpenDelay="0" TextChanged="textBoxPhone2_TextChanged" />
+        </Grid>
+    </DockPanel>
+</UserControl>

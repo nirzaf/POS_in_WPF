@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="PosControls.DateEntryDateControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:my="clr-namespace:PosControls"
+             d:DesignHeight="330" d:DesignWidth="310">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <my:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="345*" />
+            </Grid.RowDefinitions>
+            <Border Grid.Row="1" />
+            <my:DateEntryYearControl x:Name="dateEntryYearControl" Grid.Row="1" SelectedYearChanged="dateEntryYearControl_SelectedYearChanged" Visibility="Hidden" />
+            <my:DateEntryMonthControl x:Name="dateEntryMonthControl" Grid.Row="1" SelectedMonthChanged="dateEntryMonthControl_SelectedMonthChanged" Visibility="Hidden" />
+            <my:DateEntryDayControl x:Name="dateEntryDayControl" Grid.Row="1" SelectedDayChanged="dateEntryControl_SelectedDayChanged" />
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <ToggleButton Margin="5" Height="30" Width="140" x:Name="buttonChangeMonth" FontSize="16" Click="buttonChangeMonth_Click" />
+                <ToggleButton Margin="5" Height="30" Width="60" x:Name="buttonChangeYear" FontSize="16" Click="buttonChangeYear_Click" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

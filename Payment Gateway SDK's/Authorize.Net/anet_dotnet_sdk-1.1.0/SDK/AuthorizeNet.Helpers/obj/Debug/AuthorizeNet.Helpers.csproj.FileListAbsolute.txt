@@ -1,0 +1,16 @@
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\obj\Debug\ResolveAssemblyReference.cache
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\bin\Debug\AuthorizeNet.Helpers.dll
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\bin\Debug\AuthorizeNet.Helpers.pdb
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\bin\Debug\AuthorizeNet.dll
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\bin\Debug\AuthorizeNet.pdb
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\obj\Debug\AuthorizeNet.Helpers.dll
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\obj\Debug\AuthorizeNet.Helpers.pdb
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\bin\Debug\AuthorizeNet.xml
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\bin\Debug\AuthorizeNet.Helpers.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\bin\Debug\AuthorizeNet.Helpers.pdb
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\bin\Debug\AuthorizeNet.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\bin\Debug\AuthorizeNet.pdb
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\bin\Debug\AuthorizeNet.xml
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\obj\Debug\AuthorizeNet.Helpers.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\obj\Debug\AuthorizeNet.Helpers.pdb

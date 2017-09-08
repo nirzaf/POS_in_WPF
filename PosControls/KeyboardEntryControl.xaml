@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="PosControls.KeyboardEntryControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             xmlns:my="clr-namespace:PosControls"
+             d:DesignHeight="350" d:DesignWidth="825">
+    <DockPanel>
+        <my:ConfigurationManager x:Name="Configuration" />
+        <Grid Name="gridControl">
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="400*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="675*" />
+                <ColumnDefinition Width="90" />
+            </Grid.ColumnDefinitions>
+            <PasswordBox Margin="10,5,10,5" Name="passwordBoxLine" FontSize="20" FontFamily="Times New Roman" PreviewKeyDown="passwordBoxLine_PreviewKeyDown" PreviewMouseDown="passwordBoxLine_PreviewMouseDown" Visibility="Hidden" CaretBrush="Transparent" PasswordChanged="passwordBoxLine_PasswordChanged" >
+                <PasswordBox.Background>
+                    <Binding ElementName="Configuration" Path="BindableTextboxBackgroundBrush" />
+                </PasswordBox.Background>
+                <PasswordBox.Foreground>
+                    <Binding ElementName="Configuration" Path="BindableTextboxForegroundBrush" />
+                </PasswordBox.Foreground>
+            </PasswordBox>
+            <TextBox Margin="10,5,10,5" Name="textBoxLine" FontSize="20" FontFamily="Times New Roman" Text="" TextChanged="textBoxLine_TextChanged" PreviewKeyDown="textBoxLine_PreviewKeyDown" MouseUp="textBoxLine_MouseUp" KeyUp="textBoxLine_KeyUp" SelectionChanged="textBoxLine_SelectionChanged" >
+                <TextBox.CaretBrush>
+                    <Binding ElementName="Configuration" Path="BindableCaretBrush" />
+                </TextBox.CaretBrush>
+                <TextBox.Background>
+                    <Binding ElementName="Configuration" Path="BindableTextboxBackgroundBrush" />
+                </TextBox.Background>
+                <TextBox.Foreground>
+                    <Binding ElementName="Configuration" Path="BindableTextboxForegroundBrush" />
+                </TextBox.Foreground>
+            </TextBox>
+            <Button x:Name="button00" Grid.Column="1" FontWeight="ExtraBold" Width="70" Height="30" Click="Clear_Button_Click" Tag="48" Content="Clear" FontSize="16" />
+            <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="button01" FontWeight="ExtraBold" Margin="10,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="0" Content="`" FontSize="16" />
+                    <Button x:Name="button02" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="0" Content="1" FontSize="16" />
+                    <Button x:Name="button03" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="1" Content="2" FontSize="16" />
+                    <Button x:Name="button04" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="2" Content="3" FontSize="16" />
+                    <Button x:Name="button05" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="3" Content="4" FontSize="16" />
+                    <Button x:Name="button06" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="4" Content="5" FontSize="16" />
+                    <Button x:Name="button07" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="5" Content="6" FontSize="16" />
+                    <Button x:Name="button08" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="6" Content="7" FontSize="16" />
+                    <Button x:Name="button09" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="7" Content="8" FontSize="16" />
+                    <Button x:Name="button10" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="8" Content="9" FontSize="16" />
+                    <Button x:Name="button11" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="9" Content="0" FontSize="16" />
+                    <Button x:Name="button12" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="40" Content="-" FontSize="16" />
+                    <Button x:Name="button13" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="41" Content="=" FontSize="16" />
+                    <Button x:Name="button14" FontWeight="ExtraBold" Margin="0,10,5,0" Width="90" Height="50" Click="Backspace_Button_Click" Tag="46" Content="Backspace" FontSize="16" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0" Grid.ColumnSpan="2">
+                    <Button x:Name="button15" FontWeight="ExtraBold" Margin="0,10,5,0" Width="75" Height="50" Click="Tab_Button_Click" Tag="0" Content="Tab" FontSize="16" IsEnabled="False" />
+                    <Button x:Name="button16" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="10" Content="q" FontSize="16" />
+                    <Button x:Name="button17" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="11" Content="w" FontSize="16" />
+                    <Button x:Name="button18" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="12" Content="e" FontSize="16" />
+                    <Button x:Name="button19" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="13" Content="r" FontSize="16" />
+                    <Button x:Name="button20" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="14" Content="t" FontSize="16" />
+                    <Button x:Name="button21" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="15" Content="y" FontSize="16" />
+                    <Button x:Name="button22" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="16" Content="u" FontSize="16" />
+                    <Button x:Name="button23" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="17" Content="i" FontSize="16" />
+                    <Button x:Name="button24" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="18" Content="o" FontSize="16" />
+                    <Button x:Name="button25" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="19" Content="p" FontSize="16" />
+                    <Button x:Name="button26" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="19" Content="[" FontSize="16" />
+                    <Button x:Name="button27" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="19" Content="]" FontSize="16" />
+                    <Button x:Name="button28" FontWeight="ExtraBold" Margin="0,10,5,0" Width="65" Height="50" Click="Button_Click" Tag="19" Content="\" FontSize="16" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0" Grid.ColumnSpan="2">
+                    <ToggleButton x:Name="button29" FontWeight="ExtraBold" Margin="0,10,5,0" Width="90" Height="50" Click="ShiftLock_Button_Click" Tag="0" FontFamily="Century Schoolbook" Content="Shift Lock" FontSize="16" />
+                    <Button x:Name="button30" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="20" Content="a" FontSize="16" />
+                    <Button x:Name="button31" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="21" Content="s" FontSize="16" />
+                    <Button x:Name="button32" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="22" Content="d" FontSize="16" />
+                    <Button x:Name="button33" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="23" Content="f" FontSize="16" />
+                    <Button x:Name="button34" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="24" Content="g" FontSize="16" />
+                    <Button x:Name="button35" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="25" Content="h" FontSize="16" />
+                    <Button x:Name="button36" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="26" Content="j" FontSize="16" />
+                    <Button x:Name="button37" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="27" Content="k" FontSize="16" />
+                    <Button x:Name="button38" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="28" Content="l" FontSize="16" />
+                    <Button x:Name="button39" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="29" Content=";" FontSize="16" />
+                    <Button x:Name="button40" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="29" Content="'" FontSize="16" />
+                    <Button x:Name="button41" FontWeight="ExtraBold" Margin="0,10,5,0" Width="105" Height="50" Click="Enter_Button_Click" Tag="49" Content="Enter" FontSize="16" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0" Grid.ColumnSpan="2">
+                    <ToggleButton x:Name="button42" FontWeight="ExtraBold" Margin="0,10,5,0" Width="115" Height="50" Click="CapsLock_Button_Click" Tag="42" Content="Caps Lock" FontSize="16" />
+                    <Button x:Name="button43" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="30" Content="z" FontSize="16" />
+                    <Button x:Name="button44" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="31" Content="x" FontSize="16" />
+                    <Button x:Name="button45" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="32" Content="c" FontSize="16" />
+                    <Button x:Name="button46" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="33" Content="v" FontSize="16" />
+                    <Button x:Name="button47" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="34" Content="b" FontSize="16" />
+                    <Button x:Name="button48" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="35" Content="n" FontSize="16" />
+                    <Button x:Name="button49" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="36" Content="m" FontSize="16" />
+                    <Button x:Name="button50" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="37" Content="," FontSize="16" />
+                    <Button x:Name="button51" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="38" Content="." FontSize="16" />
+                    <Button x:Name="button52" FontWeight="ExtraBold" Margin="0,10,5,0" Width="50" Height="50" Click="Button_Click" Tag="39" Content="/" FontSize="16" />
+                    <ToggleButton x:Name="button53" FontWeight="ExtraBold" Margin="0,10,5,0" Width="135" Height="50" Click="SoftCapsLock_Button_Click" Tag="48" Content="Soft Caps Lock" FontSize="16" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="10,0,0,0" Grid.ColumnSpan="2">
+                    <Button x:Name="button54" FontWeight="ExtraBold" Margin="0,10,5,0" Width="90" Height="50" Click="Cancel_Button_Click" Tag="0" Content="Cancel" FontSize="16" />
+                    <Button x:Name="button55" FontWeight="ExtraBold" Margin="75,10,5,0" Width="420" Height="50" Click="Button_Click" Tag="46" Content="Space" FontSize="16" />
+                    <Button x:Name="button56" FontWeight="ExtraBold" Margin="55,10,5,0" Width="75" Height="50" Click="Left_Button_Click" PreviewMouseUp="button56_PreviewMouseUp" MouseLeave="button56_MouseLeave" Tag="43" Content="Left" FontSize="16" />
+                    <Button x:Name="button57" FontWeight="ExtraBold" Margin="0,10,5,0" Width="75" Height="50" Click="Right_Button_Click" PreviewMouseUp="button57_PreviewMouseUp" MouseLeave="button57_MouseLeave" Tag="45" Content="Right" FontSize="16" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

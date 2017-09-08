@@ -1,0 +1,1175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D36D1B9-14A0-4BAF-9577-7FDCFD6FA7A3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TemPOS</RootNamespace>
+    <AssemblyName>TemPOS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <PublishUrl>K:\ClickOnceWebRoot\TemPOS\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://tempos.no-ip.org:18080/TemPOS/</InstallUrl>
+    <ProductName>TemPOS</ProductName>
+    <PublisherName>Tempos Software Company</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationVersion>1.0.627.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>TemPOS.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Tempos.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TemPOS.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release - Client|x86'">
+    <OutputPath>bin\x86\Release - Client\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\PointOfSale.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Demo|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Demo\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEMO</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\PointOfSale.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Demo|x86'">
+    <OutputPath>bin\Release_Demo\</OutputPath>
+    <DefineConstants>TRACE;DEMO</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\PointOfSale.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B0D94B1DD439FC25131641C6CD4D43C67B20CC81</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Demo_Gtk|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug_Demo_Gtk\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEMO</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\PointOfSale.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-Gtk|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug-Gtk\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\TemPOS.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DotNetZip\DotNetZip-v1.9\Debug\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zlib, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DotNetZip\Zlib-v1.9\Debug\Ionic.Zlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.PointOfService, Version=1.12.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\Program Files (Vista)\MicrosoftPOS\SDK\Microsoft.PointOfService.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.PointOfService.ControlBase, Version=1.12.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\Program Files (Vista)\MicrosoftPOS\SDK\Microsoft.PointOfService.ControlBase.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CancelMadeUnmadeControl.xaml.cs">
+      <DependentUpon>CancelMadeUnmadeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePasswordControl.xaml.cs">
+      <DependentUpon>ChangePasswordControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CommandShellControl.xaml.cs">
+      <DependentUpon>CommandShellControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Commands\CommandBase.cs" />
+    <Compile Include="Commands\OrderEntryCommands.cs" />
+    <Compile Include="CouponEditorDetailsControl.xaml.cs">
+      <DependentUpon>CouponEditorDetailsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DayOfOperationRangeSelectionControl.xaml.cs">
+      <DependentUpon>DayOfOperationRangeSelectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryEditorControl.xaml.cs">
+      <DependentUpon>DeliveryEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceChoiceControl.xaml.cs">
+      <DependentUpon>DeviceChoiceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceSelectionControl.xaml.cs">
+      <DependentUpon>DeviceSelectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceSelectionDetails.xaml.cs">
+      <DependentUpon>DeviceSelectionDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventHandlers\CancelableEvent.cs" />
+    <Compile Include="GeneralSettingsBrushSetupControl.xaml.cs">
+      <DependentUpon>GeneralSettingsBrushSetupControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralSettingsGeneralPreferencesControl.xaml.cs">
+      <DependentUpon>GeneralSettingsGeneralPreferencesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralSettingsOperationalPreferencesControl.xaml.cs">
+      <DependentUpon>GeneralSettingsOperationalPreferencesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ManagerAlert.cs" />
+    <Compile Include="Helpers\ServiceHelper.cs" />
+    <Compile Include="Helpers\SpecialStart.cs" />
+    <Compile Include="Helpers\SpecialStartControl.xaml.cs">
+      <DependentUpon>SpecialStartControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\SqlServerSetup.cs" />
+    <Compile Include="Helpers\TaskManagerServiceHelper.cs" />
+    <Compile Include="Helpers\WeatherHelper.cs" />
+    <Compile Include="Helpers\WpfExtensions.cs" />
+    <Compile Include="InventoryEditorControl.xaml.cs">
+      <DependentUpon>InventoryEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemEditorGroupingControl.xaml.cs">
+      <DependentUpon>ItemEditorGroupingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Networking\BroadcastClientSocket.cs" />
+    <Compile Include="Networking\BroadcastServerSocket.cs" />
+    <Compile Include="Networking\NetworkTools.cs" />
+    <Compile Include="Networking\PipeClient.cs" />
+    <Compile Include="Networking\Srp6ClientSocket.cs" />
+    <Compile Include="Networking\Updater.cs" />
+    <Compile Include="OrderEntryChangeEmployeeControl.xaml.cs">
+      <DependentUpon>OrderEntryChangeEmployeeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntryNonOrderCommandsControl.xaml.cs">
+      <DependentUpon>OrderEntryNonOrderCommandsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntryOrderCommandsControl.xaml.cs">
+      <DependentUpon>OrderEntryOrderCommandsControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrderEntryReceiptTape.xaml.cs">
+      <DependentUpon>OrderEntryReceiptTape.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PersonalSettingsControl.xaml.cs">
+      <DependentUpon>PersonalSettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SystemSettingsEditorControl.xaml.cs">
+      <DependentUpon>SystemSettingsEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeClockInControl.xaml.cs">
+      <DependentUpon>EmployeeClockInControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeClockOutControl.xaml.cs">
+      <DependentUpon>EmployeeClockOutControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeEditorDetailsControl.xaml.cs">
+      <DependentUpon>EmployeeEditorDetailsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeEditorDirectDepositControl.xaml.cs">
+      <DependentUpon>EmployeeEditorDirectDepositControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeJobSelectionControl.xaml.cs">
+      <DependentUpon>EmployeeJobSelectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeJobMaintenanceControl.xaml.cs">
+      <DependentUpon>EmployeeJobMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeScheduleEditorControl.xaml.cs">
+      <DependentUpon>EmployeeScheduleEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExitControl.xaml.cs">
+      <DependentUpon>ExitControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralSettingsStoreSettingsControl.xaml.cs">
+      <DependentUpon>GeneralSettingsStoreSettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Logger.cs" />
+    <Compile Include="Helpers\PosHelper.cs" />
+    <Compile Include="Helpers\Silencer.cs" />
+    <Compile Include="Helpers\RegistryHelper.cs" />
+    <Compile Include="Helpers\WpfHelper.cs" />
+    <Compile Include="IngredientEditorControl.xaml.cs">
+      <DependentUpon>IngredientEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IngredientEditorDetailsControl.xaml.cs">
+      <DependentUpon>IngredientEditorDetailsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IngredientEditorPreparationControl.xaml.cs">
+      <DependentUpon>IngredientEditorPreparationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemEditorControl.xaml.cs">
+      <DependentUpon>ItemEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IngredientAmountControl.xaml.cs">
+      <DependentUpon>IngredientAmountControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemMaintenanceViewContextMenuControl.xaml.cs">
+      <DependentUpon>ItemMaintenanceViewContextMenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemOptionMaintenanceControl.xaml.cs">
+      <DependentUpon>ItemOptionMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntryFunctionsControl.xaml.cs">
+      <DependentUpon>OrderEntryFunctionsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntrySetupControl.xaml.cs">
+      <DependentUpon>OrderEntrySetupControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterBankrollDriverControl.xaml.cs">
+      <DependentUpon>RegisterBankrollDriverControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SeatingRoomEditorControl.xaml.cs">
+      <DependentUpon>SeatingRoomEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SeatingPersonInformationControl.xaml.cs">
+      <DependentUpon>SeatingPersonInformationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StartupWindow.xaml.cs">
+      <DependentUpon>StartupWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\DeviceManager.cs" />
+    <Compile Include="Managers\UserControlManager.cs" />
+    <Compile Include="Managers\PrinterManager.cs" />
+    <Compile Include="Managers\RegisterManager.cs" />
+    <Compile Include="Managers\SessionManager.cs" />
+    <Compile Include="OrderEntryCategorySelectionControl.xaml.cs">
+      <DependentUpon>OrderEntryCategorySelectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ButtonTouchCommandInput.xaml.cs">
+      <DependentUpon>ButtonTouchCommandInput.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntryItemSelectionControl.xaml.cs">
+      <DependentUpon>OrderEntryItemSelectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntryItemOptionsLineControl.xaml.cs">
+      <DependentUpon>OrderEntryItemOptionsLineControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryEditorControl.xaml.cs">
+      <DependentUpon>CategoryEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CouponCategorySelectionControl.xaml.cs">
+      <DependentUpon>CouponCategorySelectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CouponEditorControl.xaml.cs">
+      <DependentUpon>CouponEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CouponItemSelectionControl.xaml.cs">
+      <DependentUpon>CouponItemSelectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CouponMaintenanceControl.xaml.cs">
+      <DependentUpon>CouponMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerEditorControl.xaml.cs">
+      <DependentUpon>CustomerEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerMaintenanceControl.xaml.cs">
+      <DependentUpon>CustomerMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryMaintenanceControl.xaml.cs">
+      <DependentUpon>DeliveryMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountEditorControl.xaml.cs">
+      <DependentUpon>DiscountEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountMaintenanceControl.xaml.cs">
+      <DependentUpon>DiscountMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeEditorControl.xaml.cs">
+      <DependentUpon>EmployeeEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeJobEditorControl.xaml.cs">
+      <DependentUpon>EmployeeJobEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeScheduleMaintenanceControl.xaml.cs">
+      <DependentUpon>EmployeeScheduleMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventHandlers\ButtonTouchInputClickEvent.cs" />
+    <Compile Include="EventHandlers\CategoryValueChangedEvent.cs" />
+    <Compile Include="EventHandlers\CommandEvent.cs" />
+    <Compile Include="EventHandlers\CouponValueChangedEvent.cs" />
+    <Compile Include="EventHandlers\ItemOptionValueChangedEvent.cs" />
+    <Compile Include="EventHandlers\ItemTaxValueChangedEvent.cs" />
+    <Compile Include="EventHandlers\ItemValueChangedEvent.cs" />
+    <Compile Include="EventHandlers\UserLoginEvent.cs" />
+    <Compile Include="Exceptions\WtfException.cs" />
+    <Compile Include="FutureTimeEditControl.xaml.cs">
+      <DependentUpon>FutureTimeEditControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GiftCardMaintenanceControl.xaml.cs">
+      <DependentUpon>GiftCardMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\StringHelper.cs" />
+    <Compile Include="Helpers\UnitedStatesCity.cs" />
+    <Compile Include="ItemEditorDetailsControl.xaml.cs">
+      <DependentUpon>ItemEditorDetailsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemEditorIngredientsControl.xaml.cs">
+      <DependentUpon>ItemEditorIngredientsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemEditorOptionSetControl.xaml.cs">
+      <DependentUpon>ItemEditorOptionSetControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemEditorSpecialPricingControl.xaml.cs">
+      <DependentUpon>ItemEditorSpecialPricingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemMaintenanceControl.xaml.cs">
+      <DependentUpon>ItemMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemOptionEditorControl.xaml.cs">
+      <DependentUpon>ItemOptionEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ItemOptionSetEditorControl.xaml.cs">
+      <DependentUpon>ItemOptionSetEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginControl.xaml.cs">
+      <DependentUpon>LoginControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntryPizzaItemControl.xaml.cs">
+      <DependentUpon>OrderEntryPizzaItemControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntryStandardItemOptionsControl.xaml.cs">
+      <DependentUpon>OrderEntryStandardItemOptionsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartyEditControl.xaml.cs">
+      <DependentUpon>PartyEditControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterDrawerStartControl.xaml.cs">
+      <DependentUpon>RegisterDrawerStartControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntryRegisterMenuControl.xaml.cs">
+      <DependentUpon>OrderEntryRegisterMenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewerControl.xaml.cs">
+      <DependentUpon>ReportViewerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SeatingDineInControl.xaml.cs">
+      <DependentUpon>SeatingDineInControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SeatingEditorControl.xaml.cs">
+      <DependentUpon>SeatingEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SeatingReservationControl.xaml.cs">
+      <DependentUpon>SeatingReservationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SeatingSelectionControl.xaml.cs">
+      <DependentUpon>SeatingSelectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PartyManagementControl.xaml.cs">
+      <DependentUpon>PartyManagementControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TaxEditorControl.xaml.cs">
+      <DependentUpon>TaxEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TaxMaintenanceControl.xaml.cs">
+      <DependentUpon>TaxMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsMenuControl.xaml.cs">
+      <DependentUpon>ReportsMenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntryControl.xaml.cs">
+      <DependentUpon>OrderEntryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrintOptionEditorControl.xaml.cs">
+      <DependentUpon>PrintOptionEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PrintOptionMaintenanceControl.xaml.cs">
+      <DependentUpon>PrintOptionMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramLogoControl.xaml.cs">
+      <DependentUpon>ProgramLogoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PurchasingMaintenanceControl.xaml.cs">
+      <DependentUpon>PurchasingMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SeatingMaintenanceControl.xaml.cs">
+      <DependentUpon>SeatingMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Managers\ReportManager.cs" />
+    <Compile Include="GeneralSettingsControl.xaml.cs">
+      <DependentUpon>GeneralSettingsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketCashoutControl.xaml.cs">
+      <DependentUpon>TicketCashoutControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketCashoutPaymentControl.xaml.cs">
+      <DependentUpon>TicketCashoutPaymentControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketCouponControl.xaml.cs">
+      <DependentUpon>TicketCouponControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntryTicketDetailsControl.xaml.cs">
+      <DependentUpon>OrderEntryTicketDetailsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketDeliveryDispatchControl.xaml.cs">
+      <DependentUpon>TicketDeliveryDispatchControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketDiscountControl.xaml.cs">
+      <DependentUpon>TicketDiscountControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketFilterControl.xaml.cs">
+      <DependentUpon>TicketFilterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketItemTemplate.xaml.cs">
+      <DependentUpon>TicketItemTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEntryTicketSelectionControl.xaml.cs">
+      <DependentUpon>OrderEntryTicketSelectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TicketTypeFilterControl.xaml.cs">
+      <DependentUpon>TicketTypeFilterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimesheetEditorControl.xaml.cs">
+      <DependentUpon>TimesheetEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimesheetMaintenanceControl.xaml.cs">
+      <DependentUpon>TimesheetMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Types\BranchType.cs" />
+    <Compile Include="Types\CategoryFieldName.cs" />
+    <Compile Include="Types\CouponFieldName.cs" />
+    <Compile Include="Types\ItemFieldName.cs" />
+    <Compile Include="Types\ItemOptionFieldName.cs" />
+    <Compile Include="Types\ItemTaxFieldName.cs" />
+    <Compile Include="Types\PosDeviceTypes.cs" />
+    <Compile Include="Types\PrinterEscapeCodes.cs" />
+    <Compile Include="Types\Strings.cs" />
+    <Compile Include="Types\Strings.Dutch.cs" />
+    <Compile Include="Types\Strings.English.cs" />
+    <Compile Include="Types\Strings.French.cs" />
+    <Compile Include="Types\Strings.German.cs" />
+    <Compile Include="Types\Strings.Italian.cs" />
+    <Compile Include="Types\Strings.Portuguese.cs" />
+    <Compile Include="Types\Strings.Spanish.cs" />
+    <Compile Include="Types\TicketSelectionShow.cs" />
+    <Compile Include="GeneralSettingsUpdateControl.xaml.cs">
+      <DependentUpon>GeneralSettingsUpdateControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VendorMaintenanceControl.xaml.cs">
+      <DependentUpon>VendorMaintenanceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VendorOrderControl.xaml.cs">
+      <DependentUpon>VendorOrderControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="_TemPOS_DBDataSet.cs">
+      <DependentUpon>_TemPOS_DBDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_TemPOS_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_TemPOS_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Page Include="CancelMadeUnmadeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangePasswordControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CommandShellControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CouponEditorDetailsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DayOfOperationRangeSelectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeliveryEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceChoiceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceSelectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceSelectionDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralSettingsBrushSetupControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralSettingsGeneralPreferencesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralSettingsOperationalPreferencesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Helpers\SpecialStartControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InventoryEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemEditorGroupingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryChangeEmployeeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryNonOrderCommandsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryOrderCommandsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryReceiptTape.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PersonalSettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemSettingsEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeClockInControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeClockOutControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeEditorDetailsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeEditorDirectDepositControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeJobSelectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeJobMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeScheduleEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExitControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralSettingsStoreSettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IngredientEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IngredientEditorDetailsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IngredientEditorPreparationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IngredientAmountControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemMaintenanceViewContextMenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemOptionMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryFunctionsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntrySetupControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegisterBankrollDriverControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\PosResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SeatingRoomEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SeatingPersonInformationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StartupWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryCategorySelectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ButtonTouchCommandInput.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryItemSelectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="OrderEntryItemOptionsLineControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CategoryEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CouponCategorySelectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CouponEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CouponItemSelectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CouponMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomerMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeliveryMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DiscountEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DiscountMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeJobEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeScheduleMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FutureTimeEditControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GiftCardMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemEditorDetailsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemEditorIngredientsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemEditorOptionSetControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemEditorSpecialPricingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemOptionEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ItemOptionSetEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryPizzaItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryStandardItemOptionsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartyEditControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegisterDrawerStartControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryRegisterMenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportViewerControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SeatingDineInControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SeatingEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SeatingReservationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SeatingSelectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PartyManagementControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TaxEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TaxMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportsMenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrintOptionEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PrintOptionMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProgramLogoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PurchasingMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SeatingMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralSettingsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketCashoutControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketCashoutPaymentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketCouponControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryTicketDetailsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketDeliveryDispatchControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketDiscountControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketFilterControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketItemTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OrderEntryTicketSelectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketTypeFilterControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TimesheetEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TimesheetMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeneralSettingsUpdateControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VendorMaintenanceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VendorOrderControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="TemPOS.pfx" />
+    <None Include="_TemPOS_DBDataSet.xsc">
+      <DependentUpon>_TemPOS_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_TemPOS_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_TemPOS_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_TemPOS_DBDataSet.xss">
+      <DependentUpon>_TemPOS_DBDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\file.png" />
+    <Resource Include="Resources\Images\folder.png" />
+    <Resource Include="Resources\Images\GoUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\pos.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Tempos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PosControls\PosControls.csproj">
+      <Project>{48F4D322-514C-407C-8D13-0CBE5037463A}</Project>
+      <Name>PosControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PosModels\PosModels.csproj">
+      <Project>{494F36DC-815E-4099-B506-4CC1943C5153}</Project>
+      <Name>PosModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TemposLibrary\TemposLibrary.csproj">
+      <Project>{4570E486-EF25-4B69-9F09-2F134B66B5BA}</Project>
+      <Name>TemposLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\floppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\drive.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="..\TaskManagerAccessServiceUninstaller\bin\TaskManagerAccessServiceUninstaller.exe">
+      <Link>DataFiles\TaskManagerAccessServiceUninstaller.exe</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\TaskManagerAccessService\bin\TaskManagerAccessService.exe">
+      <Link>DataFiles\TaskManagerAccessService.exe</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TemPOS-DB.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources\AddItemButtonImage.sql" />
+    <EmbeddedResource Include="Resources\EnableClrScript.sql" />
+    <EmbeddedResource Include="Resources\AddTicketItemFireTime.sql" />
+    <EmbeddedResource Include="Resources\AddPseudoEmployeeId.sql" />
+    <EmbeddedResource Include="Resources\AddItemGrouping-Part3.sql" />
+    <EmbeddedResource Include="Resources\AddItemGrouping-Part2.sql" />
+    <EmbeddedResource Include="Resources\AddItemGrouping-Part1.sql" />
+    <EmbeddedResource Include="Resources\AddIngredientParQuantity.sql" />
+    <EmbeddedResource Include="Resources\InstallDatabaseScript.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 3.2
+if /I "$(ConfigurationName)" == "Release_Demo" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 3.2</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

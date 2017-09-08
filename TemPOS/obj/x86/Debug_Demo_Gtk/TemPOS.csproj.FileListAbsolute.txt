@@ -1,0 +1,2 @@
+E:\TemPOS\TemPOS\bin\x86\Debug_Demo_Gtk\TemPOS.exe.config
+F:\Programming\TemPOS\TemPOS\bin\x86\Debug_Demo_Gtk\TemPOS.exe.config

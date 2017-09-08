@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="TemPOS.DiscountEditorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="430" d:DesignWidth="630">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="314*" />
+                <ColumnDefinition Width="314*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+            </Grid.RowDefinitions>
+            <Label Content="{x:Static t:Strings.Description}"  FontSize="16" VerticalAlignment="Center" />
+            <Label Content="{x:Static t:Strings.Amount}" FontSize="16" Grid.Row="1" VerticalAlignment="Bottom" />
+            <Label Content="{x:Static t:Strings.DiscountEditorAmountAsPercentage}" FontSize="16" Grid.Row="3" VerticalAlignment="Bottom" />
+            <Label Content="{x:Static t:Strings.DiscountEditorApplyTo}" FontSize="16" Grid.Row="4" VerticalAlignment="Center" />
+            <Label Content="{x:Static t:Strings.DiscountEditorRequiresPermission}" FontSize="16" Grid.Row="5" VerticalAlignment="Center" />
+            <Label Content="{x:Static t:Strings.IsActive}" FontSize="16" Grid.Row="6" VerticalAlignment="Center" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxName" UseContextMenuEditing="True" PromptType="Keyboard" FontSize="16" Grid.Column="1" TouchOpenDelay="0" KeyboardShiftMode="SoftCapsLock" TextChanged="textBoxName_TextChanged" />
+            <StackPanel Name="stackPanelPromptAmount" Orientation="Horizontal" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom">
+                <ctrl:PushCheckBox x:Name="checkBoxPrompt" Width="25" Height="25" Margin="5,0,0,0" SelectionChanged="checkBoxPrompt_SelectionChanged" />
+                <Label Content="{x:Static t:Strings.DiscountEditorPromptForAmount}" FontSize="14" FontWeight="Normal" VerticalAlignment="Center" />
+            </StackPanel>
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxAmount" UseContextMenuEditing="True" FontSize="16" Grid.Column="1" Grid.Row="2" PromptType="Currency" KeyboardTitleText="Enter Amount" TouchOpenDelay="0" TextChanged="textBoxAmount_TextChanged" />
+            <StackPanel Margin="5,5,5,5" Grid.Column="1" Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center">
+                <ctrl:PushRadioButton x:Name="radioButtonIsPercentage" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonIsPercentage_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="radioButtonIsNotPercentage" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonIsPercentage_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="5,5,5,5" Grid.Column="1" Grid.Row="4" Orientation="Horizontal" VerticalAlignment="Center">
+                <ctrl:PushRadioButton x:Name="radioButtonEntireTicket" FontSize="16" VerticalAlignment="Center" Text="{x:Static t:Strings.Ticket}" SelectionGained="radioButtonApplyTo_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="radioButtonOnTicketItem" Margin="15,0,0,0" FontSize="16" Text="{x:Static t:Strings.TicketItem}" SelectionGained="radioButtonApplyTo_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="5,5,5,5" Grid.Column="1" Grid.Row="5" Orientation="Horizontal" VerticalAlignment="Center">
+                <ctrl:PushRadioButton x:Name="radioButtonRequiresManager" FontSize="16" Foreground="White" VerticalAlignment="Center" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonRequiresManager_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="radioButtonNoManagerRequired" Margin="25,0,0,0" FontSize="16" Foreground="White" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonRequiresManager_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="5,5,5,5" Grid.Column="1" Grid.Row="6" Orientation="Horizontal" VerticalAlignment="Center">
+                <ctrl:PushRadioButton x:Name="radioButtonIsActive" FontSize="16" Foreground="White" VerticalAlignment="Center" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonIsActive_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="radioButtonIsNotActive" Margin="25,0,0,0" FontSize="16" Foreground="White" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonIsActive_SelectionGained" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

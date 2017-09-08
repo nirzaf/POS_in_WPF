@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="TemPOS.LoginControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1366">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid Loaded="Grid_Loaded">
+            <Grid.Width>
+                <Binding ElementName="Configuration" Path="BindableProgramWidth" />
+            </Grid.Width>
+            <Grid.Height>
+                <Binding ElementName="Configuration" Path="BindableProgramHeight" />
+            </Grid.Height>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Border>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="400*" />
+                        <ColumnDefinition Width="900*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="185*" />
+                        <RowDefinition Height="185*" />
+                        <RowDefinition Height="90*" />
+                        <RowDefinition Height="90*" />
+                        <RowDefinition Height="90*" />
+                    </Grid.RowDefinitions>
+                    <Border Margin="10,15,0,10" Grid.RowSpan="5" />
+                    <Border Margin="10,15,10,10" Grid.Column="1" Grid.RowSpan="5" />
+                    <StackPanel Margin="50,0,50,0" Grid.Row="1" Grid.RowSpan="2" Orientation="Vertical">
+                        <Label Content="{x:Static t:Strings.LoginScanIdCard}" Name="label1" FontSize="16" />
+                        <PasswordBox Name="passwordBox" KeyDown="passwordBox_KeyDown" PreviewMouseDown="passwordBox_PreviewMouseDown" />
+                        <ctrl:TextBlockButton x:Name="buttonLogin" FontSize="14" FontWeight="ExtraBold" Margin="5" Width="65" Height="45" Text="{x:Static t:Strings.Login}" Visibility="Hidden" Click="buttonLogin_Click" />
+                    </StackPanel>
+                    <my:ProgramLogoControl Margin="15,20,15,15" Grid.Column="1" Grid.RowSpan="5" />
+                </Grid>
+            </Border>
+        </Grid>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,27 @@
+<UserControl x:Class="TemPOS.TicketCouponControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="500" d:DesignWidth="500" xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="220*" />
+        <ColumnDefinition Width="220*" />
+      </Grid.ColumnDefinitions>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="35*" />
+        <RowDefinition Height="330*" />
+        <RowDefinition Height="80*" />
+      </Grid.RowDefinitions>
+      <Border Grid.Row="1" Margin="0,0,5,0" />
+      <Border Grid.Column="1" Grid.Row="1" Margin="5,0,0,0" />
+      <Label FontSize="18" Content="{x:Static t:Strings.AvailableCoupons}" />
+      <Label FontSize="18" Content="{x:Static t:Strings.AppliedCoupons}" Grid.Column="1" Margin="5,0,0,0" />
+      <ctrl:DragScrollListBox x:Name="listBoxAvailable" Margin="5,5,10,5" Background="Transparent" Grid.Row="1" SelectionChanged="listBoxAvailable_SelectionChanged" />
+      <ctrl:DragScrollListBox x:Name="listBoxApplied" Margin="10,5,5,5" Background="Transparent" Grid.Column="1" Grid.Row="1" SelectionChanged="listBoxApplied_SelectionChanged" />
+      <ctrl:TextBlockButton x:Name="buttonApplyCoupon" Grid.Row="2" HorizontalAlignment="Center" Width="70" Height="64" Text="{x:Static t:Strings.ApplyCoupon}" IsEnabled="False" Click="buttonApplyCoupon_Click" />
+      <ctrl:TextBlockButton x:Name="buttonClearSelectedCoupon" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" Width="70" Height="64" Text="{x:Static t:Strings.ClearSelectedCoupon}" IsEnabled="False" Click="buttonClearSelectedCoupon_Click" />
+    </Grid>
+  </DockPanel>
+</UserControl>

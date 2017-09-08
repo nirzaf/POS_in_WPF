@@ -1,0 +1,7 @@
+D:\Viipe.com\PointOfSale\PosModels\bin\Release\PosModels.dll
+D:\Viipe.com\PointOfSale\PosModels\bin\Release\PosModels.pdb
+D:\Viipe.com\PointOfSale\PosModels\bin\Release\TemposLibrary.dll
+D:\Viipe.com\PointOfSale\PosModels\bin\Release\TemposLibrary.pdb
+D:\Viipe.com\PointOfSale\PosModels\obj\Release\ResolveAssemblyReference.cache
+D:\Viipe.com\PointOfSale\PosModels\obj\Release\PosModels.dll
+D:\Viipe.com\PointOfSale\PosModels\obj\Release\PosModels.pdb

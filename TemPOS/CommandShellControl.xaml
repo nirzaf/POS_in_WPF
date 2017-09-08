@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="TemPOS.CommandShellControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="660" d:DesignWidth="825">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="300*" />
+                <RowDefinition Height="360" />
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Border Margin="5,5,5,5">
+                <ctrl:DragScrollViewer x:Name="dragScrollViewer">
+                    <ctrl:DragScrollViewer.ScrollContent>
+                        <FlowDocumentScrollViewer Margin="5,5,5,5" Name="flowDocumentScroll" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+                            <FlowDocumentScrollViewer.Foreground>
+                                <Binding ElementName="Configuration" Path="BindableApplicationForegroundBrush" />
+                            </FlowDocumentScrollViewer.Foreground>
+                        </FlowDocumentScrollViewer>
+                    </ctrl:DragScrollViewer.ScrollContent>
+                </ctrl:DragScrollViewer>
+            </Border>
+            <ctrl:KeyboardEntryControl x:Name="keyboardControl" UseEnterEvents="True" Grid.Row="1" EnterPressed="keyboardControl_EnterPressed" ConsoleClear="keyboardControl_ConsoleClear" />
+        </Grid>
+    </DockPanel>
+</UserControl>

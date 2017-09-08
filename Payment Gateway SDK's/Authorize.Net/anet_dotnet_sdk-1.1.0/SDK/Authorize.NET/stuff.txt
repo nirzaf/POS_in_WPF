@@ -1,0 +1,9 @@
+﻿You may login to the Merchant Interface using the following credentials:
+Login URL: https://test.authorize.net/
+Login ID: cnptest8152010 (do not use as the value for x_login)
+Password: Authnet001
+
+Use the following information to integrate an application or website to Authorize.Net:
+Transaction POST URL: https://test.authorize.net/gateway/transact.dll
+API Login ID: 75sqQ96qHEP8
+Transaction Key: 7r83Sb4HUd58Tz5p

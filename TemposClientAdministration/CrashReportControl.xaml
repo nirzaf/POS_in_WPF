@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="TemposClientAdministration.CrashReportControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemposClientAdministration"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="576" d:DesignWidth="1024">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableApplicationBackgroundBrush" />
+            </Grid.Background>
+            <Border>
+                <Grid Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200*" />
+                        <ColumnDefinition Width="500*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="500*" />
+                        <RowDefinition Height="80" />
+                    </Grid.RowDefinitions>
+                    <Border />
+                    <Border Grid.Column="1" />
+                    <ctrl:TextBlockButton x:Name="buttonDeleteIncident" Width="70" Height="64" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Delete Incident" Grid.Row="1" IsEnabled="False" Click="buttonDeleteIncident_Click" />
+                    <ctrl:DragScrollListBox Margin="5,5,5,5" x:Name="listBox" SelectionChanged="listBox_SelectionChanged" />
+                    <ctrl:DragScrollViewer x:Name="dragScrollViewer" Grid.Column="1">
+                        <ctrl:DragScrollViewer.ScrollContent>
+                            <FlowDocumentScrollViewer Margin="5,5,5,5" Name="flowDocumentScroll" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+                                <FlowDocumentScrollViewer.Foreground>
+                                    <Binding ElementName="Configuration" Path="BindableApplicationForegroundBrush" />
+                                </FlowDocumentScrollViewer.Foreground>
+                            </FlowDocumentScrollViewer>
+                        </ctrl:DragScrollViewer.ScrollContent>
+                    </ctrl:DragScrollViewer>
+                 </Grid>
+            </Border>
+        </Grid>
+    </DockPanel>
+</UserControl>

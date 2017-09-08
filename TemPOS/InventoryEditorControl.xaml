@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="TemPOS.InventoryEditorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="560" d:DesignWidth="300">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="288*" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <ctrl:DragScrollListBox Margin="5" x:Name="listBox1" SelectionChanged="listBox1_SelectionChanged" />
+            <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+                <ctrl:TextBlockButton x:Name="buttonSet" Height="70" Width="80" Margin="5" Text="{x:Static t:Strings.Set}" Click="buttonSet_Click" IsEnabled="False"  />
+                <ctrl:TextBlockButton x:Name="buttonIncreaseBy" Height="70" Width="80" Margin="5" Text="{x:Static t:Strings.Increase}" Click="buttonIncreaseBy_Click" IsEnabled="False" />
+                <ctrl:TextBlockButton x:Name="buttonDecreaseBy" Height="70" Width="80" Margin="5" Text="{x:Static t:Strings.Decrease}" Click="buttonDecreaseBy_Click" IsEnabled="False" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

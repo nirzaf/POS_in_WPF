@@ -1,0 +1,6 @@
+F:\Programming\TemPOS\AssemblyInfoUpdate\bin\Debug\AssemblyInfoUpdate.exe
+F:\Programming\TemPOS\AssemblyInfoUpdate\bin\Debug\AssemblyInfoUpdate.pdb
+F:\Programming\TemPOS\AssemblyInfoUpdate\obj\x86\Debug\AssemblyInfoUpdate.Properties.Resources.resources
+F:\Programming\TemPOS\AssemblyInfoUpdate\obj\x86\Debug\AssemblyInfoUpdate.csproj.GenerateResource.Cache
+F:\Programming\TemPOS\AssemblyInfoUpdate\obj\x86\Debug\AssemblyInfoUpdate.exe
+F:\Programming\TemPOS\AssemblyInfoUpdate\obj\x86\Debug\AssemblyInfoUpdate.pdb

@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="PosControls.DateEditControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="180">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <my:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid Width="175" MaxWidth="175" Name="gridPanel">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*" />
+                    <ColumnDefinition Width="16*" />
+                    <ColumnDefinition Width="25*" />
+                    <ColumnDefinition Width="16*" />
+                    <ColumnDefinition Width="65*" />
+                </Grid.ColumnDefinitions>
+                <Border BorderThickness="1" />
+                <Border BorderThickness="1" Grid.Column="2" />
+                <TextBox Margin="0,5,0,5" Name="textBoxMonth" FontSize="16" MaxLength="2" TextChanged="textBoxMonth_TextChanged" >
+                    <TextBox.Text>
+                        <Binding Path="Month" ElementName="UserControl" Mode="Default" />
+                    </TextBox.Text>
+                </TextBox>
+                <Label Margin="0,-2,0,2" Foreground="White" Grid.Column="1" FontSize="18" FontWeight="ExtraBold" Content="/" />
+                <TextBox Margin="0,5,0,5" Grid.Column="2" Name="textBoxDay" FontSize="16" Text="{Binding Path=Day, ElementName=UserControl, Mode=Default}" MaxLength="2" TextChanged="textBoxDay_TextChanged" KeyDown="textBoxDay_KeyDown" />
+                <Label Margin="0,-2,0,2" Foreground="White" Grid.Column="3" FontSize="18" FontWeight="ExtraBold" Content="/" />
+                <my:PushComboBox x:Name="comboBoxYear" Margin="5,5,5,5" Grid.Column="4" FontSize="16" SelectedIndexChanged="comboBoxYear_SelectedIndexChanged" />
+            </Grid>
+            <DockPanel Name="dockPanel" Visibility="Hidden" MouseDown="stackPanel_MouseDown">
+                <Border BorderThickness="2" CornerRadius="4" Margin="0,0,60,0">
+                    <Label Name="labelDate" Margin="5,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" MinWidth="110" />
+                </Border>
+            </DockPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

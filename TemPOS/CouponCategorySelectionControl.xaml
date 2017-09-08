@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="TemPOS.CouponCategorySelectionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"                          
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="630">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid Height="400">
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="315*" />
+                <ColumnDefinition Width="315*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="520*" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <Border Margin="5,0,5,0" BorderThickness="1" CornerRadius="4" Grid.Row="1" />
+            <Border Margin="5,0,5,0"  BorderThickness="1" CornerRadius="4" Grid.Row="1" Grid.Column="1" />
+            <Label Margin="10,5,0,0" Content="{x:Static t:Strings.CategoryAllCategories}" FontSize="18" />
+            <Label Margin="10,5,0,0" Content="{x:Static t:Strings.CategorySelectedCategories}" FontSize="18" Grid.Column="1" />
+            <ctrl:DragScrollListBox x:Name="listBoxAllCategories" Margin="10,5,10,5" Grid.Row="1" SelectionChanged="listBoxAllCategories_SelectionChanged" />
+            <ctrl:DragScrollListBox x:Name="listBoxSelectedCategories" Margin="10,5,10,5" Grid.Row="1" Grid.Column="1" SelectionChanged="listBoxSelectedCategories_SelectionChanged" />
+            <ctrl:TextBlockButton x:Name="buttonAdd" Grid.Row="2" Width="85" Height="64" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{x:Static t:Strings.CategoryAddCategory}" IsEnabled="False" Click="buttonAdd_Click" />
+            <ctrl:TextBlockButton x:Name="buttonRemove" Grid.Row="2" Grid.Column="1" Width="85" Height="64" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{x:Static t:Strings.CategoryRemoveCategory}" IsEnabled="False" Click="buttonRemove_Click" />
+        </Grid>
+    </DockPanel>
+</UserControl>

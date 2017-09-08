@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{494F36DC-815E-4099-B506-4CC1943C5153}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PosModels</RootNamespace>
+    <AssemblyName>PosModels</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>TemPOS.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release - Client|AnyCPU'">
+    <OutputPath>bin\Release - Client\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\PosModels.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Demo|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Demo\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEMO</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\PosModels.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Demo|AnyCPU'">
+    <OutputPath>bin\Release_Demo\</OutputPath>
+    <DefineConstants>TRACE;DEMO</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\PosModels.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Demo_Gtk|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Demo_Gtk\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEMO</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\PosModels.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;G:\Program Files (Vista)\Visual Studio 2010\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <SignAssembly>false</SignAssembly>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-Gtk|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug-Gtk\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\PosModels.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <SignAssembly>false</SignAssembly>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarRecipe.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="CouponCategory.cs" />
+    <Compile Include="CouponItem.cs" />
+    <Compile Include="Coupon.cs" />
+    <Compile Include="CreditCardInfo.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="EmployeeAvailability.cs" />
+    <Compile Include="EmployeeStatus.cs" />
+    <Compile Include="DayOfOperation.cs" />
+    <Compile Include="DeliveryArea.cs" />
+    <Compile Include="DeliveryDriver.cs" />
+    <Compile Include="DeliveryRestriction.cs" />
+    <Compile Include="DirectDeposit.cs" />
+    <Compile Include="DirectDepositTransaction.cs" />
+    <Compile Include="Discount.cs" />
+    <Compile Include="EmployeeCheck.cs" />
+    <Compile Include="EmployeeJob.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="EmployeePayRate.cs" />
+    <Compile Include="EmployeeSchedule.cs" />
+    <Compile Include="EmployeeSetting.cs" />
+    <Compile Include="EmployeeTimesheetChangeLog.cs" />
+    <Compile Include="EmployeeTimesheet.cs" />
+    <Compile Include="GiftCard.cs" />
+    <Compile Include="Helpers\Bit.cs" />
+    <Compile Include="Helpers\Fingerprint.cs" />
+    <Compile Include="Helpers\MathHelper.cs" />
+    <Compile Include="Helpers\PosModelHelper.cs" />
+    <Compile Include="Helpers\UnitConversion.cs" />
+    <Compile Include="Ingredient.cs" />
+    <Compile Include="IngredientAdjustment.cs" />
+    <Compile Include="IngredientSet.cs" />
+    <Compile Include="ItemAdjustment.cs" />
+    <Compile Include="ItemGroup.cs" />
+    <Compile Include="ItemIngredient.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="ItemIngredientAdjustment.cs" />
+    <Compile Include="ItemOption.cs" />
+    <Compile Include="ItemOptionAdjustment.cs" />
+    <Compile Include="ItemOptionSet.cs" />
+    <Compile Include="ItemPricingChangeLog.cs" />
+    <Compile Include="ItemPricing.cs" />
+    <Compile Include="LocalSetting.cs" />
+    <Compile Include="Lock.cs" />
+    <Compile Include="MailingAddress.cs" />
+    <Compile Include="Managers\DatabaseManager.cs" />
+    <Compile Include="Managers\EmployeeManager.cs" />
+    <Compile Include="Managers\PersonManager.cs" />
+    <Compile Include="Managers\PhoneNumberManager.cs" />
+    <Compile Include="Managers\SeatingManager.cs" />
+    <Compile Include="Managers\SettingManager.cs" />
+    <Compile Include="Managers\TicketManager.cs" />
+    <Compile Include="PartyInvite.cs" />
+    <Compile Include="Party.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="PhoneNumber.cs" />
+    <Compile Include="Printer.cs" />
+    <Compile Include="PrintOption.cs" />
+    <Compile Include="PrintOptionSet.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterDeposit.cs" />
+    <Compile Include="RegisterDrawer.cs" />
+    <Compile Include="RegisterDrop.cs" />
+    <Compile Include="RegisterMove.cs" />
+    <Compile Include="RegisterNoSale.cs" />
+    <Compile Include="RegisterPayout.cs" />
+    <Compile Include="Rental.cs" />
+    <Compile Include="RentalOccurance.cs" />
+    <Compile Include="Room.cs" />
+    <Compile Include="Seating.cs" />
+    <Compile Include="SeatingReservation.cs" />
+    <Compile Include="SerialObject.cs" />
+    <Compile Include="StoreSetting.cs" />
+    <Compile Include="Tax.cs" />
+    <Compile Include="TicketCoupon.cs" />
+    <Compile Include="TicketDelivery.cs" />
+    <Compile Include="TicketDiscount.cs" />
+    <Compile Include="TicketItem.cs" />
+    <Compile Include="TicketItemOption.cs" />
+    <Compile Include="TicketItemReturn.cs" />
+    <Compile Include="Ticket.cs" />
+    <Compile Include="TicketPayment.cs" />
+    <Compile Include="TicketRefund.cs" />
+    <Compile Include="TicketVoid.cs" />
+    <Compile Include="Types\BankAccountType.cs" />
+    <Compile Include="Types\CancelType.cs" />
+    <Compile Include="Types\CommonConnection.cs" />
+    <Compile Include="Types\DataModelBase.cs" />
+    <Compile Include="Types\Days.cs" />
+    <Compile Include="Types\ItemAdjustmentType.cs" />
+    <Compile Include="Types\ItemOptionAdjustmentType.cs" />
+    <Compile Include="Types\Languages.cs" />
+    <Compile Include="Types\MeasurementUnit.cs" />
+    <Compile Include="Types\ModeledDataAttribute.cs" />
+    <Compile Include="Types\ModeledDataClassAttribute.cs" />
+    <Compile Include="Types\ModeledDataNullableAttribute.cs" />
+    <Compile Include="Types\ModeledDataTypeAttribute.cs" />
+    <Compile Include="Types\Month.cs" />
+    <Compile Include="Types\PaymentSource.cs" />
+    <Compile Include="Types\Permissions.cs" />
+    <Compile Include="Types\PrintDestinations.cs" />
+    <Compile Include="Types\Strings.cs" />
+    <Compile Include="Types\StringsCore.cs" />
+    <Compile Include="Types\TableName.cs" />
+    <Compile Include="Types\TemperatureScale.cs" />
+    <Compile Include="Types\TicketItemOptionType.cs" />
+    <Compile Include="Types\TicketRefundType.cs" />
+    <Compile Include="Types\TicketType.cs" />
+    <Compile Include="Types\YearId.cs" />
+    <Compile Include="VendorItem.cs" />
+    <Compile Include="Vendor.cs" />
+    <Compile Include="VendorOrderItem.cs" />
+    <Compile Include="VendorOrder.cs" />
+    <Compile Include="ZipCodeCity.cs" />
+    <Compile Include="ZipCode.cs" />
+    <Compile Include="ZipCodeState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TemposLibrary\TemposLibrary.csproj">
+      <Project>{4570E486-EF25-4B69-9F09-2F134B66B5BA}</Project>
+      <Name>TemposLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TemPOS.pfx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 3.2
+if /I "$(ConfigurationName)" == "Release_Demo" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 3.2</PostBuildEvent>
+  </PropertyGroup>
+</Project>

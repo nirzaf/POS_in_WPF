@@ -1,0 +1,6 @@
+E:\TemPOS\TemposUpdateServiceModels\obj\Debug_Demo_Gtk\ResolveAssemblyReference.cache
+F:\Programming\TemPOS\TemposUpdateServiceModels\bin\Debug_Demo_Gtk\TemposUpdateServiceModels.dll
+F:\Programming\TemPOS\TemposUpdateServiceModels\bin\Debug_Demo_Gtk\TemposUpdateServiceModels.pdb
+F:\Programming\TemPOS\TemposUpdateServiceModels\obj\Debug_Demo_Gtk\TemposUpdateServiceModels.csprojResolveAssemblyReference.cache
+F:\Programming\TemPOS\TemposUpdateServiceModels\obj\Debug_Demo_Gtk\TemposUpdateServiceModels.dll
+F:\Programming\TemPOS\TemposUpdateServiceModels\obj\Debug_Demo_Gtk\TemposUpdateServiceModels.pdb

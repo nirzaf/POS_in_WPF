@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="PosControls.FileBrowserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:PosControls"
+             mc:Ignorable="d"
+             Loaded="userControl_Loaded"
+             d:DesignHeight="400" d:DesignWidth="600" Name="userControl">
+    <UserControl.Resources>
+        <LinearGradientBrush  x:Key="BlueRinseBrush" 
+                        EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF223B84" Offset="1"/>
+            <GradientStop Color="#FF57A0F4" Offset="0.5"/>
+            <GradientStop Color="#FF4B94EC" Offset="0.5"/>
+        </LinearGradientBrush>
+
+
+    </UserControl.Resources>
+    <DockPanel Name="mainPane" LastChildFill="True">
+        <DockPanel.Width>
+            <Binding ElementName="userControl" Path="ActualWidth" />
+        </DockPanel.Width>
+        <DockPanel.Height>
+            <Binding ElementName="userControl" Path="ActualHeight" />
+        </DockPanel.Height>
+        <my:ConfigurationManager x:Name="Configuration" />
+        <Grid Name="gridControl">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32" />
+                <RowDefinition Height="374*" />
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <TextBlock x:Name="textBlockPath" Margin="5" />
+            <Border Margin="5,0,5,5"  Grid.Row="1">
+                <my:DragScrollListBox x:Name="listBox" />
+            </Border>                
+        </Grid>
+    </DockPanel> 
+</UserControl>

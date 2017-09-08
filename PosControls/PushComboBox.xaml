@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="PosControls.PushComboBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:my="clr-namespace:PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="100">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="pushButtonControlTemplate">
+            <DockPanel Loaded="DockPanel_Loaded">
+                <Border BorderThickness="1" CornerRadius="4" ClipToBounds="True" Initialized="Border_Initialized">
+                    <my:DragScrollListBox Margin="2" HorizontalAlignment="Stretch" SelectionChanged="listBox_SelectionChanged" />
+                </Border>
+            </DockPanel>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Border Name="borderControl" CornerRadius="4" BorderThickness="1"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                ClipToBounds="True"
+                Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Grid, AncestorLevel=1}, Path=ActualWidth}"
+                IsEnabledChanged="borderControl_IsEnabledChanged"
+                PreviewMouseDown="borderControl_PreviewMouseDown">
+            <TextBlock Name="textBlockControl" VerticalAlignment="Center" Margin="5" />
+        </Border>
+    </Grid>    
+</UserControl>

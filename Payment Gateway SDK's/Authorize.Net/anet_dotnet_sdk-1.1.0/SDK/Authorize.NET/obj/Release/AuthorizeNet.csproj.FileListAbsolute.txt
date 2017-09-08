@@ -1,0 +1,18 @@
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\bin\Release\AuthorizeNet.dll
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\bin\Release\AuthorizeNet.pdb
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\bin\Release\CookComputing.XmlRpcV2.dll
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\obj\Release\ResolveAssemblyReference.cache
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\obj\Release\AuthorizeNet.dll
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\obj\Release\AuthorizeNet.pdb
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\bin\Release\AuthorizeNet.XML
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\Authorize.NET\bin\Release\AuthorizeNet.XML
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\Authorize.NET\bin\Release\AuthorizeNet.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\Authorize.NET\bin\Release\AuthorizeNet.pdb
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\Authorize.NET\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\Authorize.NET\obj\Release\AuthorizeNet.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\Authorize.NET\obj\Release\AuthorizeNet.pdb
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\Authorize.NET\bin\Release\AuthorizeNet.dll
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\Authorize.NET\bin\Release\AuthorizeNet.pdb
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\Authorize.NET\obj\Release\ResolveAssemblyReference.cache
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\Authorize.NET\obj\Release\AuthorizeNet.dll
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\Authorize.NET\obj\Release\AuthorizeNet.pdb

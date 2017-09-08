@@ -1,0 +1,5 @@
+D:\Viipe.com\PointOfSale\PosModels\bin\Release - Client\PosModels.dll
+D:\Viipe.com\PointOfSale\PosModels\bin\Release - Client\PosModels.pdb
+D:\Viipe.com\PointOfSale\PosModels\obj\Release - Client\ResolveAssemblyReference.cache
+D:\Viipe.com\PointOfSale\PosModels\obj\Release - Client\PosModels.dll
+D:\Viipe.com\PointOfSale\PosModels\obj\Release - Client\PosModels.pdb

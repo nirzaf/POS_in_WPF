@@ -1,0 +1,34 @@
+<UserControl x:Class="TemPOS.EmployeeEditorControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:t="clr-namespace:TemPOS.Types" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="550" d:DesignWidth="900">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="467*" />
+        <RowDefinition Height="90" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="350*" />
+        <ColumnDefinition Width="587*" />
+      </Grid.ColumnDefinitions>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <GroupBox Name="groupBoxList" Header="{x:Static t:Strings.Employees}" Margin="5">
+        <ctrl:DragScrollListBox x:Name="listBoxEmployees" SelectionChanged="listBoxEmployees_SelectionChanged" />
+      </GroupBox>
+      <GroupBox Name="groupBoxProperties" Header="{x:Static t:Strings.EmployeeProperties}" Grid.Column="1" Margin="5" IsEnabled="False">
+        <my:EmployeeEditorDetailsControl x:Name="employeeDetailsControl" DetailsChanged="employeeDetailsControl_DetailsChanged" />
+      </GroupBox>
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
+        <ctrl:TextBlockButton x:Name="buttonAdd" Margin="5,0,0,0" Width="80" Height="64" Text="{x:Static t:Strings.EmployeeEditorAddEmployee}" Click="buttonAdd_Click" />
+        <ctrl:TextBlockButton x:Name="buttonModifyJobs" Margin="5,0,0,0" Width="80" Height="64" Text="{x:Static t:Strings.EmployeeEditorEditJobs}" IsEnabled="False" Click="buttonModifyJobs_Click" />
+        <ctrl:TextBlockButton x:Name="buttonTerminate" Margin="5,0,0,0" Width="80" Height="64" Text="{x:Static t:Strings.EmployeeEditorTerminateEmployee}" IsEnabled="False" Click="buttonTerminate_Click" />
+        <ctrl:TextBlockButton x:Name="buttonRemove" Margin="5,0,0,0" Width="80" Height="64" Text="{x:Static t:Strings.EmployeeEditorRemoveEmployee}" IsEnabled="False" Click="buttonRemove_Click" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
+        <ctrl:TextBlockButton x:Name="buttonUpdate" Margin="5,0,5,0" Width="85" Height="64" Text="{x:Static t:Strings.EmployeeEditorUpdateEmployee}" IsEnabled="False" Click="buttonUpdate_Click" />
+        <ctrl:TextBlockButton x:Name="buttonCancelChanges" Margin="5,0,5,0" Width="85" Height="64" Text="{x:Static t:Strings.CancelChanges}" IsEnabled="False" Click="buttonCancelChanges_Click" />
+      </StackPanel>
+    </Grid>
+  </DockPanel>
+</UserControl>

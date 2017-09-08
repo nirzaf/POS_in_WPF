@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace StringsExtractor
+{
+    public class TestClass
+    {
+        public const string Test = Strings.Test;
+
+        public void Testing()
+        {
+            Console.WriteLine(Strings.Testing);
+            Console.WriteLine(Strings.DoYouWantToStartTheTaskManagerAccessService);
+        }
+    }
+}

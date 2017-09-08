@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="TemPOS.EmployeeJobEditorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="430" d:DesignWidth="630">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="314*" />
+                <ColumnDefinition Width="314*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+            </Grid.RowDefinitions>
+            <Label VerticalAlignment="Center" Content="{x:Static t:Strings.Description}" FontSize="16" />
+            <Label VerticalAlignment="Center" Content="{x:Static t:Strings.EmployeeEditorCanDeclareTips}" FontSize="16" Grid.Row="1" />
+            <Label VerticalAlignment="Center" Content="{x:Static t:Strings.EmployeeEditorCanTakeDeliveries}" FontSize="16" Grid.Row="2" />
+            <Label VerticalAlignment="Center" Content="{x:Static t:Strings.IsEnabled}" FontSize="16" Grid.Row="3" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxName" UseContextMenuEditing="True" PromptType="Keyboard" KeyboardShiftMode="SoftCapsLock" TouchOpenDelay="0" Grid.Column="1" TextChanged="textBoxName_TextChanged"/>
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                <ctrl:PushRadioButton x:Name="buttonTipsYes" Text="{x:Static t:Strings.Yes}" FontSize="16" SelectionGained="buttonTips_SelectionGained"  />
+                <ctrl:PushRadioButton x:Name="buttonTipsNo" Text="{x:Static t:Strings.No}" Margin="25,0,0,0" FontSize="16" SelectionGained="buttonTips_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                <ctrl:PushRadioButton x:Name="buttonDeliveriesYes" Text="{x:Static t:Strings.Yes}" FontSize="16" SelectionGained="buttonDeliveries_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="buttonDeliveriesNo" Text="{x:Static t:Strings.No}" Margin="25,0,0,0" FontSize="16" SelectionGained="buttonDeliveries_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
+                <ctrl:PushRadioButton x:Name="buttonIsEnabledYes" Text="{x:Static t:Strings.Yes}" FontSize="16" SelectionGained="buttonIsEnabled_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="buttonIsEnabledNo" Text="{x:Static t:Strings.No}" Margin="25,0,0,0" FontSize="16" SelectionGained="buttonIsEnabled_SelectionGained" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

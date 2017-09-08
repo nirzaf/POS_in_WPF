@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>K:\ClickOnceWebRoot\TemPOS\|H:\Win8Users\JoshGuyette\Desktop\temposstore\publish\|Z:\temposstore\publish\|publish\</PublishUrlHistory>
+    <InstallUrlHistory>http://tempos.no-ip.org:18080/TemPOS/|http://localhost:18080/TemPOS/|http://localhost/TemPOS/|http://tempos.no-ip.org/TemPOS/|http://tempos.no-ip.org/publish/</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+</Project>

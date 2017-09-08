@@ -1,0 +1,10 @@
+E:\TemPOS\TaskManagerAccessServiceUninstaller\obj\x86\Debug_Demo_Gtk\ResolveAssemblyReference.cache
+E:\TemPOS\TaskManagerAccessServiceUninstaller\obj\x86\Debug_Demo_Gtk\TaskManagerAccessServiceUninstaller.Properties.Resources.resources
+E:\TemPOS\TaskManagerAccessServiceUninstaller\obj\x86\Debug_Demo_Gtk\GenerateResource.read.1.tlog
+E:\TemPOS\TaskManagerAccessServiceUninstaller\obj\x86\Debug_Demo_Gtk\GenerateResource.write.1.tlog
+F:\Programming\TemPOS\TaskManagerAccessServiceUninstaller\bin\x86\Debug_Demo_Gtk\TaskManagerAccessServiceUninstaller.exe
+F:\Programming\TemPOS\TaskManagerAccessServiceUninstaller\bin\x86\Debug_Demo_Gtk\TaskManagerAccessServiceUninstaller.pdb
+F:\Programming\TemPOS\TaskManagerAccessServiceUninstaller\obj\x86\Debug_Demo_Gtk\TaskManagerAccessServiceUninstaller.Properties.Resources.resources
+F:\Programming\TemPOS\TaskManagerAccessServiceUninstaller\obj\x86\Debug_Demo_Gtk\TaskManagerAccessServiceUninstaller.csproj.GenerateResource.Cache
+F:\Programming\TemPOS\TaskManagerAccessServiceUninstaller\obj\x86\Debug_Demo_Gtk\TaskManagerAccessServiceUninstaller.exe
+F:\Programming\TemPOS\TaskManagerAccessServiceUninstaller\obj\x86\Debug_Demo_Gtk\TaskManagerAccessServiceUninstaller.pdb

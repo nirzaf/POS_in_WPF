@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="PosControls.DateEntryDayControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="315">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <my:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="42*" />
+                <ColumnDefinition Width="42*" />
+                <ColumnDefinition Width="42*" />
+                <ColumnDefinition Width="42*" />
+                <ColumnDefinition Width="42*" />
+                <ColumnDefinition Width="42*" />
+                <ColumnDefinition Width="42*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="42*" />
+                <RowDefinition Height="42*" />
+                <RowDefinition Height="42*" />
+                <RowDefinition Height="42*" />
+                <RowDefinition Height="42*" />
+                <RowDefinition Height="42*" />
+            </Grid.RowDefinitions>
+            <DockPanel Grid.ColumnSpan="7">
+                <DockPanel.Background>
+                    <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+                </DockPanel.Background>
+            </DockPanel>
+            <Label Content="Sun" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Label Content="Mon" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" />
+            <Label Content="Tues" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" />
+            <Label Content="Wed" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="3" />
+            <Label Content="Thurs" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="4" />
+            <Label Content="Fri" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="5" />
+            <Label Content="Sat" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="6" />
+            <ToggleButton Width="40" Height="40" x:Name="button10" Grid.Row="1" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button11" Grid.Row="1" Grid.Column="1" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button12" Grid.Row="1" Grid.Column="2" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button13" Grid.Row="1" Grid.Column="3" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button14" Grid.Row="1" Grid.Column="4" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button15" Grid.Row="1" Grid.Column="5" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button16" Grid.Row="1" Grid.Column="6" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button20" Grid.Row="2" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button21" Grid.Row="2" Grid.Column="1" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button22" Grid.Row="2" Grid.Column="2" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button23" Grid.Row="2" Grid.Column="3" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button24" Grid.Row="2" Grid.Column="4" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button25" Grid.Row="2" Grid.Column="5" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button26" Grid.Row="2" Grid.Column="6" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button30" Grid.Row="3" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button31" Grid.Row="3" Grid.Column="1" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button32" Grid.Row="3" Grid.Column="2" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button33" Grid.Row="3" Grid.Column="3" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button34" Grid.Row="3" Grid.Column="4" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button35" Grid.Row="3" Grid.Column="5" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button36" Grid.Row="3" Grid.Column="6" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button40" Grid.Row="4" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button41" Grid.Row="4" Grid.Column="1" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button42" Grid.Row="4" Grid.Column="2" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button43" Grid.Row="4" Grid.Column="3" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button44" Grid.Row="4" Grid.Column="4" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button45" Grid.Row="4" Grid.Column="5" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button46" Grid.Row="4" Grid.Column="6" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button50" Grid.Row="5" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button51" Grid.Row="5" Grid.Column="1" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button52" Grid.Row="5" Grid.Column="2" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button53" Grid.Row="5" Grid.Column="3" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button54" Grid.Row="5" Grid.Column="4" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button55" Grid.Row="5" Grid.Column="5" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button56" Grid.Row="5" Grid.Column="6" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button60" Grid.Row="6" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button61" Grid.Row="6" Grid.Column="1" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button62" Grid.Row="6" Grid.Column="2" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button63" Grid.Row="6" Grid.Column="3" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button64" Grid.Row="6" Grid.Column="4" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button65" Grid.Row="6" Grid.Column="5" Click="Button_Click" />
+            <ToggleButton Width="40" Height="40" x:Name="button66" Grid.Row="6" Grid.Column="6" Click="Button_Click" />
+        </Grid>
+    </DockPanel>
+</UserControl>

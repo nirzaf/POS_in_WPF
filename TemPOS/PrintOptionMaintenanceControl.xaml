@@ -1,0 +1,26 @@
+<UserControl x:Class="TemPOS.PrintOptionMaintenanceControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="660" d:DesignWidth="945" xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="300*" />
+        <ColumnDefinition Width="628*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="560*" />
+        <RowDefinition Height="110*" />
+      </Grid.RowDefinitions>
+      <Border />
+      <Border Grid.Column="2" />
+      <ctrl:TextBlockButton x:Name="buttonAdd" Margin="215,0,0,12" Width="70" Height="64" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="{x:Static t:Strings.NewItem}" Grid.Column="1" Grid.Row="1" Click="buttonAdd_Click" />
+      <ctrl:TextBlockButton x:Name="buttonUpdate" Margin="345,0,0,12" Width="70" Height="64" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="{x:Static t:Strings.UpdateItem}" Grid.Column="1" Grid.Row="1" IsEnabled="False" Click="buttonUpdate_Click" />
+      <ctrl:TextBlockButton x:Name="buttonCancel" Margin="425,0,0,12" Width="70" Height="64" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="{x:Static t:Strings.CancelChanges}" Grid.Column="1" Grid.Row="1" IsEnabled="False" Click="buttonCancel_Click" />
+      <ctrl:TextBlockButton x:Name="buttonClose" Margin="550,0,0,12" Width="70" Height="64" VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="{x:Static t:Strings.CloseWindow}" Grid.Column="1" Grid.Row="1" Click="buttonClose_Click" />
+      <ctrl:DragScrollListBox Margin="5,5,5,5" x:Name="listBox1" />
+      <my:PrintOptionEditorControl x:Name="editorControl" Grid.Column="1" Margin="5,5,5,5" />
+    </Grid>
+  </DockPanel>
+</UserControl>

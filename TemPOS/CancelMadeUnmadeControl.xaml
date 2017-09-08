@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="TemPOS.CancelMadeUnmadeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="85" d:DesignWidth="300">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ctrl:TextBlockButton x:Name="buttonReopen" Text="{x:Static t:Strings.CancelControlReopen}" Margin="0,0,5,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontFamily="Century Schoolbook" FontSize="14" Visibility="Collapsed" Click="buttonReopen_Click" />
+                <ctrl:TextBlockButton x:Name="buttonMade" Text="{x:Static t:Strings.CancelControlCancelMade}" Margin="0,0,5,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontFamily="Century Schoolbook" FontSize="14" Click="buttonMade_Click" />
+                <ctrl:TextBlockButton x:Name="buttonUnmade" Text="{x:Static t:Strings.CancelControlCancelUnmade}" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontFamily="Century Schoolbook" FontSize="14" Tag="0" Click="buttonUnmade_Click" />
+                <ctrl:TextBlockButton x:Name="buttonVoid" Text="{x:Static t:Strings.CancelControlVoid}" Height="64" Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontFamily="Century Schoolbook" FontSize="14" Tag="0" Visibility="Collapsed" Click="buttonVoid_Click" />
+                <ctrl:TextBlockButton x:Name="buttonDontCancel" Text="{x:Static t:Strings.CancelControlDontCancel}" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontFamily="Century Schoolbook" FontSize="14" Click="buttonDontCancel_Click" />
+                <ctrl:TextBlockButton x:Name="buttonDontRefund" Text="{x:Static t:Strings.CancelControlDontRefund}" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontFamily="Century Schoolbook" FontSize="14" Visibility="Collapsed" Click="buttonDontCancel_Click" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

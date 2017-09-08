@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="TemPOS.IngredientEditorDetailsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="270" d:DesignWidth="560">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="275*" />
+                <ColumnDefinition Width="275*" />
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Label Content="{x:Static t:Strings.Name}" FontSize="16" VerticalAlignment="Center" />
+            <Label Content="{x:Static t:Strings.IngredientEditorPrintedName}" FontSize="16" VerticalAlignment="Center" Grid.Row="1" />
+            <Label Content="{x:Static t:Strings.IngredientEditorInventoryAmount}" FontSize="16" VerticalAlignment="Center" Grid.Row="2" />
+            <Label Content="{x:Static t:Strings.IngredientEditorMeasuringUnit}" FontSize="16" VerticalAlignment="Center" Grid.Row="3" />
+            <Label x:Name="labelCostPerUnit" Content="{x:Static t:Strings.IngredientEditorCostPerUnit}" FontSize="16" VerticalAlignment="Center" Grid.Row="4" />
+            <Label Content="{x:Static t:Strings.IngredientEditorParAmount}" FontSize="16" VerticalAlignment="Center" Grid.Row="5" />
+            <ctrl:CustomTextBox x:Name="textBoxFullName" UseContextMenuEditing="True" PromptType="Keyboard" KeyboardShiftMode="SoftCapsLock" Grid.Column="1" Margin="5" TextChanged="textBoxFullName_TextChanged" />
+            <ctrl:CustomTextBox x:Name="textBoxShortName" UseContextMenuEditing="True" PromptType="Keyboard" KeyboardShiftMode="SoftCapsLock" Grid.Column="1" Grid.Row="1" Margin="5" TextChanged="textBoxShortName_TextChanged" />
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
+                <ctrl:CustomTextBox x:Name="textBoxInventoryAmount" UseContextMenuEditing="True" PromptType="FloatNumeric" Width="115" Margin="5" TextChanged="textBoxInventoryAmount_TextChanged" />
+                <ctrl:TextBlockButton x:Name="buttonIncreaseInventory" Width="72" Text="{x:Static t:Strings.IngredientEditorIncrease}" Margin="0,5,5,5" Click="buttonIncreaseInventory_Click" />
+                <ctrl:TextBlockButton x:Name="buttonDecreaseInventory" Width="72" Margin="0,5,5,5" Text="{x:Static t:Strings.IngredientEditorDecrease}" Click="buttonDecreaseInventory_Click" />
+            </StackPanel>
+            <ctrl:PushComboBox x:Name="comboBoxMeasuringUnits" Grid.Column="1" Grid.Row="3" Margin="5" SelectedIndexChanged="comboBoxMeasuringUnits_SelectedIndexChanged" />
+            <ctrl:CustomTextBox x:Name="textBoxCostPerUnit" UseContextMenuEditing="True" PromptType="Currency"  Grid.Column="1" Grid.Row="4" Margin="5" TextChanged="textBoxCostPerUnit_TextChanged" />
+            <ctrl:CustomTextBox x:Name="textBoxParAmount" UseContextMenuEditing="True" PromptType="FloatNumeric" Grid.Column="1" Grid.Row="5" Margin="5" TextChanged="textBoxParAmount_TextChanged" />
+        </Grid>
+    </DockPanel>
+</UserControl>

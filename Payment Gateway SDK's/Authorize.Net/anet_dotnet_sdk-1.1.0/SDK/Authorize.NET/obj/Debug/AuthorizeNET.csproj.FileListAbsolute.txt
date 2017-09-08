@@ -1,0 +1,13 @@
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\bin\Debug\AuthorizeNET.dll
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\bin\Debug\AuthorizeNET.pdb
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\obj\Debug\ResolveAssemblyReference.cache
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\obj\Debug\AuthorizeNET.dll
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\obj\Debug\AuthorizeNET.pdb
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\bin\Debug\CookComputing.XmlRpcV2.dll
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\bin\Debug\AuthorizeNet.XML
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\Authorize.NET\bin\Debug\AuthorizeNet.XML
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\Authorize.NET\bin\Debug\AuthorizeNet.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\Authorize.NET\bin\Debug\AuthorizeNet.pdb
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\Authorize.NET\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\Authorize.NET\obj\Debug\AuthorizeNet.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\Authorize.NET\obj\Debug\AuthorizeNet.pdb

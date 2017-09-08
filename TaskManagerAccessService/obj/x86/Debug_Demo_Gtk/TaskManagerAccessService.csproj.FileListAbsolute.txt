@@ -1,0 +1,10 @@
+E:\TemPOS\TaskManagerAccessService\obj\x86\Debug_Demo_Gtk\ResolveAssemblyReference.cache
+E:\TemPOS\TaskManagerAccessService\obj\x86\Debug_Demo_Gtk\TaskManagerAccessService.ProjectInstaller.resources
+E:\TemPOS\TaskManagerAccessService\obj\x86\Debug_Demo_Gtk\GenerateResource.read.1.tlog
+E:\TemPOS\TaskManagerAccessService\obj\x86\Debug_Demo_Gtk\GenerateResource.write.1.tlog
+F:\Programming\TemPOS\TaskManagerAccessService\bin\x86\Debug_Demo_Gtk\TaskManagerAccessService.exe
+F:\Programming\TemPOS\TaskManagerAccessService\bin\x86\Debug_Demo_Gtk\TaskManagerAccessService.pdb
+F:\Programming\TemPOS\TaskManagerAccessService\obj\x86\Debug_Demo_Gtk\TaskManagerAccessService.ProjectInstaller.resources
+F:\Programming\TemPOS\TaskManagerAccessService\obj\x86\Debug_Demo_Gtk\TaskManagerAccessService.csproj.GenerateResource.Cache
+F:\Programming\TemPOS\TaskManagerAccessService\obj\x86\Debug_Demo_Gtk\TaskManagerAccessService.exe
+F:\Programming\TemPOS\TaskManagerAccessService\obj\x86\Debug_Demo_Gtk\TaskManagerAccessService.pdb

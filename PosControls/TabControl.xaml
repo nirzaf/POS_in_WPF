@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="PosControls.TabControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:my="clr-namespace:PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="600">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <my:ConfigurationManager x:Name="Configuration" />
+        <Grid Name="gridControl">
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="34" />
+                <RowDefinition Height="647*" />
+            </Grid.RowDefinitions>
+            <StackPanel Name="stackPanelTitleBar" Orientation="Horizontal" Background="Transparent">
+                <ToggleButton Style="{DynamicResource tabToggleButtonStyle}" x:Name="buttonTab1" Margin="10,0,0,0" Height="25" Width="120" IsChecked="True" Click="buttonTab_Click" />
+                <ToggleButton Style="{DynamicResource tabToggleButtonStyle}" x:Name="buttonTab2" Margin="0,0,0,0" Height="25" Width="120" Visibility="Collapsed" Click="buttonTab_Click" />
+                <ToggleButton Style="{DynamicResource tabToggleButtonStyle}" x:Name="buttonTab3" Margin="0,0,0,0" Height="25" Width="120" Visibility="Collapsed" Click="buttonTab_Click" />
+                <ToggleButton Style="{DynamicResource tabToggleButtonStyle}" x:Name="buttonTab4" Margin="0,0,0,0" Height="25" Width="120" Visibility="Collapsed" Click="buttonTab_Click" />
+                <ToggleButton Style="{DynamicResource tabToggleButtonStyle}" x:Name="buttonTab5" Margin="0,0,0,0" Height="25" Width="120" Visibility="Collapsed" Click="buttonTab_Click" />
+            </StackPanel>
+            <Border ClipToBounds="True" Grid.Row="1">
+                <Grid Name="contentGridControl">
+                    <!-- <my:DragScrollViewer x:Name="scrollViewerDockPanel1" VerticalAlignment="Stretch" Grid.Row="1">
+                        <my:DragScrollViewer.ScrollContent> -->
+                            <DockPanel Name="dockPanel1" Margin="5,5,5,5" Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=my:DragScrollViewer, AncestorLevel=1}, Path=Height}" Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=my:DragScrollViewer, AncestorLevel=1}, Path=Width}" />
+                        <!-- </my:DragScrollViewer.ScrollContent>
+                    </my:DragScrollViewer>
+                    <my:DragScrollViewer x:Name="scrollViewerDockPanel2" VerticalAlignment="Stretch" Visibility="Collapsed" Grid.Row="1">
+                        <my:DragScrollViewer.ScrollContent> -->
+                            <DockPanel Name="dockPanel2" Margin="5,5,5,5" Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas, AncestorLevel=1}, Path=Height}" Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas, AncestorLevel=1}, Path=Width}" />
+                        <!-- </my:DragScrollViewer.ScrollContent>
+                    </my:DragScrollViewer>
+                    <my:DragScrollViewer x:Name="scrollViewerDockPanel3" VerticalAlignment="Stretch" Visibility="Collapsed" Grid.Row="1">
+                        <my:DragScrollViewer.ScrollContent> -->
+                            <DockPanel Name="dockPanel3" Margin="5,5,5,5" Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas, AncestorLevel=1}, Path=Height}" Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas, AncestorLevel=1}, Path=Width}" />
+                        <!-- </my:DragScrollViewer.ScrollContent>
+                    </my:DragScrollViewer>
+                    <my:DragScrollViewer x:Name="scrollViewerDockPanel4" VerticalAlignment="Stretch" Visibility="Collapsed" Grid.Row="1">
+                        <my:DragScrollViewer.ScrollContent> -->
+                            <DockPanel Name="dockPanel4" Margin="5,5,5,5" Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas, AncestorLevel=1}, Path=Height}" Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas, AncestorLevel=1}, Path=Width}" />
+                        <!-- </my:DragScrollViewer.ScrollContent>
+                    </my:DragScrollViewer>
+                    <my:DragScrollViewer x:Name="scrollViewerDockPanel5" VerticalAlignment="Stretch" Visibility="Collapsed" Grid.Row="1">
+                        <my:DragScrollViewer.ScrollContent> -->
+                            <DockPanel Name="dockPanel5" Margin="5,5,5,5" Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas, AncestorLevel=1}, Path=Height}" Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas, AncestorLevel=1}, Path=Width}" />
+                        <!-- </my:DragScrollViewer.ScrollContent>
+                    </my:DragScrollViewer> -->
+                </Grid>
+            </Border>
+        </Grid>
+    </DockPanel>
+</UserControl>

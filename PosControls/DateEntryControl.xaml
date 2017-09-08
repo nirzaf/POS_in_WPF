@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="PosControls.DateEntryControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="420" d:DesignWidth="420" x:Name="ThisControl">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <my:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="345*" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <my:DateEntryDateControl x:Name="dateControl" />
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2">
+                <my:TextBlockButton Margin="5,5,5,5" Width="70" Height="64" x:Name="buttonSelect" Text="Select   Date" Click="buttonSelect_Click" />
+                <my:TextBlockButton Margin="5,5,5,5" Width="70" Height="64" x:Name="buttonCancel" Text="Cancel" Click="buttonCancel_Click" />
+            </StackPanel>
+        </Grid>
+
+    </DockPanel>
+</UserControl>

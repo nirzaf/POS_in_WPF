@@ -1,0 +1,6 @@
+K:\Viipe.com\TemPOS\TaskManagerAccessService\obj\x86\Release\TaskManagerAccessService.ProjectInstaller.resources
+K:\Viipe.com\TemPOS\TaskManagerAccessService\obj\x86\Release\TaskManagerAccessService.csproj.GenerateResource.Cache
+K:\Viipe.com\TemPOS\TaskManagerAccessService\bin\TaskManagerAccessService.exe
+K:\Viipe.com\TemPOS\TaskManagerAccessService\bin\TaskManagerAccessService.pdb
+K:\Viipe.com\TemPOS\TaskManagerAccessService\obj\x86\Release\TaskManagerAccessService.exe
+K:\Viipe.com\TemPOS\TaskManagerAccessService\obj\x86\Release\TaskManagerAccessService.pdb

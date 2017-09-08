@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="PosControls.CustomTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:my="clr-namespace:PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="100">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="keyboardControlTemplate">
+            <Border Initialized="KeyboardBorder_Initialized">
+                <my:KeyboardEntryControl Margin="0,0,5,10" CompactMode="True"/>
+            </Border>
+        </ControlTemplate>
+        <ControlTemplate x:Key="numberPadControlTemplate">
+            <Border Initialized="NumberPadBorder_Initialized">
+                <my:NumberEntryControl Margin="0,0,5,10" CompactMode="True"/>
+            </Border>
+        </ControlTemplate>
+    </UserControl.Resources>
+
+    <DockPanel Name="mainPane" LastChildFill="True">
+        <DockPanel.Width>
+            <Binding ElementName="userControl" Path="ActualWidth" />
+        </DockPanel.Width>
+        <DockPanel.Height>
+            <Binding ElementName="userControl" Path="ActualHeight" />
+        </DockPanel.Height>
+        <my:ConfigurationManager x:Name="Configuration" />
+        <Border Name="borderControl" SizeChanged="borderControl_SizeChanged" PreviewMouseDown="borderControl_PreviewMouseDown" ClipToBounds="True">
+            <Border.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Border.Background>
+            <Grid>
+                <TextBlock Name="textBlock" VerticalAlignment="Center" Margin="5,5,5,5" />
+                <StackPanel Name="phoneNumberStackPanel" VerticalAlignment="Center" Orientation="Horizontal" Margin="5" Visibility="Collapsed">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="areaCodeText1" />
+                        <TextBlock Name="areaCodeText2" />
+                        <TextBlock Name="areaCodeText3" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="phoneLine1" Text="-" Visibility="Collapsed" />
+                        <TextBlock Name="phoneText1" />
+                        <TextBlock Name="phoneText2" />
+                        <TextBlock Name="phoneText3" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Name="phoneLine2" Text="-" Visibility="Collapsed" />
+                        <TextBlock Name="phoneText4" />
+                        <TextBlock Name="phoneText5" />
+                        <TextBlock Name="phoneText6" />
+                        <TextBlock Name="phoneText7" />
+                    </StackPanel>
+                </StackPanel>
+                <Canvas Margin="0,5,0,5" ClipToBounds="True" Background="Transparent" Name="caretCanvas">
+                    <Line Name="caretLine" StrokeThickness="1" X1="0" X2="0" Y1="0" Y2="180" Visibility="Hidden">
+                        <Line.Stroke>
+                            <Binding ElementName="Configuration" Path="BindableCaretBrush" />
+                        </Line.Stroke>
+                    </Line>
+                </Canvas>
+            </Grid>
+        </Border>
+    </DockPanel>
+</UserControl>

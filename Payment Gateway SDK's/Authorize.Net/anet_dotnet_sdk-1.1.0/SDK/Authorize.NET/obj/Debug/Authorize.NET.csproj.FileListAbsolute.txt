@@ -1,0 +1,15 @@
+C:\@Projects\LabZero\Authorize.NET\Authorize.NET\bin\Debug\Authorize.NET.dll
+C:\@Projects\LabZero\Authorize.NET\Authorize.NET\bin\Debug\Authorize.NET.pdb
+C:\@Projects\LabZero\Authorize.NET\Authorize.NET\obj\Debug\ResolveAssemblyReference.cache
+C:\@Projects\LabZero\Authorize.NET\Authorize.NET\obj\Debug\Authorize.NET.dll
+C:\@Projects\LabZero\Authorize.NET\Authorize.NET\obj\Debug\Authorize.NET.pdb
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\bin\Debug\Authorize.NET.dll
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\bin\Debug\Authorize.NET.pdb
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\obj\Debug\ResolveAssemblyReference.cache
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\obj\Debug\Authorize.NET.dll
+C:\@clients\LabZero\Authorize.NET\Authorize.NET\obj\Debug\Authorize.NET.pdb
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\Authorize.NET\Authorize.NET\bin\Debug\Authorize.NET.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\Authorize.NET\Authorize.NET\bin\Debug\Authorize.NET.pdb
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\Authorize.NET\Authorize.NET\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\Authorize.NET\Authorize.NET\obj\Debug\Authorize.NET.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\Authorize.NET\Authorize.NET\obj\Debug\Authorize.NET.pdb

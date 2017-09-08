@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="TemPOS.ItemMaintenanceViewContextMenuControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="175" d:DesignWidth="230">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Border CornerRadius="10">
+            <Border.Background>
+                <Binding ElementName="Configuration" Path="BindableApplicationBackgroundBrush" />
+            </Border.Background>
+            <StackPanel Margin="0,5,0,10" Orientation="Vertical" HorizontalAlignment="Left" Background="Transparent">
+                <ctrl:PushRadioButton x:Name="buttonAllCategories" Margin="5,5,5,5" Width="220" Height="35" SelectionGained="buttonAllCategories_SelectionGained" Text="{x:Static t:Strings.ItemSetupAllCategories}" />
+                <ctrl:PushRadioButton x:Name="buttonAllItemsInCategory" Margin="5,0,5,5" Width="220" Height="35" SelectionGained="buttonAllItemsInCategory_SelectionGained" Text="{x:Static t:Strings.ItemSetupAllItemsInCategory}" />
+                <ctrl:PushRadioButton x:Name="buttonAllItems" Margin="5,0,5,5" Width="220" Height="35" SelectionGained="buttonAllItems_SelectionGained" Text="{x:Static t:Strings.ItemSetupAllItems}" />
+                <ctrl:PushRadioButton x:Name="buttonAllItemOptionsSets" Margin="5,0,5,5" Width="220" Height="35" SelectionGained="buttonAllItemOptionsSets_SelectionGained" Text="{x:Static t:Strings.ItemSetupAllItemOptionSets}" />
+                <ctrl:PushRadioButton x:Name="buttonAllIngredients" Margin="5,0,5,5" Width="220" Height="35" SelectionGained="buttonAllIngredients_SelectionGained" Text="{x:Static t:Strings.ItemSetupAllIngredients}" />
+            </StackPanel>
+        </Border>
+    </DockPanel>
+</UserControl>

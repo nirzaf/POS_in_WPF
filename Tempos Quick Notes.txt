@@ -1,0 +1,478 @@
+* Find out what await and async are
+* Shark Tank TV Show, for investing
+
+EMAIL US AT: SharkTankCasting@yahoo.com 
+ Please include your name, age, contact info, a recent photo, and a brief, NON-CONFIDENTIAL description of your idea. Good luck.	
+
+------------------------------------------------------------------------------
+Restart Notes
+------------------------------------------------------------------------------
+* Task Manager Access Service might (will probably) fail on Windows 8
+* Test out Kiosk mode in Windows 8
+* Get SVN server up and running
+* Get ClickOnce server up and running (tempos.myftp.org) (No-Ip service)
+* Force waste on void (General Setting), should not be default enabled
+* Fire Instructions to Recipes
+* Selected Ticket Details Looks like shit...
+	- Don't spead out so much, add more information about the ticket
+	- Show items fire states
+* Use seating
+	- You shouldn't need to enable this option to enable different ticket types.
+	- This option should only be used to enable seating for Dine-In orders.
+	- Will need to add an option as to what ticket types should be enabled.
+* Should have an initial setup screen that is displayed on first startup.
+* Should have an option to purge indvidual table-groups (Item*, Ticket*, etc...)
+* Default ticket filter isn't working (doesn't set/get in general settings)
+* Block task manager access radio buttons (general settings), "works" poorly
+* Add option to control the screen saver settings for Windows.
+
+
+
+
+
+
+Original Notes...
+-------------------------------------------------------------------------------
+DEMO RELEASE WORK
+-------------------------------------------------------------------------------
+* For Publish After Next
+	* Not every country will have denominations in a 0.01 format. Canada has eliminated the penny, others might not even have
+	  "change" or decimal values.
+	* Create a control that is appended to the ReceiptTapeControl that has Subtotal, each tax, discounts, coupons, total.
+	* Add support for Item.ButtonImage 
+	* I think Task Manager Access service is uninstalling on every reboot/login
+	* Write up a unit test for finding undefined words in other languages
+	* Update Ticket Commands (non-in-order) when languages change
+	* TemposLanguageProcessor	
+		* Needs to make sure a variable name isn't already being used before adding it to the strings files.
+			* Also need to check that the strings match, "Cancel: " and "Cancel" would have the same variable name.
+		* Finish this tool... In the end it needs to also do the translations
+		* when translating need to pass "\t" through unaltered
+		* All non-UI string literals, need to be moved to the settings file. To eliminate all quoted literals
+		  in code behind.
+		* Need to eliminate newlines in variable names
+		* WPF Controls and Elements (static reference or bindable)
+			* Fix: Doesn't skip content/text that is already a binding
+		
+	* Test threaded starts for install and starting the Task Manager Access service
+		* Test Enable/Disable of Task Manager Access service
+	* GroupBox bottom borders are missing (on mom's computer)
+	
+	* Exportable Reports
+	
+	* See if the Task Manager Access services works on XP
+	* Fix that the application doesn't remember a user's ticket filter settings
+		* Add code to support the default ticket filter personal setting
+		* Add Strings code for default ticket filter personal setting
+	* Finish implement GroupBox's where applicable (only some dialogs should be left)
+	* Add settings for enable/disable and control of Task Manager Access service
+	* Set publisher identity properly for ClickOnce deployment
+	* Finish implement multiple language support
+		* Strings that need reupdating because of adding group boxes
+			* OrderEntryReceiptTape
+			* OrderEntryTicketDetailsControl
+			* OrderEntryTicketSelectionControl
+		* Need to use binding syntax for any control that exists in MainWindow or children of MainWindow
+			<t:Strings x:Key="strings" /> (In resources)
+			Text="{Binding Source={StaticResource strings}, Path=OrderEntryCommandConsole}"	
+	* Fix: Employee's Language isn't being set if opening a suspended ticket at login.
+	* Implement "Par Quantity" for Ingredients... The minimum quantity of an ingredient to keep in stock.	
+	* When deleting items, etc..., if the item has no ticket items referencing it, really delete it,
+	  don't just discontinue it.
+	* Verify support for two register drawers per client
+
+* Coupons / Discounts
+	* Need to make sure stacking coupons and discounts are done in either the way specified by the client
+	  or in the least loss method...
+			* For example... $10 with two 25% discounts applied...
+				Do: $10 (- 25%) -> $7.50 (-25 %) -> 5.63
+			    Rather than:  $10 (- 50%, sum of percentages) -> $5.00
+	* Need to make sure coupons and discounts only work on ticket items that do not have
+	  a parent id set.
+	* The TicketCouponControl and TicketDiscountControl controls need more testing
+		* I think there are certain coupon options that you wouldn't want to use at the same time;
+		  results would not be as expected.	  
+* Show tooltips when a mouse click happens on a label
+	* This is more appropate for a touch screen tooltip
+	* Tooltip's need to have a "disappear time".
+* Make the "Exit" button a triangle shaped button
+* With the longer startup times, esp when the database is being installed, should add
+  a line of text to the startup window that tells the users what tempos is doing.
+* Add support for other nation's weather (England, France, Germany, Spain, Portuagal, Netherlands.  
+* "Learn a Langauge" feature... If you know one of the supported languages, and want to add
+  support for some other language, you can create your own language (basing it on a known
+  language) and run in the application in "label edit mode". Only one custom language should
+  be supported (Add Languages.Local). Just add a serializable Dictionary<> call Strings.Local.
+* Come up with an ideal scenerio for: Paying for a future time order at time of order.
+	* Cashout allows this, but is the order handled properly by the print destinations?
+* Updating the scrollbar location of a DrawScrollViewer when using the mouse scroll-wheel works
+  before trying to do a drag scroll and fails after.
+		
+* Demo Release Version
+	* Kiosk Mode Fixed
+	* Add option to logout after placing an order, everytime SessionManager.ActiveTicket becomes null.
+	* Current culture setting of language in StringsCore is disabled, reenable when all strings
+	  translated. Reenable "Personall Settings" button too.
+	* Note as a restriction (to users), the LocalSetting's config file is not encrypted.
+	* Touch screen clicks, currently only work with monitors that generate mouse clicks.
+	  Support for true touch screen events will be supported in future versions.
+
+Release Notes
+-------------------------------------------------------------------------------
+* Need to setup version control of the Task Manager Service (support for updating) (Done?)
+* Added the Task Manager Access control service
+* The assembly loaded by the MS SQL now targets .NET4, as a result MS SQL 2008 will no longer be supported,
+  only MS SQL 2012 is currently supported.	  
+
+Very Important Items
+-------------------------------------------------------------------------------
+* Add support for plug-ins
+* Account based ordering and billing
+	* For deliveries, can restrict the address to which orders can be delivered
+* Add support for delivery charges
+	* Support for extended areas, locations that are farther away and have additional delivery charges
+* Need to prevent printing of future time orders, when no changes where made, this
+  might already be the case, but "Place Order" button is used when reopen future time orders, this
+  is because the ticketitems times
+* Using caller ID information from the phone to start orders on a POS
+* As soon as your delivery driver is dispatched, you get sent a text message.
+* Item Groups
+	* Need support for printing item groups
+* Easy viewing of ticket times by all employees
+* Add field for ItemPreparationInstructions to be usable on bump-screen systems.
+* Should NOT be able to void, cancel, or uncancel tickets that are NOT in the current day of operation
+ (or previous day of operation, if there is no start of day).
+* Logging
+	* Add logging of changes to item option adjustments
+		* Use ItemOptionAdjustment for both ItemOption and ItemOptionSet table adjustments
+* The existance of the unencrypted demo file, can comprise release build security
+  should the information inside it be the same SQL login information contained. So
+  wipe out this file when the full versions start-up.
+* The way old ticket item options are just cached in memory doesn't help in a power-loss situation
+  for canceling changes.
+* Need item option support for "substitutions"? Or is it already do-able?
+* Maybe I don't need ConfigurationManager in every user control,
+  bind to statics with <Setter Property="Foreground" 
+              Value="{DynamicResource 
+                  {x:Static SystemColors.ControlTextBrushKey}}"/>
+* Turning item selection off when item is out of stock (optional feature)
+	* Use the new Item.HaveIngredientsToMake() method, check before and after adding or increasing
+	  the quantity of an Item. Set Item.IsOutOfStock if this methods returns false.
+	* Managers can out-of-stock (or "in-stock") an item manually regardless of what the inventory says
+* Manager Alerts
+	* When product running low (Need an Item/IngredientLowAmountAlertThreshold fields)
+	* When an item is out-of-stock (and why... what Ingredients)
+	* When a large order is entered (exceeds some cash threshold)
+	* The existance of out-of-stock Items and Ingredients after a start-of-day and end-of-day.
+	* Any printers out of paper
+	* Any employee's late for a shift
+* Automatic firing to make items at appropate times
+	* Used as a guide for cooking times
+	* Fires certain items based on the longest-prepare time of the ticket (being considered
+	  the total cook time) and item firing when the cook time would result in all items being
+	  completed at the same time. Works with Fireable and Non-Fired items separately.
+	* Items need a cooking time field (maybe already in there)
+	* Items need an ItemType = { Immeidate/Drink, App, Entree, Desert }
+* End-of-receipt tape, reprint of tickets
+* UI Improvements
+	* Add a charting tool like DataVisualization
+	* Eliminate PushCheckBox and PushRadioButton
+* Picture Gallery
+	* Create a new Table [ItemImage], with these fields { ItemId, ItemOptionSets..., ItemImageData }
+	* Picture in a button are more of a hinderence to fast order entry, they can obscure a button's text
+	* But instead provide a "Gallery Lookup" feature when in order-entry, this feature can be used to
+	  display a picture of the item on a server's tablet. 
+* Finish graphing controls
+	* LineGraph
+	* BarGraph
+	* PieGraph
+* Freeze Freezables to eliminate change notification
+* Incoming calls prompting and answering threw the POS (using caller ID for lookup)
+* Product Suggestion Prompting to Employee's
+* Biometic Authentication
+* Should have a "Support Ticket" feature, where I can be messaged with a question and give a responce
+* When printing out a void, don't print order id, it's irrelavent (future note, why?)
+* Online payment options are becoming more important at this stage
+* Add VisualBrush support for playing videos
+* Using FrameworkPropertyMetadata on DependencyProperty's, may actually get rid of the need for updating the bindings.
+* Pre-Order Question and Answer based surfees
+* General Setup (Options / Features)
+	* UseOnScreenTextEntry (If false, using a keyboard)
+* Need a database migration feature (Builds and maintains a database from the model classes)
+	* Classes contain a static string(s) that contains the source(s) for any associated
+	  stored procedures.
+	* On build, warnings like... "You have changed a database model class. The following SQL statements
+	  will be executed the next time the application is started, to modify the database for compatibility."
+	* Need to "link" field associations then (wtf is that called?)
+* Register Drawer Improvements
+	* Handing of multiple register drawers per workstation (same computer, but
+	  two different employee's can each have their own drawer, sharing the same application/computer)
+	* Restriction to prevent any single employee from opening more than one register at a time.
+	* Track when a register drawer is manually opened
+	* Managers need some way (besides asking the employee) to recover a drawer that is left floating
+* Pizza Item Order Entry
+* Driver dispatching and bankrolling
+	* UI needs to add field to edit an Item's PrepareTime (the time it should take to prepare item)
+	* Add "Driver Cashout" to the Register Menu
+	* Add "Driver Bankrolling" to the Register Menu
+	* Move dispatch driver to the ticket selection control, pressing the button
+		* Filters for only deliveries
+		* Place the ticket selection control in to multiple selection mode
+		* Changes the ticket details area to driver dispathing (driver selection) control
+	* TicketSelectionControl listbox items need to filter which tickets are dispatched.
+	* Remind delivery drivers when clocking-out, about repaying remaining bankroll
+	* Make sure DeliveryDriver.GetAllActive() is ordering drivers properly for dispatching
+	* Add customer maintenance (setup)
+	* Add option to set a minimum total for deliveries tickets
+	* Print driver's / customer's copy of tickets on dispatch, since kitchen copies wont have customer
+	  information on it... Print the dispatched driver's name on the ticket.
+		* Add feature to optionally enable printing customer information on kitchen copies
+* Virtual Printer Viewers - Keeps an image of receipt, so any receipt tape can be viewed from any terminal.
+	* Also use for the demo version in addition to a virtual cash drawer
+* Test updating on the release version (on the other desktop)
+* LocalSetting.Values["UpdateServer"] and LocalSetting.Values["UpdateServerPort"] need to be changable
+  on the system settings dialog at startup. And need default values set in the LocalSetting's static constructor.
+  This can also be useful if I'm doing on-site code-updates, I can run a local update server on their LAN
+* Need to do "Power-Loss Testing"
+	* Exiting while in order entry
+		* Locks need to be taken care of in these situations too. (Future, currently Locks are disabled)
+* Add a buffet request ticket type
+	* Add field to Ticket model/table TicketRequestingTicketId INT NULLABLE
+		* Set to the ticket id that requested the buffet-request ticket
+		* Is set to null to normal tickets
+	* Only a single buffet request ticket is requested 
+	* Add a "Buffet Request" button to the ticket details control.
+	* Item table needs an AllowsBuffetRequests field
+	* Specify times and days of the week, that the button is available
+	* Creates a ticket with items that total $0 and that are closed as soon as they are placed.
+	* Ability to cancel buffet requests
+
+* CustomTextBox
+	* Verify text entry with the TextMaskCharacter
+		* Clear masked fields when context-menu keyboard is displayed?
+	* doesn't have multiline support (needed for ticket comments)
+		* Caret needs to be aware of this
+		* For some reason when text get really long, keyboard frame size
+		  increases, if nessacary set MaxWidth
+		* KeyboardControl - Add "Home", "End", "Up" "Down", "PgUp", "PgDown"
+	* Since you can type with the keyboard, need to support "text selection". Have it
+	  mirror the textbox's selected text.
+* Ticket selection control, ticket items that have a ticket filter that is not My-Tickets,
+  need to have the name of the server in the listbox's FormattedListBoxItem.
+
+* Update Business plan
+	* for my company model (partners and an established local POS company)
+	* Breakdown existing POS software's features and prices
+* Backup web site text
+	
+* Auto-Update exists in the UI but there is no code using it.
+* It appears the firewall dialog that allows the broadcast server will only display on the default desktop.
+* DeviceManager / Hardware Setup
+	* Clean-up the hardware setup control
+	* Unique-tag for POS hardware... Need to identify a better tag than Description, two of the same
+	  devices would have the same Descriptions.
+	* Options / Features
+		* Use BumpBars rather than printers (UsePaperlessPrintDestinations)
+		* Printer receipt editing (Using PrinterReceiptFormats.xml?)			
+		* Optionally print the entire order or just new/fired items to the Kitchen printers
+			* When Firing (what is the status of adding the firing ability?)
+			* When Modifing Order
+
+* When there is only one category, update the item selection control so that can be used to display
+  more items and skip category selection.
+* Option to modify the SQL server process's priority (both in registry and to the current process)
+* Assistant support for the setup portion (first run after install)?
+* Support for price-matching refunds
+* Support for price history tracking
+* Support for Gift Cards (selling and use of)
+* Support for Customer Loyality Cards (point accumulation and bonus, including coupons and discounts)
+	- Print rewards total on ticket
+	- Scan drivers licenses to quickly capture customer's information
+* Reimplementing locks
+	* Preventing Simultaneous Logins
+		* Test by setting up mom's laptop with the new software (using the database on my computer)
+	* For party tickets, lock the partyid, not ticketid... Or at least check for a party locks
+	  before allowing a ticket to be opened.
+* Retail Sales Items
+	* Support for bar-code scanner item entry support
+	* Additonal item fields: UPC, Size, Vendor, Model #, Serial #
+	* Finding the original price... If no entries exist in the ItemPricingChangeLog, then the current price
+	  is the original price. Otherwise the first entry in ItemPricingChangeLog (for a specific item), is
+	  it's original price.
+	* Support for exchanges
+		- Old items, are a different color
+		- An old item is selected, and employee is first asked, Exchange for the same item?",
+		  if no, employee is prompted to select the item they want to replace it with.
+* Client-to-Client Broadcast Messaging Protocol
+	* MessageSocket class
+	* Time change events
+	* SeatingManager's NotifySeatingChanged() and NotifyRoomsChanged() are ideal canidates for this
+		(and remove HasUpToDateSeating and HasUpToDateRooms).
+
+* Support for CBT's and for hiring people from the web site.
+	
+* User Interface
+	* I should be able to place "default" properties and bindings into the PosResourceDictionary.
+		* Then each user control would just load PosResourceDictionary
+		* This is one of the last places to eliminate code duplication.
+	* PosDialogWindow.PromptPhoneNumber is not implemented (popup version works)
+
+* Reports
+	* Sales Margin
+		* Revenue verses cost of food, cost of labor, cost of utilities, marketing, rent
+	* Make-times by category, Average make-times per item
+	* Should also be able to do end-of-year manually (from console), for resturants
+	  that are closing down.
+	* End-of-Year should prevent Start-Of-Days if done before the year is actually over with
+	* Reports, Cost of Labor (Breakdown by "Food Production" and "Non-Food Production" ?
+	* Report of differences between scheduling verse actual clock-in's
+	
+* Bump Support
+	- The entire bump system could be run on a single computer with multiple monitor cards
+	- The application open's a MainWindow on each of the displays, so would be nice to CreateDesktop()
+	  and display that desktop on a different monitor
+	- Replace the need for any physical timers (like used at pizza hut), besides automatic timing
+	  features, also add the ability for bump screens to set manual timers on-the-fly.
+
+* General
+	* Window 8 idea to borrow... (In Window's) The boxes that encase the close, maximize,
+	  and minimize buttons have been removed, leaving just the signs.
+	* NOTE: Looks like Windows 8 is coming out with virtual keyboard support
+	* Option to center PosDialogWindow's title text
+	* Make use of the PosPrinterCaps class
+	* Adding an ItemOption to an existing item, didn't print to the kitchen
+	* See if there is a generic method for SqlDataReader instead of ToString.Conveting all them!!!
+	  Could speed alot up!!!
+	* Make tags are wrong for future orders...
+		* Always says [Make] when it should say [Changed]
+		* Fix long load times with TicketCashoutControl (with Coupons and Discounts), excessive
+		  ticket hits probably.
+	* Finish DeviceManager control (for non-printer devices)
+  
+
+Main Items
+-------------------------------------------------------------------------------
+* POS Screen saver?
+* Sliding transitions (A horizontal or vetical transistion to a different user/layout control)
+	* The Login screen "slides" in the main screen (Left to Right, for X)
+	* Order entry slides in from the top (X to Up, for Y)
+	* Coupon (Y to Left), Discounts (Y to Right), Party (Y to Up)
+	* Ticket Cash-Out (X to right) or (Y to Down-Right)
+	* Configuration (X to Down)
+	* Actions based on frame position
+		* sliding at X, a right-stroke would be sliding to the login "frame" and logout
+		* sliding at X, an up-stoke would open a select ticket (or create a new ticket, if no ticket is selected)
+* Don't Popup the prompt for login password, instead make-appear a login control that will already exists in the
+  same area as the program logo. (i.e., Enter is still used, but not a slide to the right-side pane will "login")
+* GradientEditorControl
+	* Someday implement transformations
+	* Add these buttons below the parameters for a LinearGradientBrush...
+		* "Rotate Left", "Rotate Right", "Flip Horizonal", "Flip Vertical"		
+		* These will change the orientation of the linear gradient by altering it's Start and End points
+		* With buttons like these it would be nice to have "repeatitive holding-down events" event for holding
+		  down a PushButton (like a keyboard would have).
+
+* Tempos Client Administration
+	* Update service transfer log (who and when)	  
+* Adding of an EXISTING non-party ticket to a party
+* Come-Back Coupons (on receipts)
+* Initializing the Ticket filter, previous setting, per-user preference is not working
+* Coupons need occasion-based (room-type based) applicability
+* Add ticket filter for filting each occation (or rather each seating's room ticket-type)
+* Ticket filter (mostly for managers)... Filter any employee's tickets, not just
+  "My Tickets" (one for open, and one for closed). Impleament this as a submenu, or
+  a "contextmenu" for the "contextmenuitem" or reinitialize the TicketFilterControl
+  to contain the names of all the employee's that have open tickets.
+* Employee Security Permissions
+* Deliveries (driver bankrolling and dispatching)
+* Automatic Gratuities
+	* Option to have certain items excluded from automatic gratuities
+* QR Code support could be used to encode all the ticket items on an order and that receipt
+  can be used with a mobil app to read the QR code and reorder the ticket! Previous tickets
+  can also be given to servers.
+	* Can be used for customer tracking
+	* Regular customer can be setup to always receive a specific percent discount.
+	  Even if customer doesn't want a repeat order, they can use their previous
+	  ticket's QR code like a "discount card".
+* Register reports break down payments by type (cash, check, credit)
+* Report: Sales by payment method
+* Report: Collected Sales Tax
+* Report: Tips by server (include a field for percentage of sales)
+* Report: With sales reports (item and category / total and employee), don't just
+	  count the number of item, but also add a column for a total amount of each
+	  row of items/categories. Beware any coupons and discounts.
+* Report: Coupons and Discounts, be specific on which coupons and discounts,
+	  (total and by employee)
+* http://en.wikipedia.org/wiki/SQL_Server_Reporting_Services
+* Need to update permissions, there is no "System Maintenance" and "Employee Maintenance"
+  button anymore. Also need to verify permissions are everywhere needed.
+* The "Touch" events, should probably be using these everywhere I am using mouse events
+* Add employee setting "LastUsedTicketFilter", set on logout or exit, init on login
+* Prevent payouts, refunds, and returns when these is not enough money in the
+  drawer to cover it???
+* Register Summary Report
+	* Fields: Register Id, Date, Employee Id, Gross Sales, Taxes Collected,
+	  Coupons, Discounts
+* Add a reprint register report feature, use the listbox view of the reportviewer.
+* Reporting for employee payroll tax deductions
+* Make sure cashed out future orders print properly
+* TicketItemOptions are orphaning (after voiding all tickets, some were still there),
+  This might just be a result of exception handling
+* Stop early gets for TicketItems, that will be just discarded later.
+* Finish port all SQL Procs to CLR/C# functions, create a class for each table
+  (unsure about this, CLR code seems to execute noticably slower)
+* Show Start or Prepare times in Ticket on the receipt tape (instead of create time)
+  or ClosedTime for closed-out orders
+* Installation and Updates
+	* Add background version checks
+		* When new updates is available, prompt those with the security permission 
+		  (on login) add prompts to proceed with the update.
+	
+
+* Setup database "hit counts" for all tables, to determine if network traffic can
+  be anymore reduced to the minimum.
+
+After that
+-------------------------------------------------------------------------------
+* Add a "Discontinue/Hide" for rentals (when supported)...
+* MeasureText use the properties of the textBox control to determine font properties,
+  for phone number's, different textblocks are used (keep this in mind).
+* Write a paper on the SerialObjectArchive class, it was good enoug to be used
+  in two main projects, and would make I nice and brief paper.
+* Need a manager function for voiding a range of tickets, and to purge old
+  tickets from the database. Prevent purges for the current year. Any an
+  automatic purging of Coupons, Deliveries, Discounts, etc... That are more
+  than X DateTime old.
+* Add "Bar 1" and "Bar 2" print destinations
+* Give managers a "Stop Order" ability to set PreparedTime to null,
+  and set a StartTime (this has print implications... Use a "[Stop]" tag)
+  also need to update TicketItem and unset their make times
+	* The stop is sent to print destinations before setting the future time
+* Command Console command for Dropping and Recreate all Ticket* databases.
+  Add commands for other table collection's drop-and-recreate.
+* Disabling of on-screen keyboard for using a real keyboard
+* Wrapping text of special instructions when printing
+* Add a command console commands to launch SQL Server Management Studio
+
+Future Items
+-------------------------------------------------------------------------------
+* ProcessReturnsCommand()
+	* Obviously can only return, non-canceled items (ok for now, canceled
+	  ticket items are not shown on the receipt tape control).
+* DropAndCreateTable() and CreateTable() functions for all the models, and TableExists
+  as a static property. Then use static constructors to do a CreateTable() if
+  !TableExists. Skip for infrequent-changing tables.* Payment Processing, Inc.
+* A nice configuration control
+* Make sure when adding customers, with delivery, that an Employee's Person
+  table entry; isn't the say at the Person entry used for employee records.
+  The Person table shouldn't used direcly in it's plain form. It's ment to
+  supplement Employee, Customer, and vendor contact information.
+
+Notes
+-------------------------------------------------------------------------------
+
+TemPOS Restaurant Touchscreen Point-of-Sale Software 
+
+TemPOS Restaurant Touchscreen Point-of-Sale Software. http://www.tem-pos.com
+
+Note: The main window is scaled to fit a 4:3 aspect ratio screen, on a wide screen it would take up the entire screen. The popup windows are not scaled.

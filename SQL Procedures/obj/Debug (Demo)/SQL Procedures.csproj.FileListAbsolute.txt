@@ -1,0 +1,5 @@
+D:\Viipe.com\PointOfSale\SQL Procedures\bin\Debug (Demo)\TemposProcs.dll
+D:\Viipe.com\PointOfSale\SQL Procedures\bin\Debug (Demo)\TemposProcs.pdb
+D:\Viipe.com\PointOfSale\SQL Procedures\obj\Debug (Demo)\ResolveAssemblyReference.cache
+D:\Viipe.com\PointOfSale\SQL Procedures\obj\Debug (Demo)\TemposProcs.dll
+D:\Viipe.com\PointOfSale\SQL Procedures\obj\Debug (Demo)\TemposProcs.pdb

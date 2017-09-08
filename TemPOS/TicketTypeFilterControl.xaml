@@ -1,0 +1,18 @@
+<UserControl x:Class="TemPOS.TicketTypeFilterControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:my="clr-namespace:TemPOS" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" d:DesignHeight="257" d:DesignWidth="230" xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Border CornerRadius="10">
+      <Border.Background>
+        <Binding ElementName="Configuration" Path="BindableApplicationBackgroundBrush" />
+      </Border.Background>
+      <StackPanel Margin="0,5,0,10" Orientation="Vertical" HorizontalAlignment="Left" Background="Transparent">
+        <ctrl:PushRadioButton x:Name="buttonNoneToggle" Margin="5,5,5,5" Width="220" Height="35" Text="{x:Static t:Strings.NoneDisplayAll}" SelectionGained="buttonNoneToggle_SelectionGained" />
+        <ctrl:PushRadioButton x:Name="buttonDineInToggle" Margin="5,0,5,5" Width="220" Height="35" Text="{x:Static t:Strings.DineIn}" SelectionGained="buttonDineInToggle_SelectionGained" />
+        <ctrl:PushRadioButton x:Name="buttonCarryOutToggle" Margin="5,0,5,5" Width="220" Height="35" Text="{x:Static t:Strings.Carryout}" SelectionGained="buttonCarryOutToggle_SelectionGained" />
+        <ctrl:PushRadioButton x:Name="buttonDeliveryToggle" Margin="5,0,5,5" Width="220" Height="35" Text="{x:Static t:Strings.Delivery}" SelectionGained="buttonDeliveryToggle_SelectionGained" />
+        <ctrl:PushRadioButton x:Name="buttonDriveThruToggle" Margin="5,0,5,5" Width="220" Height="35" Text="{x:Static t:Strings.DriveThru}" SelectionGained="buttonDriveThruToggle_SelectionGained" />
+        <ctrl:PushRadioButton x:Name="buttonCateringToggle" Margin="5,0,5,5" Width="220" Height="35" Text="{x:Static t:Strings.Catering}" SelectionGained="buttonCateringToggle_SelectionGained" />
+      </StackPanel>
+    </Border>
+  </DockPanel>
+</UserControl>

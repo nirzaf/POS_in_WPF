@@ -1,0 +1,62 @@
+<UserControl xmlns:my="clr-namespace:TemPOS" x:Class="TemPOS.ItemMaintenanceControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:t="clr-namespace:TemPOS.Types" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="660" d:DesignWidth="950">
+  <UserControl.Resources>
+    <ContextMenu x:Key="viewContextMenu" Placement="Top">
+      <ContextMenu.Template>
+        <ControlTemplate>
+          <my:ItemMaintenanceViewContextMenuControl Width="200" />
+        </ControlTemplate>
+      </ContextMenu.Template>
+    </ContextMenu>
+  </UserControl.Resources>
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="350*" />
+        <ColumnDefinition Width="600*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="560*" />
+        <RowDefinition Height="90" />
+      </Grid.RowDefinitions>
+      <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1">
+        <ctrl:TextBlockButton x:Name="buttonAdd" Margin="5,0,5,0" Width="80" Height="64" Text="{x:Static t:Strings.Add}" Click="buttonAdd_Click" />
+        <ctrl:TextBlockButton x:Name="buttonDelete" Margin="5,0,5,0" Width="80" Height="64" Text="{x:Static t:Strings.Delete}" Click="buttonDelete_Click" />
+        <StackPanel>
+          <ctrl:TextBlockButton x:Name="buttonSearch" Margin="5,0,5,0" Width="80" Height="64" Text="{x:Static t:Strings.ItemSetupFind}" Click="buttonSearch_Click" />
+          <ctrl:TextBlockButton x:Name="buttonFindNext" Margin="5,4,5,0" Width="80" Height="30" Text="{x:Static t:Strings.ItemSetupFindNext}" Visibility="Collapsed" Click="buttonFindNext_Click" />
+        </StackPanel>
+        <ctrl:TextBlockButton x:Name="buttonEdit" Margin="5,0,5,0" Width="80" Height="64" Text="{x:Static t:Strings.ItemSetupEditItemOptions}" Visibility="Collapsed" Click="buttonEdit_Click" />
+        <ctrl:TextBlockButton x:Name="buttonView" Margin="5,0,5,0" Width="80" Height="64" Text="{x:Static t:Strings.ItemSetupView}" Click="buttonView_Click" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1">
+        <ctrl:TextBlockButton x:Name="buttonUpdate" Margin="0,0,5,0" Width="85" Height="64" Text="{x:Static t:Strings.Update}" IsEnabled="False" Click="buttonUpdate_Click" />
+        <ctrl:TextBlockButton x:Name="buttonCancel" Width="85" Height="64" Text="{x:Static t:Strings.CancelChanges}" IsEnabled="False" Click="buttonCancel_Click" />
+      </StackPanel>
+      <GroupBox Name="groupBoxList" Header="{x:Static t:Strings.Items}" FontSize="16" Margin="5,5,5,5">
+        <Grid>
+          <ctrl:DragScrollListBox x:Name="listBoxItems" SelectionChanged="listBoxItems_SelectionChanged" />
+          <ctrl:DragScrollListBox x:Name="listBoxFilteredItems" SelectionChanged="listBoxFilteredItems_SelectionChanged" />
+          <ctrl:DragScrollListBox x:Name="listBoxCategories" SelectionChanged="listBoxCategories_SelectionChanged" />
+          <ctrl:DragScrollListBox x:Name="listBoxItemOption" SelectionChanged="listBoxItemOption_SelectionChanged" />
+          <ctrl:DragScrollListBox x:Name="listBoxIngredient" SelectionChanged="listBoxIngredient_SelectionChanged" />
+        </Grid>
+      </GroupBox>
+      <GroupBox Name="groupBoxItems" Header="{x:Static t:Strings.ItemProperties}" FontSize="16" Grid.Column="1" Margin="5,5,5,5" IsEnabled="False">
+        <my:ItemEditorControl x:Name="itemEditorControl" VerticalAlignment="Stretch" ValueChanged="editorControl_ValueChanged" />
+      </GroupBox>
+      <GroupBox Name="groupBoxItemOptions" Header="{x:Static t:Strings.ItemOptionProperties}" FontSize="16" Grid.Column="1" Margin="5,5,5,5" IsEnabled="False" Visibility="Collapsed">
+        <my:ItemOptionSetEditorControl x:Name="itemOptionSetEditorControl" ValueChanged="itemOptionSetEditorControl_ValueChanged" />
+      </GroupBox>
+      <GroupBox Name="groupBoxCategories" Header="{x:Static t:Strings.CategoryProperties}" FontSize="16" Grid.Column="1" Margin="5,5,5,5" IsEnabled="False" Visibility="Collapsed">
+        <my:CategoryEditorControl x:Name="categoryEditorControl" ValueChanged="categoryEditorControl_ValueChanged" />
+      </GroupBox>
+      <GroupBox Name="groupBoxIngredients" Header="{x:Static t:Strings.IngredientProperties}" FontSize="16" Grid.Column="1" Margin="5,5,5,5" IsEnabled="False" Visibility="Collapsed">
+        <my:IngredientEditorControl x:Name="ingredientEditorControl" ValueChanged="ingredientEditorControl_ValueChanged" />
+      </GroupBox>
+    </Grid>
+  </DockPanel>
+</UserControl>

@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="TemPOS.OrderEntryFunctionsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="335" d:DesignWidth="190">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Border CornerRadius="10">
+            <Border.Background>
+                <Binding ElementName="Configuration" Path="BindableApplicationBackgroundBrush" />
+            </Border.Background>
+            <StackPanel Margin="0,5,0,5" Orientation="Vertical" HorizontalAlignment="Left" Background="Transparent">
+                <Button x:Name="buttonDispatchDriver" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.OrderEntryDispatchDriver}" Click="buttonDispatchDriver_Click" />
+                <Button x:Name="buttonStartOfDay" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.OrderEntryStartOfDay}" Click="buttonStartOfDay_Click" />
+                <Button x:Name="buttonEndOfDay" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.OrderEntryEndOfDay}" Click="buttonEndOfDay_Click" />
+                <Button x:Name="buttonEndOfYear" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.OrderEntryEndOfYear}" Click="buttonEndOfYear_Click" />
+                <Button x:Name="buttonEditTimesheet" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.OrderEntryEditTimeSheet}" Click="buttonEditTimesheet_Click" />
+                <Button x:Name="buttonEditInventory" Margin="5,0,5,0" Width="180" Height="50" Content="{x:Static t:Strings.OrderEntryEditInventory}" Click="buttonEditInventory_Click" />
+            </StackPanel>
+        </Border>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,39 @@
+<UserControl xmlns:my="clr-namespace:TemPOS" x:Class="TemPOS.ItemOptionEditorControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:t="clr-namespace:TemPOS.Types" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="280" d:DesignWidth="630">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="220*" />
+        <ColumnDefinition Width="400*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="40*" />
+        <RowDefinition Height="40*" />
+        <RowDefinition Height="40*" />
+        <RowDefinition Height="40*" />
+        <RowDefinition Height="40*" />
+        <RowDefinition Height="40*" />
+      </Grid.RowDefinitions>
+      <Label Content="{x:Static t:Strings.Description}" FontSize="16" VerticalAlignment="Center" />
+      <Label Content="{x:Static t:Strings.ItemSetupCostForExtra}" FontSize="16" VerticalAlignment="Center" Grid.Row="1" />
+      <Label Content="{x:Static t:Strings.ItemSetupUses}" FontSize="16" VerticalAlignment="Center" Grid.Row="2" />
+      <Label Name="labelSpecifiedUse" Margin="25,0,0,0" Content="{x:Static t:Strings.Ingredient}" FontSize="16" VerticalAlignment="Center" Grid.Row="3" Visibility="Hidden" />
+      <Label Name="labelAmount" Content="{x:Static t:Strings.Amount}" Margin="25,0,0,0" FontSize="16" VerticalAlignment="Center" Grid.Row="4" Visibility="Hidden" />
+      <Label Name="labelMeasurementUnit" Content="{x:Static t:Strings.MeasurementUnit}" Margin="25,0,0,0" FontSize="16" VerticalAlignment="Center" Grid.Row="5" Visibility="Hidden" />
+      <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxName" UseContextMenuEditing="True" PromptType="Keyboard" FontSize="16" Grid.Column="1" KeyboardShiftMode="SoftCapsLock" TextChanged="textBoxName_TextChanged" TouchOpenDelay="0" />
+      <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxExtraCost" UseContextMenuEditing="True" FontSize="16" Grid.Column="1" PromptType="Currency" Grid.Row="1" TextChanged="textBoxExtraCost_TextChanged" TouchOpenDelay="0" />
+      <StackPanel Margin="5,5,5,5" Grid.Column="1" Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center">
+        <ctrl:PushRadioButton x:Name="radioButtonUsesNothing" FontSize="16" Text="{x:Static t:Strings.ItemSetupNothing}" IsSelected="True" SelectionGained="radioButtonUsesNothing_SelectionGained" />
+        <ctrl:PushRadioButton x:Name="radioButtonUsesIngredient" Margin="15,0,0,0" FontSize="16" Text="{x:Static t:Strings.ItemSetupIngredient}" SelectionGained="radioButtonUsesIngredient_SelectionGained" />
+        <ctrl:PushRadioButton x:Name="radioButtonUsesItem" Margin="15,0,0,0" FontSize="16" Text="{x:Static t:Strings.ItemSetupItem}" SelectionGained="radioButtonUsesItem_SelectionGained" />
+      </StackPanel>
+      <ctrl:PushComboBox Margin="5,5,5,5" x:Name="comboBoxItemChoice" HorizontalAlignment="Stretch" FontSize="16" Grid.Column="1" Grid.Row="3" SelectedIndexChanged="comboBoxItemChoice_SelectedIndexChanged" Visibility="Hidden" />
+      <ctrl:PushComboBox Margin="5,5,5,5" x:Name="comboBoxAddsIngredientChoice" HorizontalAlignment="Stretch" FontSize="16" Grid.Column="1" Grid.Row="3" SelectedIndexChanged="comboBoxAddsIngredientChoice_SelectedIndexChanged" Visibility="Hidden" />
+      <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxPortionAmount" UseContextMenuEditing="True" FontSize="16" Grid.Column="1" Grid.Row="4" PromptType="FloatNumeric" TextChanged="textBoxPortionAmount_TextChanged" Visibility="Hidden" />
+      <ctrl:PushComboBox Margin="5,5,5,5" x:Name="comboBoxMeasuringUnits" FontSize="16" Grid.Column="1" Grid.Row="5" SelectedIndexChanged="comboBoxMeasuringUnits_SelectedIndexChanged" Visibility="Hidden" />
+    </Grid>
+  </DockPanel>
+</UserControl>

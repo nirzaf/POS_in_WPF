@@ -1,0 +1,59 @@
+<UserControl x:Class="TemPOS.SeatingDineInControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="350" d:DesignWidth="466" xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel>
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Border>
+      <Grid>
+        <Grid.Background>
+          <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+        </Grid.Background>
+        <StackPanel Grid.Column="1">
+          <Label Name="labelSelectSeating" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Times New Roman" Content="{x:Static t:Strings.SelectSeating}" />
+          <StackPanel Orientation="Horizontal">
+            <StackPanel.Background>
+              <Binding Path="ConfigurationManager.ApplicationBackground" />
+            </StackPanel.Background>
+            <ctrl:TextBlockButton x:Name="Row0_Col0_Button" Margin="10,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row0_Col1_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row0_Col2_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row0_Col3_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row0_Col4_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row0_Col5_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+          </StackPanel>
+          <StackPanel Orientation="Horizontal">
+            <StackPanel.Background>
+              <Binding Path="ConfigurationManager.ApplicationBackground" />
+            </StackPanel.Background>
+            <ctrl:TextBlockButton x:Name="Row1_Col0_Button" Margin="10,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row1_Col1_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row1_Col2_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row1_Col3_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row1_Col4_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row1_Col5_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+          </StackPanel>
+          <StackPanel Orientation="Horizontal">
+            <StackPanel.Background>
+              <Binding Path="ConfigurationManager.ApplicationBackground" />
+            </StackPanel.Background>
+            <ctrl:TextBlockButton x:Name="Row2_Col0_Button" Margin="10,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row2_Col1_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row2_Col2_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row2_Col3_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row2_Col4_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row2_Col5_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+          </StackPanel>
+          <StackPanel Orientation="Horizontal">
+            <StackPanel.Background>
+              <Binding Path="ConfigurationManager.ApplicationBackground" />
+            </StackPanel.Background>
+            <ctrl:TextBlockButton x:Name="Row3_Col0_Button" Margin="10,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row3_Col1_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row3_Col2_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row3_Col3_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row3_Col4_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+            <ctrl:TextBlockButton x:Name="Row3_Col5_Button" Margin="0,10,5,0" Width="70" Height="64" IsCheckable="True" Click="Button_Click" />
+          </StackPanel>
+        </StackPanel>
+      </Grid>
+    </Border>
+  </DockPanel>
+</UserControl>

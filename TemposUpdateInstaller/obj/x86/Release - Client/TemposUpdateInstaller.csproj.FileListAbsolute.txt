@@ -1,0 +1,10 @@
+D:\Viipe.com\PointOfSale\TemposUpdateInstaller\bin\x86\Release - Client\TemposUpdateInstaller.exe
+D:\Viipe.com\PointOfSale\TemposUpdateInstaller\bin\x86\Release - Client\TemposUpdateInstaller.pdb
+D:\Viipe.com\PointOfSale\TemposUpdateInstaller\bin\x86\Release - Client\TemposUpdaterDLL.dll
+D:\Viipe.com\PointOfSale\TemposUpdateInstaller\bin\x86\Release - Client\TemposUpdaterDLL.pdb
+D:\Viipe.com\PointOfSale\TemposUpdateInstaller\obj\x86\Release - Client\ResolveAssemblyReference.cache
+D:\Viipe.com\PointOfSale\TemposUpdateInstaller\obj\x86\Release - Client\TemposUpdateInstaller.Properties.Resources.resources
+D:\Viipe.com\PointOfSale\TemposUpdateInstaller\obj\x86\Release - Client\GenerateResource.read.1.tlog
+D:\Viipe.com\PointOfSale\TemposUpdateInstaller\obj\x86\Release - Client\GenerateResource.write.1.tlog
+D:\Viipe.com\PointOfSale\TemposUpdateInstaller\obj\x86\Release - Client\TemposUpdateInstaller.exe
+D:\Viipe.com\PointOfSale\TemposUpdateInstaller\obj\x86\Release - Client\TemposUpdateInstaller.pdb

@@ -1,0 +1,192 @@
+<UserControl x:Class="TemPOS.GeneralSettingsGeneralPreferencesControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:t="clr-namespace:TemPOS.Types" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="550" d:DesignWidth="845">
+  <DockPanel LastChildFill="True" Name="mainPane" Loaded="mainPane_Loaded">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid Height="550">
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="300*" />
+        <ColumnDefinition Width="300*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="300*" />
+        <RowDefinition Height="300*" />
+      </Grid.RowDefinitions>
+      <StackPanel Grid.RowSpan="2">
+        <GroupBox Name="groupBoxBroadcastServer" Header="{x:Static t:Strings.SettingsClientMessageBroadcastServer}" Margin="5,0,5,10" FontSize="16">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="300*" />
+              <ColumnDefinition Width="300*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="{x:Static t:Strings.Enabled}" Margin="20,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="16" />
+            <Label Content="{x:Static t:Strings.Port}" Margin="20,0,0,0" Grid.Row="2" VerticalAlignment="Center" FontSize="16" />
+            <StackPanel Grid.Row="1" Margin="5,5,5,5" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1">
+              <ctrl:PushRadioButton x:Name="radioButtonIsEnabled" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonIsEnabled_SelectionGained" />
+              <ctrl:PushRadioButton x:Name="radioButtonIsNotEnabled" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonIsNotEnabled_SelectionGained" />
+            </StackPanel>
+            <ctrl:CustomTextBox Margin="5,5,10,5" x:Name="textBoxPort" UseContextMenuEditing="True" PromptType="IntegerNumeric" FontSize="16" Grid.Column="1" TouchOpenDelay="0" Grid.Row="2" CommitEdit="textBoxPort_CommitEdit" />
+            <ctrl:TextBlockButton Margin="5" x:Name="buttonTest" Text="{x:Static t:Strings.SettingsTest}" Height="40" Width="100" Grid.Column="1" Grid.Row="3" Click="buttonTest_Click" />
+          </Grid>
+        </GroupBox>
+        <GroupBox Header="{x:Static t:Strings.SettingsGeneralOptions}" Margin="5,0,5,10" FontSize="16">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="300*" />
+              <ColumnDefinition Width="300*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="{x:Static t:Strings.SettingsUseSeating}" VerticalAlignment="Center" FontSize="16" Grid.Row="5" />
+            <Label Content="{x:Static t:Strings.SettingsForceWasteOnVoid}" VerticalAlignment="Center" FontSize="16" Grid.Row="6" />
+            <Label Content="{x:Static t:Strings.SettingsRestrictKeyboard}" VerticalAlignment="Center" FontSize="16" Grid.Row="7" />
+            <Label Content="{x:Static t:Strings.SettingsLogoutOnPlaceOrder}" VerticalAlignment="Center" FontSize="16" Grid.Row="8" />
+            <Label Content="{x:Static t:Strings.BlockTaskManagerAccess}" VerticalAlignment="Center" FontSize="16" Grid.Row="9" />
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5">
+              <ctrl:PushRadioButton x:Name="radioButtonIsUsingSeating" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonIsUsingSeating_SelectionGained" />
+              <ctrl:PushRadioButton x:Name="radioButtonIsNotUsingSeating" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonIsNotUsingSeating_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" Grid.Row="6">
+              <ctrl:PushRadioButton x:Name="radioButtonIsForceVoidWaste" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonIsForceVoidWaste_SelectionGained" />
+              <ctrl:PushRadioButton x:Name="radioButtonIsNotForceVoidWaste" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonIsNotForceVoidWaste_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" Grid.Row="7">
+              <ctrl:PushRadioButton x:Name="radioButtonIsKeyboardRestricted" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonIsKeyboardRestricted_SelectionGained" />
+              <ctrl:PushRadioButton x:Name="radioButtonIsNotKeyboardRestricted" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonIsNotKeyboardRestricted_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" Grid.Row="8">
+              <ctrl:PushRadioButton x:Name="radioButtonIsLogoutOnPlaceOrder" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonIsLogoutOnPlaceOrder_SelectionGained" />
+              <ctrl:PushRadioButton x:Name="radioButtonIsNotLogoutOnPlaceOrder" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonIsNotLogoutOnPlaceOrder_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" Grid.Row="9">
+              <ctrl:PushRadioButton x:Name="radioButtonIsBlockTaskManager" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonIsBlockTaskManager_SelectionGained" />
+              <ctrl:PushRadioButton x:Name="radioButtonIsNotBlockTaskManager" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonIsNotBlockTaskManager_SelectionGained" />
+            </StackPanel>
+          </Grid>
+        </GroupBox>
+        <GroupBox Header="{x:Static t:Strings.SettingsWeatherConditions}" Margin="5,0,5,10" FontSize="16">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="300*" />
+              <ColumnDefinition Width="300*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="{x:Static t:Strings.Enabled}" Margin="20,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="16" />
+            <Label Name="labelWeatherPostal" Content="{x:Static t:Strings.SettingsPostalCode}" Margin="20,0,0,0" Grid.Row="2" VerticalAlignment="Center" FontSize="16" />
+            <StackPanel Grid.Row="1" Margin="5,5,5,5" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1">
+              <ctrl:PushRadioButton x:Name="radioButtonWeatherIsEnabled" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonWeatherIsEnabled_SelectionGained" />
+              <ctrl:PushRadioButton x:Name="radioButtonWeatherIsNotEnabled" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonWeatherIsNotEnabled_SelectionGained" />
+            </StackPanel>
+            <ctrl:CustomTextBox Margin="5,5,10,5" x:Name="textBoxWeatherZipCode" MaxLength="5" UseContextMenuEditing="True" PromptType="IntegerNumeric" FontSize="16" Grid.Column="1" TouchOpenDelay="0" Grid.Row="2" CommitEdit="textBoxWeatherZipCode_CommitEdit" />
+          </Grid>
+        </GroupBox>
+      </StackPanel>
+      <StackPanel Orientation="Vertical" Grid.Column="1" Grid.RowSpan="2">
+        <GroupBox Header="{x:Static t:Strings.SettingsAutoLogoutOptions}" Margin="5,0,5,10" FontSize="16">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="100*" />
+              <ColumnDefinition Width="95*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="{x:Static t:Strings.Enabled}" VerticalAlignment="Center" FontSize="16" />
+            <Label Name="labelAutoLogoutTimeOut" Content="{x:Static t:Strings.SettingsAutoLogoutTimeout}" VerticalAlignment="Center" FontSize="16" Grid.Row="1" />
+            <Label Name="labelAutoLogoutDisable" Content="{x:Static t:Strings.SettingsAutoLogoutDisable}" VerticalAlignment="Center" FontSize="16" Grid.Row="2" />
+            <Label Name="labelAutoLogoutDisableOrder" Margin="25,0,0,0" Content="{x:Static t:Strings.SettingsAutoLogoutDisableOrderEntry}" VerticalAlignment="Center" FontSize="16" Grid.Row="3" />
+            <Label Name="labelAutoLogoutDisableDialog" Margin="25,0,0,0" Content="{x:Static t:Strings.SettingsAutoLogoutDisableDialogs}" VerticalAlignment="Center" FontSize="16" Grid.Row="4" />
+            <Label Name="labelAutoLogoutDisablePassword" Margin="25,0,0,0" Content="{x:Static t:Strings.SettingsAutoLogoutDisablePasswordChange}" VerticalAlignment="Center" FontSize="16" Grid.Row="5" />
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1">
+              <ctrl:PushRadioButton x:Name="radioButtonYesAutoLogoutEnabled" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonYesAutoLogoutEnabled_SelectionGained" />
+              <ctrl:PushRadioButton x:Name="radioButtonNoAutoLogoutEnabled" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonNoAutoLogoutEnabled_SelectionGained" />
+            </StackPanel>
+            <ctrl:CustomTextBox x:Name="textBoxAutoLogoutTimeout" Grid.Column="1" Grid.Row="1" Margin="5,5,15,5" UseContextMenuEditing="True" PromptType="IntegerNumeric" MaxLength="4" CommitEdit="textBoxAutoLogoutTimeout_CommitEdit" />
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3">
+              <ctrl:PushRadioButton x:Name="radioButtonYesDisableAutoLogoutInOrderEntry" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonYesDisableAutoLogoutInOrderEntry_SelectionGained" />
+              <ctrl:PushRadioButton x:Name="radioButtonNoDisableAutoLogoutInOrderEntry" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonNoDisableAutoLogoutinOrderEntry_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4">
+              <ctrl:PushRadioButton x:Name="radioButtonYesDisableAutoLogoutForDialogWindows" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonYesDisableAutoLogoutForDialogWindows_SelectionGained" />
+              <ctrl:PushRadioButton x:Name="radioButtonNoDisableAutoLogoutForDialogWindows" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonNoDisableAutoLogoutForDialogWindows_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5">
+              <ctrl:PushRadioButton x:Name="radioButtonYesDisableAutoLogoutForPasswordChanges" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonYesDisableAutoLogoutForPasswordChanges_SelectionGained" />
+              <ctrl:PushRadioButton x:Name="radioButtonNoDisableAutoLogoutForPasswordChanges" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonNoDisableAutoLogoutForPasswordChanges_SelectionGained" />
+            </StackPanel>
+          </Grid>
+        </GroupBox>
+        <GroupBox Header="{x:Static t:Strings.SettingsLocalSettings}" Margin="5,0,5,10" FontSize="16">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="300*" />
+              <RowDefinition Height="300*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="100*" />
+              <ColumnDefinition Width="95*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="{x:Static t:Strings.SettingsKioskMode}" VerticalAlignment="Center" FontSize="16" Margin="0,1,0,-1" />
+            <StackPanel Margin="5,5,5,5" Orientation="Horizontal" VerticalAlignment="Center" Grid.Column="1">
+              <ctrl:PushRadioButton x:Name="radioButtonIsUsingKioskMode" FontSize="16" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonIsUsingKioskMode_SelectionGained" />
+              <ctrl:PushRadioButton x:Name="radioButtonIsNotUsingKioskMode" Margin="25,0,0,0" FontSize="16" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonIsNotUsingKioskMode_SelectionGained" />
+            </StackPanel>
+            <TextBlock TextWrapping="Wrap" Text="{x:Static t:Strings.SettingsKioskModeWarning}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Margin="0,1,0,-1" Grid.Row="1" Grid.ColumnSpan="2" />
+          </Grid>
+        </GroupBox>
+      </StackPanel>
+    </Grid>
+  </DockPanel>
+</UserControl>

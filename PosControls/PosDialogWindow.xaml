@@ -1,0 +1,172 @@
+﻿<Window x:Class="PosControls.PosDialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:PosControls"
+        Height="600" Width="950" ShowInTaskbar="False"
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        BorderThickness="0" BorderBrush="Transparent" AllowsTransparency="True"
+        ResizeMode="NoResize"
+        Background="Transparent" UseLayoutRounding="True">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="tabBrush" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Offset="0" Color="Black"/>
+            <GradientStop Offset="0.2" Color="Blue"/>
+            <GradientStop Offset="0.4" Color="DarkBlue"/>
+            <GradientStop Offset="0.6" Color="LimeGreen"/>
+            <GradientStop Offset="0.8" Color="Green"/>
+            <GradientStop Offset="1" Color="DarkGreen"/>
+        </LinearGradientBrush>
+        <DrawingBrush x:Key="drawingBrush">
+            <DrawingBrush.Drawing>
+                <DrawingGroup>
+                    <DrawingGroup.Children>
+                        <GeometryDrawing>
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry Rect="0,0,100,100"/>
+                            </GeometryDrawing.Geometry>
+                            <GeometryDrawing.Brush>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Offset="0.0" Color="Black" />
+                                    <GradientStop Offset="1.0" Color="DarkBlue" />
+                                </LinearGradientBrush>
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                        <GeometryDrawing>
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry Rect="100,0,100,100"/>
+                            </GeometryDrawing.Geometry>
+                            <GeometryDrawing.Brush>
+                                <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                                    <GradientStop Offset="0.0" Color="Black" />
+                                    <GradientStop Offset="1.0" Color="DarkBlue" />
+                                </LinearGradientBrush>
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                        <GeometryDrawing>
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry Rect="0,100,100,100"/>
+                            </GeometryDrawing.Geometry>
+                            <GeometryDrawing.Brush>
+                                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                                    <GradientStop Offset="0.0" Color="Black" />
+                                    <GradientStop Offset="1.0" Color="DarkBlue" />
+                                </LinearGradientBrush>
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                        <GeometryDrawing>
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry Rect="100,100,100,100"/>
+                            </GeometryDrawing.Geometry>
+                            <GeometryDrawing.Brush>
+                                <LinearGradientBrush StartPoint="1,1" EndPoint="0,0">
+                                    <GradientStop Offset="0.0" Color="Black" />
+                                    <GradientStop Offset="1.0" Color="DarkBlue" />
+                                </LinearGradientBrush>
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                    </DrawingGroup.Children>
+                </DrawingGroup>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+        <DrawingBrush x:Key="checkeredGreenBrush" Stretch="None" TileMode="Tile" Viewport="0,0,2,2" ViewportUnits="Absolute">
+
+            <!-- a drawing of 4 checkerboard tiles -->
+            <DrawingBrush.Drawing>
+                <DrawingGroup>
+
+                    <!-- checkerboard background -->
+                    <GeometryDrawing Brush="Transparent">
+                        <GeometryDrawing.Geometry>
+                            <RectangleGeometry Rect="0,0,2,2" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+
+                    <!-- two checkerboard foreground tiles -->
+                    <GeometryDrawing Brush="DarkGreen">
+                        <GeometryDrawing.Geometry>
+                            <GeometryGroup>
+                                <RectangleGeometry Rect="0,0,1,1" />
+                                <RectangleGeometry Rect="1,1,1,1" />
+                            </GeometryGroup>
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                </DrawingGroup>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+        <DrawingBrush x:Key="checkeredBlueBrush" Stretch="None" TileMode="Tile" Viewport="0,0,2,2" ViewportUnits="Absolute">
+
+            <!-- a drawing of 4 checkerboard tiles -->
+            <DrawingBrush.Drawing>
+                <DrawingGroup>
+
+                    <!-- checkerboard background -->
+                    <GeometryDrawing Brush="Transparent">
+                        <GeometryDrawing.Geometry>
+                            <RectangleGeometry Rect="0,0,2,2" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+
+                    <!-- two checkerboard foreground tiles -->
+                    <GeometryDrawing Brush="DarkBlue">
+                        <GeometryDrawing.Geometry>
+                            <GeometryGroup>
+                                <RectangleGeometry Rect="0,0,1,1" />
+                                <RectangleGeometry Rect="1,1,1,1" />
+                            </GeometryGroup>
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                </DrawingGroup>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+        <DrawingBrush x:Key="graphPaperBrush" Viewport="0,0,10,10" 
+              ViewportUnits="Absolute"
+              TileMode="Tile">
+            <DrawingBrush.Drawing>
+                <DrawingGroup>
+                    <GeometryDrawing Geometry="M0,0 L1,0 1,0.1, 0,0.1Z" Brush="Green" />
+                    <GeometryDrawing Geometry="M0,0 L0,1 0.1,1, 0.1,0Z" Brush="Green" />
+                </DrawingGroup>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </Window.Resources>
+    <AdornerDecorator>
+        <DockPanel LastChildFill="True" Name="mainPane" Background="Transparent">
+            <my:ConfigurationManager x:Name="Configuration" />
+            <Border CornerRadius="4" BorderThickness="1" ClipToBounds="True" Background="Transparent" BorderBrush="Transparent">
+                <Grid Name="gridControl">
+                    <Grid.Background>
+                        <Binding ElementName="Configuration" Path="BindableApplicationBackgroundBrush" />
+                    </Grid.Background>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="34" />
+                        <RowDefinition Height="647*" />
+                    </Grid.RowDefinitions>
+                    <Border BorderThickness="2,0,2,2" CornerRadius="0,0,4,4" ClipToBounds="True" Grid.Row="1" />
+                    <StackPanel Name="stackPanelTitleBar" Orientation="Horizontal">
+                        <StackPanel.Background>
+                            <Binding ElementName="Configuration" Path="BindableApplicationTitleBarBrush" />
+                        </StackPanel.Background>
+                        <Label Margin="5,0,0,0" VerticalAlignment="Center" FontSize="14" FontWeight="ExtraBold" Content="Maintenance" Name="labelTitle">
+                            <Label.Foreground>
+                                <Binding ElementName="Configuration" Path="BindableApplicationForegroundBrush" />
+                            </Label.Foreground>
+                        </Label>
+                        <ToggleButton Style="{DynamicResource tabToggleButtonStyle}" x:Name="buttonTab1" Margin="10,0,0,0" Height="25" Width="120" IsChecked="True" Visibility="Collapsed" Click="buttonTab_Click" />
+                        <ToggleButton Style="{DynamicResource tabToggleButtonStyle}" x:Name="buttonTab2" Height="25" Width="120" Visibility="Collapsed" Click="buttonTab_Click" />
+                        <ToggleButton Style="{DynamicResource tabToggleButtonStyle}" x:Name="buttonTab3" Height="25" Width="120" Visibility="Collapsed" Click="buttonTab_Click" />
+                        <ToggleButton Style="{DynamicResource tabToggleButtonStyle}" x:Name="buttonTab4" Height="25" Width="120" Visibility="Collapsed" Click="buttonTab_Click" />
+                        <ToggleButton Style="{DynamicResource tabToggleButtonStyle}" x:Name="buttonTab5" Height="25" Width="120" Visibility="Collapsed" Click="buttonTab_Click" />
+                    </StackPanel>
+                    <Button x:Name="buttonClose" Margin="0,0,5,0" Height="24" Width="40" HorizontalAlignment="Right" FontWeight="ExtraBold" Content="X" Click="buttonClose_Click" />
+                    <Border ClipToBounds="True" BorderThickness="2,2,2,1" Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas, AncestorLevel=1}, Path=Height}" Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas, AncestorLevel=1}, Path=Width}" />
+                    <Border ClipToBounds="True" BorderThickness="2,0,2,0" CornerRadius="4,4,0,0" Height="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas, AncestorLevel=1}, Path=Height}" Width="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Canvas, AncestorLevel=1}, Path=Width}" />
+                    <DockPanel Name="dockPanel1" Margin="5,5,5,5" Grid.Row="1" />
+                    <DockPanel Name="dockPanel2" Margin="5,5,5,5" Grid.Row="1" Visibility="Collapsed" />
+                    <DockPanel Name="dockPanel3" Margin="5,5,5,5" Grid.Row="1" Visibility="Collapsed" />
+                    <DockPanel Name="dockPanel4" Margin="5,5,5,5" Grid.Row="1" Visibility="Collapsed" />
+                    <DockPanel Name="dockPanel5" Margin="5,5,5,5" Grid.Row="1" Visibility="Collapsed" />
+                </Grid>
+            </Border>
+        </DockPanel>
+    </AdornerDecorator>
+</Window>

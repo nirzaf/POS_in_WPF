@@ -1,0 +1,133 @@
+﻿<UserControl x:Class="TemPOS.ItemEditorDetailsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="590" d:DesignWidth="630">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="314*" />
+                <ColumnDefinition Width="314*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+            </Grid.RowDefinitions>
+            <Label Content="{x:Static t:Strings.ItemEditorCategory}" VerticalAlignment="Center"  FontSize="14" FontWeight="Normal" />
+            <Label Content="{x:Static t:Strings.ItemEditorFullName}" VerticalAlignment="Center" FontSize="14" FontWeight="Normal" Grid.Row="1" />
+            <Label Content="{x:Static t:Strings.ItemEditorButtonName}" VerticalAlignment="Center" FontSize="14" FontWeight="Normal" Grid.Row="2" />
+            <Label Content="{x:Static t:Strings.ItemEditorPrice}" VerticalAlignment="Center" FontSize="14" FontWeight="Normal" Grid.Row="3" />
+            <Label Content="{x:Static t:Strings.ItemEditorPrintDestination}" VerticalAlignment="Center" FontSize="14" FontWeight="Normal" Grid.Row="4" />
+            <Label Content="{x:Static t:Strings.ItemEditorTax}" VerticalAlignment="Center" FontSize="14" FontWeight="Normal" Grid.Row="7" />
+            <Label Content="{x:Static t:Strings.ItemEditorIsReturnable}" VerticalAlignment="Center" FontSize="14" FontWeight="Normal" Grid.Row="8" />
+            <Label Content="{x:Static t:Strings.ItemEditorIsFired}" VerticalAlignment="Center" FontSize="14" FontWeight="Normal" Grid.Row="9" />
+            <Label Content="{x:Static t:Strings.ItemEditorIsTaxExemptable}" VerticalAlignment="Center" FontSize="14" FontWeight="Normal" Grid.Row="10" />
+            <Label Content="{x:Static t:Strings.ItemEditorAvailableForSale}" VerticalAlignment="Center" FontSize="14" FontWeight="Normal" Grid.Row="11" />
+            <Label Content="{x:Static t:Strings.ItemEditorIsOutOfStock}" VerticalAlignment="Center" FontSize="14" FontWeight="Normal" Grid.Row="12" />
+            <Label Content="{x:Static t:Strings.ItemEditorIsGrouping}" FontSize="14" VerticalAlignment="Center" Grid.Row="13" />
+            <ctrl:PushComboBox Margin="5,5,5,5" x:Name="comboBoxCategory"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" SelectedIndexChanged="comboBoxCategory_SelectedIndexChanged" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxFullName" UseContextMenuEditing="True" PromptType="Keyboard" Grid.Column="1" Grid.Row="1" TouchOpenDelay="0" TextChanged="textBoxFullName_TextChanged" KeyboardShiftMode="SoftCapsLock" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxPosName" UseContextMenuEditing="True" PromptType="Keyboard" Grid.Column="1" Grid.Row="2" TouchOpenDelay="0" TextChanged="textBoxPosName_TextChanged" KeyboardShiftMode="SoftCapsLock" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxPrice" UseContextMenuEditing="True" PromptType="Currency" Grid.Column="1" Grid.Row="3" TouchOpenDelay="0" TextChanged="textBoxPrice_TextChanged" />
+            <Grid Grid.Column="1" Grid.Row="4" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="40*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <ctrl:PushCheckBox x:Name="checkBoxPrintDestinationJournal" Width="25" Height="25" Margin="5,0,0,0" SelectionChanged="checkBoxPrintDestinationJournal_SelectionChanged" />
+                    <Label Content="{x:Static t:Strings.ItemEditorJournal}" FontSize="12" FontWeight="Normal" VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                    <ctrl:PushCheckBox x:Name="checkBoxPrintDestinationReceipt" Width="25" Height="25" Margin="5,0,0,0" SelectionChanged="checkBoxPrintDestinationReceipt_SelectionChanged" />
+                    <Label Content="{x:Static t:Strings.ItemEditorReceipt}" FontSize="12" FontWeight="Normal" VerticalAlignment="Center" />
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="5" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="40*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <ctrl:PushCheckBox x:Name="checkBoxPrintDestinationKitchen1" Width="25" Height="25" Margin="5,0,0,0" SelectionChanged="checkBoxPrintDestinationKitchen1_SelectionChanged" />
+                    <Label Content="{x:Static t:Strings.ItemEditorKitchen1}" FontSize="12" VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Center">
+                    <ctrl:PushCheckBox x:Name="checkBoxPrintDestinationKitchen2" Width="25" Height="25" Margin="5,0,0,0" SelectionChanged="checkBoxPrintDestinationKitchen2_SelectionChanged" />
+                    <Label Content="{x:Static t:Strings.ItemEditorKitchen2}" FontSize="12" VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Column="2" VerticalAlignment="Center">
+                    <ctrl:PushCheckBox x:Name="checkBoxPrintDestinationKitchen3" Width="25" Height="25" Margin="5,0,0,0" SelectionChanged="checkBoxPrintDestinationKitchen3_SelectionChanged" />
+                    <Label Content="{x:Static t:Strings.ItemEditorKitchen3}" FontSize="12" VerticalAlignment="Center" />
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="6" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="40*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <ctrl:PushCheckBox x:Name="checkBoxPrintDestinationBar1" Width="25" Height="25" Margin="5,0,0,0" SelectionChanged="checkBoxPrintDestinationBar1_SelectionChanged" />
+                    <Label Content="{x:Static t:Strings.ItemEditorBar1}" FontSize="12" FontWeight="Normal" VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                    <ctrl:PushCheckBox x:Name="checkBoxPrintDestinationBar2" Width="25" Height="25" Margin="5,0,0,0" SelectionChanged="checkBoxPrintDestinationBar2_SelectionChanged" />
+                    <Label Content="{x:Static t:Strings.ItemEditorBar2}" FontSize="12" VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                    <ctrl:PushCheckBox x:Name="checkBoxPrintDestinationBar3" Width="25" Height="25" Margin="5,0,0,0" SelectionChanged="checkBoxPrintDestinationBar3_SelectionChanged" />
+                    <Label Content="{x:Static t:Strings.ItemEditorBar3}" FontSize="12" VerticalAlignment="Center" />
+                </StackPanel>
+            </Grid>
+            <ctrl:PushComboBox Margin="5,5,5,5" x:Name="comboBoxTaxId" Height="32" Grid.Column="1" Grid.Row="7" SelectedIndexChanged="comboBoxTaxId_SelectedIndexChanged" />
+            <StackPanel Margin="2" Grid.Column="1" Grid.Row="8" Orientation="Horizontal">
+                <ctrl:PushRadioButton x:Name="pushButtonIsReturnableYes" Margin="4,5,0,5" Text="{x:Static t:Strings.Yes}" SelectionGained="pushButtonIsReturnable_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="pushButtonIsReturnableNo" Margin="25,5,0,5" Text="{x:Static t:Strings.No}" SelectionGained="pushButtonIsReturnable_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="2" Grid.Column="1" Grid.Row="9" Orientation="Horizontal">
+                <ctrl:PushRadioButton x:Name="pushButtonIsFiredYes" Margin="4,5,0,5" Text="{x:Static t:Strings.Yes}" SelectionGained="pushButtonIsFired_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="pushButtonIsFiredNo" Margin="25,5,0,5" Text="{x:Static t:Strings.No}" SelectionGained="pushButtonIsFired_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="2" Grid.Column="1" Grid.Row="10" Orientation="Horizontal">
+                <ctrl:PushRadioButton x:Name="pushButtonIsTaxExemptableYes" Margin="4,5,0,5" Text="{x:Static t:Strings.Yes}" SelectionGained="pushButtonIsTaxExemptable_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="pushButtonIsTaxExemptableNo" Margin="25,5,0,5" Text="{x:Static t:Strings.No}" SelectionGained="pushButtonIsTaxExemptable_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="2" Grid.Column="1" Grid.Row="11" Orientation="Horizontal">
+                <ctrl:PushRadioButton x:Name="pushButtonIsForSaleYes" Margin="4,5,0,5" Text="{x:Static t:Strings.Yes}" SelectionGained="pushButtonIsForSale_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="pushButtonIsForSaleNo" Margin="25,5,0,5" Text="{x:Static t:Strings.No}" SelectionGained="pushButtonIsForSale_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="2" Grid.Column="1" Grid.Row="12" Orientation="Horizontal">
+                <ctrl:PushRadioButton x:Name="pushButtonIsOutOfStockYes" Margin="4,5,0,5" Text="{x:Static t:Strings.Yes}" SelectionGained="pushButtonIsOutOfStock_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="pushButtonIsOutOfStockNo" Margin="25,5,0,5" Text="{x:Static t:Strings.No}" SelectionGained="pushButtonIsOutOfStock_SelectionGained" />
+            </StackPanel>
+            <StackPanel Margin="5,5,5,5" Grid.Column="1" Grid.Row="13" Orientation="Horizontal" VerticalAlignment="Center">
+                <ctrl:PushRadioButton x:Name="radioButtonIsGrouping" Text="{x:Static t:Strings.Yes}" SelectionGained="radioButtonIsGrouping_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="radioButtonIsNotGrouping" Margin="25,0,0,0" Text="{x:Static t:Strings.No}" SelectionGained="radioButtonIsGrouping_SelectionGained" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

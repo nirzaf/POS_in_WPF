@@ -1,0 +1,20 @@
+<UserControl x:Class="TemPOS.TicketItemTemplate" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" BorderThickness="0" Background="Transparent" d:DesignHeight="75" d:DesignWidth="350" HorizontalAlignment="Stretch" Name="userControl" xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel LastChildFill="True" Name="mainPane" HorizontalAlignment="Stretch" Background="Transparent">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Canvas x:Name="canvasDropDown" Background="Transparent" Width="0">
+      <!-- Need to draw here the connecting lines, do in code-behide -->
+    </Canvas>
+    <Grid MinHeight="64" Name="GridControl" HorizontalAlignment="Stretch">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="40" />
+        <ColumnDefinition Width="300*" />
+        <ColumnDefinition Width="90" />
+      </Grid.ColumnDefinitions>
+      <Border CornerRadius="0" BorderThickness="1,1,0,1" />
+      <Border CornerRadius="0" Grid.Column="1" Grid.ColumnSpan="2" />
+      <TextBlock Margin="5,5,5,5" Name="textBoxQuantity" Focusable="False" IsManipulationEnabled="False" TextAlignment="Center" FontSize="16" HorizontalAlignment="Stretch" Foreground="{Binding ElementName=userControl, Path=Foreground}" />
+      <TextBlock Margin="5,5,5,5" Focusable="False" IsManipulationEnabled="False" Grid.Column="1" Name="textBoxItem" FontSize="14" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Foreground="{Binding ElementName=userControl, Path=Foreground}" />
+      <TextBlock Margin="5,5,5,5" Name="textBoxComment" Focusable="False" IsManipulationEnabled="False" VerticalAlignment="Top" HorizontalAlignment="Right" FontSize="12" Text="$0.00" Visibility="Hidden" Grid.Column="2" Foreground="{Binding ElementName=userControl, Path=Foreground}" />
+    </Grid>
+  </DockPanel>
+</UserControl>

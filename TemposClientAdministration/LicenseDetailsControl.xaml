@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="TemposClientAdministration.LicenseDetailsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemposClientAdministration"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="700">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableApplicationBackgroundBrush" />
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="314*" />
+                <ColumnDefinition Width="314*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+            </Grid.RowDefinitions>
+            <Label Content="Customer" VerticalAlignment="Center" FontSize="16" />
+            <Label Content="Serial Number" FontSize="16" VerticalAlignment="Center" Grid.Row="1" />
+            <Label Content="Is Valid" FontSize="16" VerticalAlignment="Center" Grid.Row="2" />
+            <ctrl:PushComboBox Margin="5,5,5,5" x:Name="comboBoxCustomer" FontSize="16" FontWeight="Normal" Grid.Column="1" SelectedIndexChanged="comboBoxCustomer_SelectedIndexChanged" />
+            <ctrl:CustomTextBox Margin="5,5,5,5" x:Name="textBoxSerialNumber" UseContextMenuEditing="True" PromptType="Keyboard" FontSize="16" Grid.Row="1" Grid.Column="1" TouchOpenDelay="0" TextChanged="textBoxSerialNumber_TextChanged" />
+            <StackPanel Margin="5,5,5,5" Grid.Column="1" Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center">
+                <ctrl:PushRadioButton x:Name="radioButtonIsValid" FontSize="16" Text="Yes" SelectionGained="radioButtonIsValid_SelectionGained" />
+                <ctrl:PushRadioButton x:Name="radioButtonIsNotValid" Margin="25,0,0,0" FontSize="16" Text="No" SelectionGained="radioButtonIsNotValid_SelectionGained" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

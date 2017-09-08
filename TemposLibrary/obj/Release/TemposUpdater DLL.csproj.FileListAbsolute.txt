@@ -1,0 +1,5 @@
+D:\Viipe.com\PointOfSale\TemposUpdater DLL\bin\Release\TemposUpdater.dll
+D:\Viipe.com\PointOfSale\TemposUpdater DLL\bin\Release\TemposUpdater.pdb
+D:\Viipe.com\PointOfSale\TemposUpdater DLL\obj\Release\ResolveAssemblyReference.cache
+D:\Viipe.com\PointOfSale\TemposUpdater DLL\obj\Release\TemposUpdater.dll
+D:\Viipe.com\PointOfSale\TemposUpdater DLL\obj\Release\TemposUpdater.pdb

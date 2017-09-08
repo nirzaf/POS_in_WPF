@@ -1,0 +1,28 @@
+<UserControl x:Class="TemPOS.SeatingRoomEditorControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="80" d:DesignWidth="630" xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <StackPanel>
+      <Grid>
+        <Grid.Background>
+          <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="314*" />
+          <ColumnDefinition Width="314*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+        </Grid.RowDefinitions>
+        <Label Content="{x:Static t:Strings.Description}" FontSize="16" VerticalAlignment="Center" />
+        <Label Content="{x:Static t:Strings.TicketType}" FontSize="16" VerticalAlignment="Center" Grid.Row="1" />
+        <ctrl:CustomTextBox x:Name="textBoxName" UseContextMenuEditing="True" PromptType="Keyboard" Margin="5" Grid.Column="1" FontSize="16" TouchOpenDelay="0" KeyboardShiftMode="SoftCapsLock" TextChanged="textBoxName_TextChanged" />
+        <ctrl:PushComboBox Margin="5,5,5,5" x:Name="comboBoxTicketType" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Grid.Column="1" Grid.Row="1" Text="Dine-In" SelectedIndexChanged="comboBoxTicketType_SelectedIndexChanged">
+          <ctrl:PushComboBox.Width>
+            <Binding ElementName="textBoxName" Path="ActualWidth" />
+          </ctrl:PushComboBox.Width>
+        </ctrl:PushComboBox>
+      </Grid>
+    </StackPanel>
+  </DockPanel>
+</UserControl>

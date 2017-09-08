@@ -1,0 +1,6 @@
+E:\TemPOS\TemposUpdateInstaller\obj\x86\Debug_Demo_Gtk\ResolveAssemblyReference.cache
+E:\TemPOS\TemposUpdateInstaller\obj\x86\Debug_Demo_Gtk\TemposUpdateInstaller.Properties.Resources.resources
+E:\TemPOS\TemposUpdateInstaller\obj\x86\Debug_Demo_Gtk\GenerateResource.read.1.tlog
+E:\TemPOS\TemposUpdateInstaller\obj\x86\Debug_Demo_Gtk\GenerateResource.write.1.tlog
+F:\Programming\TemPOS\TemposUpdateInstaller\obj\x86\Debug_Demo_Gtk\TemposUpdateInstaller.Properties.Resources.resources
+F:\Programming\TemPOS\TemposUpdateInstaller\obj\x86\Debug_Demo_Gtk\TemposUpdateInstaller.csproj.GenerateResource.Cache

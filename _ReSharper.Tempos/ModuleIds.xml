@@ -1,0 +1,18 @@
+<Modules>
+  <Module PersistentId="B3699BA5-5139-428A-AA7C-FDC0E164F278" ModuleId="TaskManagerAccessService" />
+  <Module PersistentId="2D36D1B9-14A0-4BAF-9577-7FDCFD6FA7A3" ModuleId="PointOfSale" />
+  <Module PersistentId="48F4D322-514C-407C-8D13-0CBE5037463A" ModuleId="PosControls" />
+  <Module PersistentId="494F36DC-815E-4099-B506-4CC1943C5153" ModuleId="PosModels" />
+  <Module PersistentId="4570E486-EF25-4B69-9F09-2F134B66B5BA" ModuleId="TemposLibrary" />
+  <Module PersistentId="System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" ModuleId="System.ServiceProcess" />
+  <Module PersistentId="System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" ModuleId="System.Configuration.Install" />
+  <Module PersistentId="6E23DDCB-CD27-4911-A6E3-053012D7ED8D" ModuleId="TaskManagerAccessServiceUnistaller" />
+  <Module PersistentId="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="mscorlib" />
+  <Module PersistentId="D3D47B23-C9DC-453A-8A78-7D42BAE29150" ModuleId="TemposUpdateInstaller" />
+  <Module PersistentId="7A483766-F286-4683-8957-09F9AE0E9A3E" ModuleId="TemposClientAdministration" />
+  <Module PersistentId="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Core" />
+  <Module PersistentId="3B32058E-9394-4011-B1A9-D0F893B91A24" ModuleId="SVNRevisionToCS" />
+  <Module PersistentId="PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" ModuleId="PresentationFramework" />
+  <Module PersistentId="394FB49E-869E-46C9-A529-B6A3D90AEDF7" ModuleId="TemposLanguageProcessor" />
+  <Module PersistentId="B4F17922-23C0-4921-8C58-12FEAE3F30A3" ModuleId="TemposWebApplication" />
+</Modules>

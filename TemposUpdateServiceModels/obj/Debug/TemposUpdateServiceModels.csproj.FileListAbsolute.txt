@@ -1,0 +1,9 @@
+D:\Viipe.com\PointOfSale\TemposUpdateServiceModels\bin\Debug\TemposUpdateServiceModels.dll
+D:\Viipe.com\PointOfSale\TemposUpdateServiceModels\bin\Debug\TemposUpdateServiceModels.pdb
+D:\Viipe.com\PointOfSale\TemposUpdateServiceModels\obj\Debug\ResolveAssemblyReference.cache
+D:\Viipe.com\PointOfSale\TemposUpdateServiceModels\obj\Debug\TemposUpdateServiceModels.dll
+D:\Viipe.com\PointOfSale\TemposUpdateServiceModels\obj\Debug\TemposUpdateServiceModels.pdb
+K:\Viipe.com\TemPOS\TemposUpdateServiceModels\bin\Debug\TemposUpdateServiceModels.dll
+K:\Viipe.com\TemPOS\TemposUpdateServiceModels\bin\Debug\TemposUpdateServiceModels.pdb
+K:\Viipe.com\TemPOS\TemposUpdateServiceModels\obj\Debug\TemposUpdateServiceModels.dll
+K:\Viipe.com\TemPOS\TemposUpdateServiceModels\obj\Debug\TemposUpdateServiceModels.pdb

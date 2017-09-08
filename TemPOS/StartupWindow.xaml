@@ -1,0 +1,34 @@
+<Window x:Class="TemPOS.StartupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:TemPOS"
+        xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+        xmlns:help="clr-namespace:TemPOS.Helpers"
+        AllowsTransparency="True" ResizeMode="NoResize" ShowInTaskbar="False"
+        WindowStartupLocation="CenterScreen" Title="" WindowStyle="None" Topmost="True"
+        Background="Transparent" help:Silencer.Silence="True" Width="500" Height="220" UseLayoutRounding="True"
+        xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <!-- Rounded mask (stretches to fill Grid) -->
+      <Border Name="mask" CornerRadius="14">
+        <Border.Background>
+          <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#000080" Offset="0.3" />
+            <GradientStop Color="#000012" Offset="1" />
+          </LinearGradientBrush>
+        </Border.Background>
+      </Border>
+      <StackPanel Height="164" Width="480">
+        <StackPanel.OpacityMask>
+          <VisualBrush Visual="{Binding ElementName=mask}" />
+        </StackPanel.OpacityMask>
+        <Label Margin="0,-10,0,-5" Foreground="White" Content="{x:Static t:Strings.Tempos}" HorizontalAlignment="Center" FontSize="56" />
+        <Label Name="labelVersion" Margin="0,-5, 0, -5" Foreground="White" Content="{x:Static t:Strings.Version10}" HorizontalAlignment="Center" FontSize="26" />
+        <Label Name="labelBuild" Margin="0,-5, 0, -5" Foreground="White" Content="{x:Static t:Strings.Build}" HorizontalAlignment="Center" FontSize="18" />
+        <Label Name="labelCopyright" Margin="0,-5, 0, -5" Foreground="White" HorizontalAlignment="Center" FontSize="12" />
+      </StackPanel>
+    </Grid>
+  </DockPanel>
+</Window>

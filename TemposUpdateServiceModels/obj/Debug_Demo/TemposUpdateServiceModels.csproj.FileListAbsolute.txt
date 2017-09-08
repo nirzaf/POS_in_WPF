@@ -1,0 +1,4 @@
+K:\Viipe.com\TemPOS\TemposUpdateServiceModels\bin\Debug_Demo\TemposUpdateServiceModels.dll
+K:\Viipe.com\TemPOS\TemposUpdateServiceModels\bin\Debug_Demo\TemposUpdateServiceModels.pdb
+K:\Viipe.com\TemPOS\TemposUpdateServiceModels\obj\Debug_Demo\TemposUpdateServiceModels.dll
+K:\Viipe.com\TemPOS\TemposUpdateServiceModels\obj\Debug_Demo\TemposUpdateServiceModels.pdb

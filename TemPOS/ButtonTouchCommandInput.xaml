@@ -1,0 +1,25 @@
+<UserControl x:Class="TemPOS.ButtonTouchCommandInput" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="70" d:DesignWidth="900" xmlns:t="clr-namespace:TemPOS.Types">
+  <UserControl.Resources>
+    <t:Strings x:Key="strings" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" /></UserControl.Resources>
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <StackPanel Orientation="Horizontal">
+        <StackPanel.Background>
+          <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+        </StackPanel.Background>
+        <ctrl:TextBlockButton x:Name="button1" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="14" Click="Button_Click" PreviewMouseDown="Button_PreviewMouseDown" />
+        <ctrl:TextBlockButton x:Name="button2" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="14" Click="Button_Click" PreviewMouseDown="Button_PreviewMouseDown" />
+        <ctrl:TextBlockButton x:Name="button3" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="14" Click="Button_Click" PreviewMouseDown="Button_PreviewMouseDown" />
+        <ctrl:TextBlockButton x:Name="button4" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="14" Click="Button_Click" PreviewMouseDown="Button_PreviewMouseDown" />
+        <ctrl:TextBlockButton x:Name="button5" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="14" Click="Button_Click" PreviewMouseDown="Button_PreviewMouseDown" />
+        <ctrl:TextBlockButton x:Name="button6" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="14" Click="Button_Click" PreviewMouseDown="Button_PreviewMouseDown" />
+        <ctrl:TextBlockButton x:Name="button7" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="14" Click="Button_Click" PreviewMouseDown="Button_PreviewMouseDown" />
+        <ctrl:TextBlockButton x:Name="button8" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="14" Click="Button_Click" PreviewMouseDown="Button_PreviewMouseDown" />
+        <ctrl:TextBlockButton x:Name="button9" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="14" Click="Button_Click" PreviewMouseDown="Button_PreviewMouseDown" />
+        <ctrl:TextBlockButton x:Name="button10" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="14" Click="Button_Click" PreviewMouseDown="Button_PreviewMouseDown" />
+        <ctrl:TextBlockButton x:Name="button11" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" FontSize="14" Click="Button_Click" PreviewMouseDown="Button_PreviewMouseDown" />
+      </StackPanel>
+    </Grid>
+  </DockPanel>
+</UserControl>

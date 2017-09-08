@@ -1,0 +1,149 @@
+<UserControl x:Class="TemPOS.DeviceChoiceControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="530" d:DesignWidth="480" xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <StackPanel>
+      <StackPanel.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </StackPanel.Background>
+      <Grid Name="gridDemo" Visibility="Collapsed">
+        <Label Content="{x:Static t:Strings.DisabledInDemo}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+      </Grid>
+      <Grid Name="gridPosPrinter" Visibility="Collapsed">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="200*" />
+          <ColumnDefinition Width="300*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="36" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+        </Grid.RowDefinitions>
+        <Grid.Background>
+          <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+        </Grid.Background>
+        <Label Content="{x:Static t:Strings.POSPrinter}" FontSize="16" Grid.ColumnSpan="2" />
+        <Border BorderThickness="1" CornerRadius="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="15" />
+        <Label Content="{x:Static t:Strings.PrintOutput}" FontSize="16" Grid.Row="1" VerticalAlignment="Center" />
+        <ctrl:PushComboBox Margin="5,5,5,5" x:Name="comboBoxPrinterOutput" FontSize="16" Grid.Column="1" Grid.Row="1" SelectedIndexChanged="comboBoxPrinterOutput_SelectedIndexChanged" />
+      </Grid>
+      <Grid Name="gridCashDrawer" Visibility="Collapsed">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="200*" />
+          <ColumnDefinition Width="300*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="36" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+        </Grid.RowDefinitions>
+        <Grid.Background>
+          <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+        </Grid.Background>
+        <Label Content="{x:Static t:Strings.CashDrawer}" FontSize="16" Grid.ColumnSpan="2" />
+        <Border BorderThickness="1" CornerRadius="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="15" />
+        <Label Content="{x:Static t:Strings.Description}" FontSize="16" Grid.Row="1" VerticalAlignment="Center" />
+      </Grid>
+      <Grid Name="gridScanner" Visibility="Collapsed">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="200*" />
+          <ColumnDefinition Width="300*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="36" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+        </Grid.RowDefinitions>
+        <Grid.Background>
+          <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+        </Grid.Background>
+        <Label Content="{x:Static t:Strings.Scanner}" FontSize="16" Grid.ColumnSpan="2" />
+        <Border BorderThickness="1" CornerRadius="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="15" />
+        <Label Content="{x:Static t:Strings.Description}" FontSize="16" Grid.Row="1" VerticalAlignment="Center" />
+      </Grid>
+      <Grid Name="gridCoinDispenser" Visibility="Collapsed">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="200*" />
+          <ColumnDefinition Width="300*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="36" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+        </Grid.RowDefinitions>
+        <Grid.Background>
+          <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+        </Grid.Background>
+        <Label Content="{x:Static t:Strings.CoinDispenser}" FontSize="16" Grid.ColumnSpan="2" />
+        <Border BorderThickness="1" CornerRadius="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="15" />
+        <Label Content="{x:Static t:Strings.Description}" FontSize="16" Grid.Row="1" VerticalAlignment="Center" />
+      </Grid>
+      <Grid Name="gridBumpBar" Visibility="Collapsed">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="200*" />
+          <ColumnDefinition Width="300*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="36" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+          <RowDefinition Height="40*" />
+        </Grid.RowDefinitions>
+        <Grid.Background>
+          <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+        </Grid.Background>
+        <Label Content="{x:Static t:Strings.BumpBar}" FontSize="16" Grid.ColumnSpan="2" />
+        <Border BorderThickness="1" CornerRadius="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="15" />
+        <Label Content="{x:Static t:Strings.Description}" FontSize="16" Grid.Row="1" VerticalAlignment="Center" />
+      </Grid>
+    </StackPanel>
+  </DockPanel>
+</UserControl>

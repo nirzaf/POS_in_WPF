@@ -1,0 +1,11 @@
+E:\TemPOS\QRCodeLib\obj\Debug_Demo_Gtk\ResolveAssemblyReference.cache
+E:\TemPOS\QRCodeLib\obj\Debug_Demo_Gtk\ThoughtWorks.QRCode.Properties.Resources.resources
+E:\TemPOS\QRCodeLib\obj\Debug_Demo_Gtk\GenerateResource.read.1.tlog
+E:\TemPOS\QRCodeLib\obj\Debug_Demo_Gtk\GenerateResource.write.1.tlog
+F:\Programming\TemPOS\QRCodeLib\bin\Debug_Demo_Gtk\ThoughtWorks.QRCode.dll
+F:\Programming\TemPOS\QRCodeLib\bin\Debug_Demo_Gtk\ThoughtWorks.QRCode.pdb
+F:\Programming\TemPOS\QRCodeLib\obj\Debug_Demo_Gtk\QRCodeLib.csprojResolveAssemblyReference.cache
+F:\Programming\TemPOS\QRCodeLib\obj\Debug_Demo_Gtk\ThoughtWorks.QRCode.Properties.Resources.resources
+F:\Programming\TemPOS\QRCodeLib\obj\Debug_Demo_Gtk\QRCodeLib.csproj.GenerateResource.Cache
+F:\Programming\TemPOS\QRCodeLib\obj\Debug_Demo_Gtk\ThoughtWorks.QRCode.dll
+F:\Programming\TemPOS\QRCodeLib\obj\Debug_Demo_Gtk\ThoughtWorks.QRCode.pdb

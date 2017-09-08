@@ -1,0 +1,17 @@
+C:\@clients\LabZero\Authorize.NET\CoffeeShop\obj\Debug\ResolveAssemblyReference.cache
+C:\@clients\LabZero\Authorize.NET\CoffeeShop\bin\CoffeeShop.dll
+C:\@clients\LabZero\Authorize.NET\CoffeeShop\bin\CoffeeShop.pdb
+C:\@clients\LabZero\Authorize.NET\CoffeeShop\bin\AuthorizeNET.dll
+C:\@clients\LabZero\Authorize.NET\CoffeeShop\bin\AuthorizeNET.pdb
+C:\@clients\LabZero\Authorize.NET\CoffeeShop\obj\Debug\CoffeeShop.dll
+C:\@clients\LabZero\Authorize.NET\CoffeeShop\obj\Debug\CoffeeShop.pdb
+C:\@clients\LabZero\Authorize.NET\CoffeeShop\bin\AuthorizeNet.Helpers.dll
+C:\@clients\LabZero\Authorize.NET\CoffeeShop\bin\AuthorizeNet.Helpers.pdb
+C:\@clients\LabZero\Authorize.NET\CoffeeShop\bin\AuthorizeNet.xml
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\CoffeeShop\bin\CoffeeShop.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\CoffeeShop\bin\CoffeeShop.pdb
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\CoffeeShop\bin\AuthorizeNet.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\CoffeeShop\bin\AuthorizeNet.Helpers.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\CoffeeShop\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\CoffeeShop\obj\Debug\CoffeeShop.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\CoffeeShop\obj\Debug\CoffeeShop.pdb

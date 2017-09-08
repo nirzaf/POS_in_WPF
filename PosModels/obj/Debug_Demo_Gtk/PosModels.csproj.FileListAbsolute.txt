@@ -1,0 +1,2 @@
+E:\TemPOS\PosModels\obj\Debug_Demo_Gtk\ResolveAssemblyReference.cache
+F:\Programming\TemPOS\PosModels\obj\Debug_Demo_Gtk\PosModels.csprojResolveAssemblyReference.cache

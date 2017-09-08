@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="TemPOS.OrderEntryNonOrderCommandsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:cmd="clr-namespace:TemPOS.Commands"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="900">
+    <UserControl.Resources>
+        <t:Strings x:Key="strings" />
+    </UserControl.Resources>
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Background>
+                    <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+                </StackPanel.Background>
+                <ctrl:TextBlockButton x:Name="buttonSystemFunctions" Command="cmd:OrderEntryCommands.SystemMenu" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" FontFamily="Century Schoolbook" FontSize="14" Text="{Binding Source={StaticResource strings}, Path=OrderEntrySystemFunctions}">
+                    <ctrl:TextBlockButton.ContextMenu>
+                        <ContextMenu Placement="Top">
+                            <ContextMenu.Template>
+                                <ControlTemplate>
+                                    <my:OrderEntryFunctionsControl />
+                                </ControlTemplate>
+                            </ContextMenu.Template>
+                        </ContextMenu>
+                    </ctrl:TextBlockButton.ContextMenu>
+                </ctrl:TextBlockButton>
+                <ctrl:TextBlockButton x:Name="buttonRegisterFunctions" Command="cmd:OrderEntryCommands.RegisterMenu" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" FontFamily="Century Schoolbook" FontSize="14" Text="{Binding Source={StaticResource strings}, Path=OrderEntryRegisterFunctions}">
+                    <ctrl:TextBlockButton.ContextMenu>
+                        <ContextMenu Placement="Top">
+                            <ContextMenu.Template>
+                                <ControlTemplate>
+                                    <my:OrderEntryRegisterMenuControl />
+                                </ControlTemplate>
+                            </ContextMenu.Template>
+                        </ContextMenu>
+                    </ctrl:TextBlockButton.ContextMenu>
+                </ctrl:TextBlockButton>
+                <ctrl:TextBlockButton x:Name="buttonReports" Command="cmd:OrderEntryCommands.ReportsMenu" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" FontFamily="Century Schoolbook" FontSize="14" Text="{Binding Source={StaticResource strings}, Path=OrderEntryReports}" />
+                <ctrl:TextBlockButton x:Name="buttonSetup" Command="cmd:OrderEntryCommands.SetupMenu" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="93" FontFamily="Century Schoolbook" FontSize="14" Text="{Binding Source={StaticResource strings}, Path=OrderEntrySetup}">
+                    <ctrl:TextBlockButton.ContextMenu>
+                        <ContextMenu Placement="Top">
+                            <ContextMenu.Template>
+                                <ControlTemplate>
+                                    <my:OrderEntrySetupControl />
+                                </ControlTemplate>
+                            </ContextMenu.Template>
+                        </ContextMenu>
+                    </ctrl:TextBlockButton.ContextMenu>
+                </ctrl:TextBlockButton>
+                <ctrl:TextBlockButton x:Name="buttonCommandConsole" Command="cmd:OrderEntryCommands.Console" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" FontSize="14" Text="{Binding Source={StaticResource strings}, Path=OrderEntryCommandConsole}" Visibility="Collapsed" />
+                <ctrl:TextBlockButton x:Name="buttonPersonalSettings" Command="cmd:OrderEntryCommands.PersonalSettings" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" FontSize="14" Text="{Binding Source={StaticResource strings}, Path=OrderEntryPersonalSettings}" Visibility="Collapsed" />
+                <ctrl:TextBlockButton x:Name="buttonChangePassword" Command="cmd:OrderEntryCommands.ChangePassword" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" FontSize="14" Text="{Binding Source={StaticResource strings}, Path=OrderEntryChangePassword}" />
+                <ctrl:TextBlockButton x:Name="buttonClockOut" Command="cmd:OrderEntryCommands.ClockOut" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" FontSize="14" Text="{Binding Source={StaticResource strings}, Path=OrderEntryClockOut}" />
+                <ctrl:TextBlockButton x:Name="buttonLogout" Command="cmd:OrderEntryCommands.Logout" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" FontSize="14" Text="{Binding Source={StaticResource strings}, Path=OrderEntryLogout}" />
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right">
+                <ctrl:TextBlockButton x:Name="buttonExit" Command="cmd:OrderEntryCommands.Exit" Margin="5,0,10,0" Height="64" Width="64" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" Text="{Binding Source={StaticResource strings}, Path=OrderEntryExit}" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

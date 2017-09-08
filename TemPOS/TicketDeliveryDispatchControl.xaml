@@ -1,0 +1,26 @@
+<UserControl x:Class="TemPOS.TicketDeliveryDispatchControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="560" d:DesignWidth="645" xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="300*" />
+        <ColumnDefinition Width="428*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="35" />
+        <RowDefinition Height="560*" />
+        <RowDefinition Height="90" />
+      </Grid.RowDefinitions>
+      <Border Grid.Row="1" />
+      <Border Grid.Row="1" Grid.Column="2" />
+      <Label Content="{x:Static t:Strings.Drivers}" FontSize="16" />
+      <Label Content="{x:Static t:Strings.Deliveries}" FontSize="16" Grid.Column="1" />
+      <ctrl:TextBlockButton x:Name="buttonDispatch" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="2" Width="70" Height="64" Text="{x:Static t:Strings.DispatchDriver}" IsEnabled="False" Click="buttonDispatch_Click" />
+      <ctrl:DragScrollListBox Margin="5,5,5,5" x:Name="listBoxDrivers" Grid.Row="1" SelectionChanged="listBoxDrivers_SelectionChanged" />
+      <ctrl:DragScrollListBox Margin="5,5,5,5" x:Name="listBoxDeliveries" SelectionMode="Multiple" Grid.Row="1" Grid.Column="1" SelectionChanged="listBoxDeliveries_SelectionChanged" />
+    </Grid>
+  </DockPanel>
+</UserControl>

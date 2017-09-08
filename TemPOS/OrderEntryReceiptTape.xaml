@@ -1,0 +1,51 @@
+<UserControl x:Class="TemPOS.OrderEntryReceiptTape" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:t="clr-namespace:TemPOS.Types" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" xmlns:cmd="clr-namespace:TemPOS.Commands" mc:Ignorable="d" d:DesignHeight="500" d:DesignWidth="400">
+  <UserControl.Resources>
+    <t:Strings x:Key="strings" />
+  </UserControl.Resources>
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="239*" />
+        <RowDefinition Height="85" />
+        <RowDefinition Height="85" />
+      </Grid.RowDefinitions>
+      <GroupBox Header="{x:Static t:Strings.TicketItems}" FontSize="16" Margin="0,0,0,5">
+        <ctrl:DragScrollListBox x:Name="listBoxTransactions" BorderThickness="0" Background="Transparent" Margin="5" SelectionChanged="listBoxTransactions_SelectionChanged" />
+      </GroupBox>
+      <GroupBox Header="{x:Static t:Strings.SelectedTicketItemCommands}" FontSize="16" Grid.Row="1" Grid.RowSpan="2">
+        <StackPanel Orientation="Vertical">
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="75">
+            <ctrl:TextBlockButton x:Name="buttonQuantityIncrease" Command="cmd:OrderEntryCommands.IncreaseQuantity" Margin="5,10,0,5" Text="{Binding Source={StaticResource strings}, Path=OrderEntryIncreaseQuantity}" IsEnabled="False" Width="95" />
+            <ctrl:TextBlockButton x:Name="buttonQuantitySet" Command="cmd:OrderEntryCommands.SetQuantity" Margin="5,10,0,5" Text="{Binding Source={StaticResource strings}, Path=OrderEntryButtonSetQuantity}" IsEnabled="False" Width="95">
+              <ctrl:TextBlockButton.ContextMenu>
+                <ContextMenu Placement="Top">
+                  <ContextMenu.Template>
+                    <ControlTemplate>
+                      <Border Initialized="ContextMenu_Initialized" ClipToBounds="True">
+                        <Border.Background>
+                          <Binding ElementName="Configuration" Path="BindableApplicationBackgroundBrush" />
+                        </Border.Background>
+                        <ctrl:NumberEntryControl Margin="5,5,5,10" />
+                      </Border>
+                    </ControlTemplate>
+                  </ContextMenu.Template>
+                </ContextMenu>
+              </ctrl:TextBlockButton.ContextMenu>
+            </ctrl:TextBlockButton>
+            <ctrl:TextBlockButton x:Name="buttonQuantityDecrease" Command="cmd:OrderEntryCommands.DecreaseQuantity" Margin="5,10,0,5" Text="{Binding Source={StaticResource strings}, Path=OrderEntryDecreaseQuantity}" IsEnabled="False" Width="95" />
+          </StackPanel>
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="75">
+            <ctrl:TextBlockButton x:Name="buttonSpecialInstructions" Command="cmd:OrderEntryCommands.SpecialInstructions" Margin="5,5,0,10" Text="{Binding Source={StaticResource strings}, Path=OrderEntrySpecialInstructions}" IsEnabled="False" Width="95" />
+            <ctrl:TextBlockButton x:Name="buttonCancelItem" Command="cmd:OrderEntryCommands.CancelTicketItem" Margin="5,5,0,10" Text="{Binding Source={StaticResource strings}, Path=OrderEntryButtonCancelItem}" IsEnabled="False" Width="95" />
+            <ctrl:TextBlockButton x:Name="buttonVoidItem" Command="cmd:OrderEntryCommands.VoidTicketItem" Margin="5,5,0,10" Text="{Binding Source={StaticResource strings}, Path=OrderEntryButtonVoidItem}" IsEnabled="False" Width="95" />
+            <ctrl:TextBlockButton x:Name="buttonReturnItem" Command="cmd:OrderEntryCommands.ReturnTicketItem" Margin="5,5,0,10" Text="{Binding Source={StaticResource strings}, Path=OrderEntryButtonReturnItem}" IsEnabled="False" Width="95" Visibility="Collapsed" />
+          </StackPanel>
+        </StackPanel>
+      </GroupBox>
+    </Grid>
+  </DockPanel>
+</UserControl>

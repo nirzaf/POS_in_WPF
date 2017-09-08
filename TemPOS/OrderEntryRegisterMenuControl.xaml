@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="TemPOS.OrderEntryRegisterMenuControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="125" d:DesignWidth="190">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Border CornerRadius="10">
+            <Border.Background>
+                <Binding ElementName="Configuration" Path="BindableApplicationBackgroundBrush" />
+            </Border.Background>
+            <StackPanel Margin="0,5,0,0" Orientation="Vertical" HorizontalAlignment="Left" Background="Transparent">
+                <Button x:Name="buttonStartRegister" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.RegisterMenuStartDrawer}" Click="buttonStartRegister_Click" />
+                <Button x:Name="buttonNoSale" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.RegisterMenuNoSale}" Click="buttonNoSale_Click" />
+                <Button x:Name="buttonDeposit" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.RegisterMenuDeposit}" Grid.Row="1" Click="buttonDeposit_Click" />
+                <Button x:Name="buttonDrop" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.RegisterMenuSafeDrop}" Grid.Row="2" Click="buttonDrop_Click" />
+                <Button x:Name="buttonPayout" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.RegisterMenuPayout}" Grid.Row="3" Click="buttonPayout_Click" />
+                <Button x:Name="buttonFloat" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.RegisterMenuFloat}" Grid.Row="3" Click="buttonFloat_Click" />
+                <Button x:Name="buttonDock" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.RegisterMenuDock}" Grid.Row="3" Click="buttonDock_Click" />
+                <Button x:Name="buttonReport" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.RegisterMenuReport}" Grid.Row="4" Click="buttonReport_Click" />
+                <Button x:Name="buttonCloseOut" Margin="5,0,5,5" Width="180" Height="50" Content="{x:Static t:Strings.RegisterMenuCloseOut}" Grid.Row="5" Click="buttonCloseOut_Click" />
+            </StackPanel>
+        </Border>
+    </DockPanel>
+</UserControl>

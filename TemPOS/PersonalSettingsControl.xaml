@@ -1,0 +1,70 @@
+<UserControl x:Class="TemPOS.PersonalSettingsControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:t="clr-namespace:TemPOS.Types" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="350" d:DesignWidth="700">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="314*" />
+        <ColumnDefinition Width="314*" />
+        <ColumnDefinition Width="314*" />
+      </Grid.ColumnDefinitions>
+      <GroupBox Name="groupBoxLanguage" Header="{x:Static t:Strings.LanguageLanguage}" FontSize="16" Margin="0,0,5,0">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="0" x:Name="rowDefinitionDebug" />
+          </Grid.RowDefinitions>
+          <ctrl:PushRadioButton x:Name="radioButtonLangEnglish" Margin="5" Grid.Column="1" FontSize="16" Text="{x:Static t:Strings.LanguageEnglish}" SelectionGained="radioButtonLangEnglish_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioButtonLangSpanish" Margin="5" Grid.Column="1" Grid.Row="1" FontSize="16" Text="{x:Static t:Strings.LanguageSpanish}" SelectionGained="radioButtonLangSpanish_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioButtonLangFrench" Margin="5" Grid.Column="1" Grid.Row="2" FontSize="16" Text="{x:Static t:Strings.LanguageFrench}" SelectionGained="radioButtonLangFrench_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioButtonLangGerman" Margin="5" Grid.Column="1" Grid.Row="3" FontSize="16" Text="{x:Static t:Strings.LanguageGerman}" SelectionGained="radioButtonLangGerman_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioButtonLangItalian" Margin="5" Grid.Column="1" Grid.Row="4" FontSize="16" Text="{x:Static t:Strings.LanguageItalian}" SelectionGained="radioButtonLangItalian_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioButtonLangDutch" Margin="5" Grid.Column="1" Grid.Row="5" FontSize="16" Text="{x:Static t:Strings.LanguageDutch}" SelectionGained="radioButtonLangDutch_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioButtonLangPortuguese" Margin="5" Grid.Column="1" Grid.Row="6" FontSize="16" Text="{x:Static t:Strings.LanguagePortuguese}" SelectionGained="radioButtonLangPortuguese_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioButtonLangDebug" Margin="5" Grid.Column="1" Grid.Row="7" FontSize="16" Text="{x:Static t:Strings.Debug}" SelectionGained="radioButtonLangDebug_SelectionGained" Visibility="Collapsed" />
+        </Grid>
+      </GroupBox>
+      <GroupBox Name="groupBoxTemperature" Header="{x:Static t:Strings.SettingsTemperatureScale}" FontSize="16" Grid.Column="1" Height="167" VerticalAlignment="Top" Margin="0,0,5,0">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+          </Grid.RowDefinitions>
+          <ctrl:PushRadioButton x:Name="radioButtonLangFahrenheit" Margin="5" Grid.Column="1" FontSize="16" Text="{x:Static t:Strings.SettingsFahrenheit}" SelectionGained="radioButtonLangFahrenheit_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioButtonLangCelsius" Margin="5" Grid.Column="1" Grid.Row="1" FontSize="16" Text="{x:Static t:Strings.SettingsCelsius}" SelectionGained="radioButtonLangCelsius_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioButtonLangKelvin" Margin="5" Grid.Column="1" Grid.Row="2" FontSize="16" Text="{x:Static t:Strings.SettingsKelvin}" SelectionGained="radioButtonLangKelvin_SelectionGained" />
+        </Grid>
+      </GroupBox>
+      <GroupBox Name="groupBoxTicketFilter" Header="{x:Static t:Strings.DefaultTicketFilter}" FontSize="16" Grid.Column="2" Height="350" VerticalAlignment="Top">
+        <!-- Show My Open, Show All Open, Show Future Orders, Show Closed, Show All Day, Show Range, Show All -->
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+          </Grid.RowDefinitions>
+          <ctrl:PushRadioButton x:Name="radioButton1" Margin="5" Grid.Column="1" FontSize="16" Text="{x:Static t:Strings.ShowMyOpen}" />
+          <ctrl:PushRadioButton x:Name="radioButton2" Margin="5" Grid.Column="1" Grid.Row="1" FontSize="16" Text="{x:Static t:Strings.ShowAllOpen}" />
+          <ctrl:PushRadioButton x:Name="radioButton3" Margin="5" Grid.Column="1" Grid.Row="2" FontSize="16" Text="{x:Static t:Strings.ShowFutureOrders}" />
+          <ctrl:PushRadioButton x:Name="radioButton4" Margin="5" Grid.Column="1" Grid.Row="3" FontSize="16" Text="{x:Static t:Strings.ShowClosed}" />
+          <ctrl:PushRadioButton x:Name="radioButton5" Margin="5" Grid.Column="1" Grid.Row="4" FontSize="16" Text="{x:Static t:Strings.ShowAllDay}" />
+          <ctrl:PushRadioButton x:Name="radioButton6" Margin="5" Grid.Column="1" Grid.Row="5" FontSize="16" Text="{x:Static t:Strings.ShowRange}" />
+          <ctrl:PushRadioButton x:Name="radioButton7" Margin="5" Grid.Column="1" Grid.Row="6" FontSize="16" Text="{x:Static t:Strings.ShowAll}" />
+        </Grid>
+      </GroupBox>
+    </Grid>
+  </DockPanel>
+</UserControl>

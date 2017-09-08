@@ -1,0 +1,31 @@
+<UserControl x:Class="TemPOS.ItemEditorIngredientsControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:t="clr-namespace:TemPOS.Types" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="400" d:DesignWidth="650">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid Height="400">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="30*" />
+        <RowDefinition Height="235*" />
+        <RowDefinition Height="70*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="300*" />
+        <ColumnDefinition Width="300*" />
+      </Grid.ColumnDefinitions>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <Border Margin="0,0,5,0" Grid.Row="1" />
+      <Border Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" />
+      <Label Content="{x:Static t:Strings.ItemEditorAvailableIngredients}" VerticalAlignment="Center" FontSize="14" />
+      <Label Content="{x:Static t:Strings.ItemEditorCurrentIngredients}" VerticalAlignment="Center" FontSize="14" Grid.Column="1" Grid.ColumnSpan="2" />
+      <ctrl:DragScrollListBox Margin="5,5,10,5" x:Name="listBox" Grid.Row="1" SelectionChanged="listBox_SelectionChanged" />
+      <ctrl:DragScrollListBox Margin="5" x:Name="listBoxItemIngredients" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" SelectionChanged="listBoxItemIngredients_SelectionChanged" />
+      <Label x:Name="labelReadOnly" Grid.Row="2" Grid.ColumnSpan="2" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{x:Static t:Strings.ItemIngredientsCanNotBeModifiedDuringADayOfOperationCompleteAnEndOfDayToModify}" Visibility="Collapsed" />
+      <ctrl:TextBlockButton x:Name="buttonAdd" Grid.Row="2" Margin="5" Text="{x:Static t:Strings.ItemEditorAddIngredient}" Width="85" Height="70" FontSize="14" Click="buttonAdd_Click" />
+      <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1">
+        <ctrl:TextBlockButton x:Name="buttonAmount" Margin="5" Text="{x:Static t:Strings.ItemEditorEditIngredientAmount}" Width="85" Height="70" FontSize="14" Click="buttonAmount_Click" />
+        <ctrl:TextBlockButton x:Name="buttonRemove" Margin="5" Text="{x:Static t:Strings.ItemEditorRemoveIngredient}" Width="85" Height="70" FontSize="14" Click="buttonRemove_Click" />
+      </StackPanel>
+    </Grid>
+  </DockPanel>
+</UserControl>

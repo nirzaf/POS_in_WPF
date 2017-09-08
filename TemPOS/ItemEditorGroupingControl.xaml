@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="TemPOS.ItemEditorGroupingControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="650">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid Height="400">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="235*" />
+                <RowDefinition Height="70*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300*" />
+                <ColumnDefinition Width="300*" />
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Border Margin="0,0,5,0" Grid.Row="1" />
+            <Border Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" />
+            <Label Content="{x:Static t:Strings.ItemEditorAvailableItems}" VerticalAlignment="Center" FontSize="14" />
+            <Label  Content="{x:Static t:Strings.ItemEditorIncludedItems}" VerticalAlignment="Center" FontSize="14" Grid.Column="1" Grid.ColumnSpan="2" />
+            <ctrl:DragScrollListBox Margin="5,5,10,5" x:Name="listBoxAvailableItems" Grid.Row="1" SelectionChanged="listBoxAvailableItems_SelectionChanged" />
+            <ctrl:DragScrollListBox Margin="5" x:Name="listBoxIncludedItems" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" SelectionChanged="listBoxIncludedItems_SelectionChanged" />
+            <Label x:Name="labelReadOnly" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{x:Static t:Strings.ItemEditorErrorStartOfDay}" Visibility="Collapsed" />
+            <ctrl:TextBlockButton x:Name="buttonAdd" Grid.Row="2" Margin="5" Text="{x:Static t:Strings.ItemEditorAddItem}" Width="85" Height="70" FontSize="14" Click="buttonAdd_Click" IsEnabled="False" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1">
+                <ctrl:TextBlockButton x:Name="buttonEditQuantity" Margin="5" Text="{x:Static t:Strings.ItemEditorEditQuantityButton}" Width="85" Height="70" FontSize="14" Click="buttonEditQuantity_Click" IsEnabled="False" />
+                <ctrl:TextBlockButton x:Name="buttonRemove" Margin="5" Text="{x:Static t:Strings.ItemEditorRemoveItem}" Width="85" Height="70" FontSize="14" Click="buttonRemove_Click" IsEnabled="False" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

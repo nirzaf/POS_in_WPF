@@ -1,0 +1,145 @@
+﻿<UserControl x:Class="TemPOS.TimesheetMaintenanceControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="660" d:DesignWidth="945">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="633*" />
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <DataGrid Name="headerGrid" Margin="0,0,10,0" GridLinesVisibility="All" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="True" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" AutoGenerateColumns="False" FontSize="16" ColumnHeaderHeight="36" Sorting="dataGrid_Sorting" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header=" Id" Binding="{Binding Path=Id}" Width="50" IsReadOnly="True" />
+                    <DataGridTextColumn Header=" Name" Binding="{Binding Path=EmployeeName}" Width="225" IsReadOnly="True" />
+                    <DataGridTextColumn Header=" Job" Binding="{Binding Path=JobName}" Width="100" />
+                    <DataGridTextColumn Header=" Start Time" Binding="{Binding Path=StartTime}" Width="200" />
+                    <DataGridTextColumn Header=" End Time" Binding="{Binding Path=EndTime}" Width="200" />
+                    <DataGridTextColumn Header=" Tips Declared" Binding="{Binding Path=DeclaredTipAmount}" Width="200" />
+                </DataGrid.Columns>
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="BorderBrush">
+                            <Setter.Value>
+                                <Binding ElementName="Configuration" Path="BindableBorderBrush" />
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="BorderThickness" Value="1"/>
+                        <Setter Property="Background">
+                            <Setter.Value>
+                                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </DataGrid.Resources>
+                <DataGrid.BorderBrush>
+                    <Binding ElementName="Configuration" Path="BindableBorderBrush" />
+                </DataGrid.BorderBrush>
+                <DataGrid.HorizontalGridLinesBrush>
+                    <Binding ElementName="Configuration" Path="BindableBorderBrush" />
+                </DataGrid.HorizontalGridLinesBrush>
+                <DataGrid.VerticalGridLinesBrush>
+                    <Binding ElementName="Configuration" Path="BindableBorderBrush" />
+                </DataGrid.VerticalGridLinesBrush>
+                <DataGrid.Foreground>
+                    <Binding ElementName="Configuration" Path="BindableLabelForegroundBrush" />
+                </DataGrid.Foreground>
+                <DataGrid.Background>
+                    <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+                </DataGrid.Background>
+                <DataGrid.RowBackground>
+                    <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+                </DataGrid.RowBackground>
+            </DataGrid>
+
+            <ctrl:DragScrollViewer x:Name="listBox" Grid.Row="1">
+                <ctrl:DragScrollViewer.ScrollContent>
+                    <Border CornerRadius="0">
+                        <DataGrid Name="dataGrid" HeadersVisibility="None" GridLinesVisibility="All" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="True" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" AutoGenerateColumns="False" FontSize="16" RowHeight="40" ColumnHeaderHeight="0" BeginningEdit="dataGrid_BeginningEdit" SelectionChanged="dataGrid_SelectionChanged" BorderThickness="1" >
+                            <DataGrid.Columns>                            
+                                <DataGridTextColumn Binding="{Binding Path=Id}" Width="50" />
+                                <DataGridTextColumn Binding="{Binding Path=EmployeeName}" Width="225" />
+                                <DataGridTextColumn Binding="{Binding Path=JobName}" Width="100" />
+                                <DataGridTextColumn Binding="{Binding Path=StartTime}" Width="200" />
+                                <DataGridTextColumn Binding="{Binding Path=EndTime}" Width="200" />
+                                <DataGridTextColumn Binding="{Binding Path=DeclaredTipAmount}" Width="200" />
+                            </DataGrid.Columns>
+                            <DataGrid.Resources>
+                                <Style TargetType="{x:Type DataGridColumnHeader}">
+                                    <Setter Property="Background">
+                                        <Setter.Value>
+                                            <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                                <Style TargetType="{x:Type DataGridRowHeader}">
+                                    <Setter Property="Background">
+                                        <Setter.Value>
+                                            <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                                <Style TargetType="{x:Type DataGridCell}">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Foreground">
+                                                <Setter.Value>
+                                                    <Binding ElementName="Configuration" Path="BindableListItemSelectedForegroundBrush" />
+                                                </Setter.Value>
+                                            </Setter>
+                                            <Setter Property="Background">
+                                                <Setter.Value>
+                                                    <Binding ElementName="Configuration" Path="BindableListItemSelectedBackgroundBrush" />
+                                                </Setter.Value>
+                                            </Setter>                                            
+                                        </Trigger>
+                                        <MultiTrigger>
+                                            <MultiTrigger.Conditions>
+                                                <Condition Property="IsEnabled" Value="false" />
+                                                <Condition Property="IsSelected" Value="true" />
+                                            </MultiTrigger.Conditions>
+                                            <Setter Property="Foreground">
+                                                <Setter.Value>
+                                                    <Binding ElementName="Configuration" Path="BindableListItemDisabledSelectedForegroundBrush" />
+                                                </Setter.Value>
+                                            </Setter>
+                                            <Setter Property="Background">
+                                                <Setter.Value>
+                                                    <Binding ElementName="Configuration" Path="BindableListItemDisabledSelectedBackgroundBrush" />
+                                                </Setter.Value>
+                                            </Setter>
+                                        </MultiTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.Resources>
+                            <DataGrid.HorizontalGridLinesBrush>
+                                <Binding ElementName="Configuration" Path="BindableBorderBrush" />                            
+                            </DataGrid.HorizontalGridLinesBrush>
+                            <DataGrid.VerticalGridLinesBrush>
+                                <Binding ElementName="Configuration" Path="BindableBorderBrush" />
+                            </DataGrid.VerticalGridLinesBrush>
+                            <DataGrid.Foreground>
+                                <Binding ElementName="Configuration" Path="BindableLabelForegroundBrush" />
+                            </DataGrid.Foreground>
+                            <DataGrid.Background>
+                                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+                            </DataGrid.Background>
+                            <DataGrid.RowBackground>
+                                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+                            </DataGrid.RowBackground>
+                        </DataGrid>
+                    </Border>
+                </ctrl:DragScrollViewer.ScrollContent>
+            </ctrl:DragScrollViewer>
+        </Grid>
+    </DockPanel>
+</UserControl>

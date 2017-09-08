@@ -1,0 +1,8 @@
+D:\Viipe.com\PointOfSale\QRCodeLib\obj\Release\ResolveAssemblyReference.cache
+D:\Viipe.com\PointOfSale\QRCodeLib\obj\Release\ThoughtWorks.QRCode.Properties.Resources.resources
+D:\Viipe.com\PointOfSale\QRCodeLib\obj\Release\GenerateResource.read.1.tlog
+D:\Viipe.com\PointOfSale\QRCodeLib\obj\Release\GenerateResource.write.1.tlog
+D:\Viipe.com\PointOfSale\QRCodeLib\obj\Release\ThoughtWorks.QRCode.dll
+D:\Viipe.com\PointOfSale\QRCodeLib\obj\Release\ThoughtWorks.QRCode.pdb
+D:\Viipe.com\PointOfSale\QRCodeLib\ThoughtWorks.QRCode.dll
+D:\Viipe.com\PointOfSale\QRCodeLib\ThoughtWorks.QRCode.pdb

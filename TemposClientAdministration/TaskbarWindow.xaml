@@ -1,0 +1,22 @@
+﻿<Window x:Class="TemposClientAdministration.TaskbarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:TemposClientAdministration"
+        xmlns:tb="clr-namespace:TaskbarNotification"
+        ShowInTaskbar="False" WindowStyle="None" AllowsTransparency="True"
+        Title="TaskbarWindow" Height="300" Width="300" Visibility="Hidden">
+    <Window.Resources>
+        <ContextMenu x:Key="trayContextMenu" Placement="Top">
+            <ContextMenu.Template>
+                <ControlTemplate>
+                    <my:TrayContextMenuControl />
+                </ControlTemplate>
+            </ContextMenu.Template>
+        </ContextMenu>
+    </Window.Resources>
+    <tb:TaskbarIcon
+      x:Name="notifyIcon"
+      IconSource="Icons/Tempos.ico"
+      ToolTipText="Tempos Client Administration" TrayLeftMouseDown="MyNotifyIcon_TrayLeftMouseDown">
+    </tb:TaskbarIcon>
+</Window>

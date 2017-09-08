@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="TemposClientAdministration.UpdateServiceControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemposClientAdministration"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="576" d:DesignWidth="1024">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableApplicationBackgroundBrush" />
+            </Grid.Background>
+            <Border>
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="500*" />
+                        <RowDefinition Height="80" />
+                    </Grid.RowDefinitions>
+                    <Border x:Name="mainContentBorder" Margin="10,15,0,0" BorderThickness="1" CornerRadius="4" Grid.Column="1" Grid.RowSpan="5" Visibility="Hidden" />
+                    <Border />
+                    <Border Grid.Column="1" />
+                    <ctrl:DragScrollViewer x:Name="dragScrollViewer">
+                        <ctrl:DragScrollViewer.ScrollContent>
+                            <FlowDocumentScrollViewer Margin="5,5,5,5" Name="flowDocumentScroll" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
+                                <FlowDocumentScrollViewer.Foreground>
+                                    <Binding ElementName="Configuration" Path="BindableApplicationForegroundBrush" />
+                                </FlowDocumentScrollViewer.Foreground>
+                            </FlowDocumentScrollViewer>
+                        </ctrl:DragScrollViewer.ScrollContent>
+                    </ctrl:DragScrollViewer>
+                    <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <ctrl:TextBlockButton x:Name="buttonStart" Margin="5" Width="70" Height="64" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Start" Click="buttonStart_Click" />
+                        <ctrl:TextBlockButton x:Name="buttonRestart" Margin="5" Width="70" Height="64" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Restart" IsEnabled="False" Click="buttonRestart_Click" />
+                        <ctrl:TextBlockButton x:Name="buttonStop" Margin="5" Width="70" Height="64" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Stop" IsEnabled="False" Click="buttonStop_Click" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+    </DockPanel>
+</UserControl>

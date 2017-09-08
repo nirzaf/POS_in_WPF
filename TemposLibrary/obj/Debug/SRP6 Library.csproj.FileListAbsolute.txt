@@ -1,0 +1,10 @@
+D:\Viipe.com\SRP6 Demo\SRP6 Library\bin\Debug\SRP6.dll
+D:\Viipe.com\SRP6 Demo\SRP6 Library\bin\Debug\SRP6.pdb
+D:\Viipe.com\SRP6 Demo\SRP6 Library\obj\Debug\ResolveAssemblyReference.cache
+D:\Viipe.com\SRP6 Demo\SRP6 Library\obj\Debug\SRP6.dll
+D:\Viipe.com\SRP6 Demo\SRP6 Library\obj\Debug\SRP6.pdb
+D:\Viipe.com\PointOfSale\SRP6 Library\obj\Debug\ResolveAssemblyReference.cache
+D:\Viipe.com\PointOfSale\SRP6 Library\bin\Debug\TemposUpdater.dll
+D:\Viipe.com\PointOfSale\SRP6 Library\bin\Debug\TemposUpdater.pdb
+D:\Viipe.com\PointOfSale\SRP6 Library\obj\Debug\TemposUpdater.dll
+D:\Viipe.com\PointOfSale\SRP6 Library\obj\Debug\TemposUpdater.pdb

@@ -1,0 +1,94 @@
+<UserControl x:Class="TemPOS.ReportsMenuControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="550" d:DesignWidth="800" xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="200*" />
+        <ColumnDefinition Width="200*" />
+        <ColumnDefinition Width="200*" />
+        <ColumnDefinition Width="200*" />
+      </Grid.ColumnDefinitions>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <StackPanel>
+        <GroupBox Header="{x:Static t:Strings.TotalSales}" FontSize="16" Margin="0,0,5,0">
+          <StackPanel>
+            <Button x:Name="buttonSalesTotalsByItem" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.SalesByItem}" Click="buttonSalesTotalsByItem_Click" />
+            <Button x:Name="buttonSalesTotalsByCategory" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.SalesByCategory}" Click="buttonSalesTotalsByCategory_Click" />
+            <Button x:Name="buttonSalesTotalsByEmployee" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.SalesByEmployee}" Click="buttonSalesTotalsByEmployee_Click" />
+            <Button Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.CostOfSales}" Visibility="Collapsed" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+          </StackPanel>
+        </GroupBox>
+        <GroupBox Header="{x:Static t:Strings.EmployeeSales}" FontSize="16" Margin="0,5,5,0">
+          <StackPanel>
+            <Button x:Name="buttonEmployeeSalesTotalsByItem" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.SalesByItem}" Click="buttonEmployeeSalesTotalsByItem_Click" />
+            <Button x:Name="buttonEmployeeSalesTotalsByCategory" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.SalesByCategory}" Click="buttonEmployeeSalesTotalsByCategory_Click" />
+            <Button Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.CostOfSales}" Visibility="Collapsed" />
+          </StackPanel>
+        </GroupBox>
+        <GroupBox Header="{x:Static t:Strings.TicketTransactions}" FontSize="16" Margin="0,5,5,0">
+          <StackPanel>
+            <Button x:Name="buttonCancels" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.Cancels}" Click="buttonCancels_Click" />
+            <Button x:Name="buttonVoids" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.Voids}" Click="buttonVoids_Click" />
+            <Button x:Name="buttonReturns" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.Returns}" Click="buttonReturns_Click" />
+            <Button x:Name="buttonRefunds" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.Refunds}" Click="buttonRefunds_Click" />
+          </StackPanel>
+        </GroupBox>
+      </StackPanel>
+      <StackPanel Grid.Column="1">
+        <GroupBox Header="{x:Static t:Strings.RegisterTransactions}" FontSize="16" Margin="0,0,5,0">
+          <StackPanel>
+            <Button x:Name="buttonNoSales" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.NoSales}" Click="buttonNoSales_Click" />
+            <Button x:Name="buttonPayouts" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.Payouts}" Click="buttonPayouts_Click" />
+            <Button x:Name="buttonSafeDrops" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.SafeDrops}" Click="buttonSafeDrops_Click" />
+            <Button x:Name="buttonRegisterDeposits" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.Deposits}" Click="buttonRegisterDeposits_Click" />
+            <Button x:Name="buttonRegisterFloatingDocking" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.FloatingDocking}" Click="buttonRegisterFloatingDocking_Click" />
+          </StackPanel>
+        </GroupBox>
+        <GroupBox Header="{x:Static t:Strings.Labor}" FontSize="16" Margin="0,5,5,0">
+          <StackPanel>
+            <Button x:Name="buttonLaborEmployeeHours" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.EmployeeHours}" Click="buttonLaborEmployeeHours_Click" />
+            <Button x:Name="buttonLaborHourlyTotals" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.HourlyTotals}" Click="buttonLaborHourlyTotals_Click" />
+          </StackPanel>
+        </GroupBox>
+        <GroupBox Header="{x:Static t:Strings.Inventory}" FontSize="16" Margin="0,5,5,0">
+          <StackPanel>
+            <Button x:Name="buttonInventoryUsageByIngredient" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.IngredientUsage}" Click="buttonInventoryUsageByIngredient_Click" />
+            <Button x:Name="buttonInventoryCurrentInventory" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.CurrentInventory}" Click="buttonInventoryCurrentInventory_Click" />
+          </StackPanel>
+        </GroupBox>
+      </StackPanel>
+      <StackPanel Grid.Column="2">
+        <GroupBox Header="{x:Static t:Strings.Waste}" FontSize="16" Margin="0,0,5,0">
+          <StackPanel>
+            <Button x:Name="buttonInventoryWasteByItem" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.WasteByItem}" Click="buttonInventoryWasteByItem_Click" />
+            <Button x:Name="buttonInventoryWasteByCategory" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.WasteByCategory}" Click="buttonInventoryWasteByCategory_Click" />
+            <Button x:Name="buttonInventoryWasteByIngredient" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.WasteByIngredient}" Click="buttonInventoryWasteByIngredient_Click" />
+            <Button x:Name="buttonInventoryWasteByHours" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.WasteByHour}" Click="buttonInventoryWasteByHours_Click" Visibility="Collapsed" />
+          </StackPanel>
+        </GroupBox>
+        <GroupBox Header="{x:Static t:Strings.Logging}" FontSize="16" Margin="0,5,5,0">
+          <StackPanel Height="328">
+            <ctrl:TextBlockButton x:Name="buttonLogInventoryAdjustments" Margin="2" Width="150" Height="45" Text="{x:Static t:Strings.InventoryAdjustments}" Click="buttonLogInventoryAdjustments_Click" />
+            <ctrl:TextBlockButton x:Name="buttonLogIngredientSetChanges" Margin="2" Width="150" Height="45" Text="{x:Static t:Strings.IngredientRecipeAdjustments}" Click="buttonLogIngredientSetChanges_Click" />
+            <ctrl:TextBlockButton x:Name="buttonLogItemDiscontinue" Margin="2" Width="150" Height="45" Text="{x:Static t:Strings.ItemAdjustments}" Click="buttonLogItemDiscontinue_Click" />
+            <ctrl:TextBlockButton x:Name="buttonLogItemIngredientChanges" Margin="2" Width="150" Height="45" Text="{x:Static t:Strings.ItemRecipeAdjustments}" Click="buttonLogItemIngredientChanges_Click" />
+            <Button x:Name="buttonLogPricingChanges" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.PriceChanges}" Click="buttonLogPricingChanges_Click" />
+            <Button x:Name="buttonLaborTimesheetChanges" Margin="2" Width="150" Height="45" Content="{x:Static t:Strings.TimesheetChanges}" Click="buttonLaborTimesheetChanges_Click" />
+          </StackPanel>
+        </GroupBox>
+      </StackPanel>
+      <GroupBox Header="{x:Static t:Strings.RangeOptions}" FontSize="16" Margin="5,0,5,5" Grid.Column="3" Height="265">
+        <StackPanel>
+          <ctrl:PushRadioButton x:Name="radioTodayOnly" Text="{x:Static t:Strings.TodayOnly}" FontSize="12" Height="30" Margin="10,5,0,5" SelectionGained="radioButton_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioDateRange" Text="{x:Static t:Strings.SpecifyDates}" FontSize="12" Height="30" Margin="10,5,0,5" SelectionGained="radioButton_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioDayOfOperationRange" Text="{x:Static t:Strings.OperationalDays}" FontSize="12" Height="30" Margin="10,5,0,5" SelectionGained="radioButton_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioMonthToDate" Text="{x:Static t:Strings.MonthToDate}" FontSize="12" Height="30" Margin="10,5,0,5" SelectionGained="radioButton_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioYearToDate" Text="{x:Static t:Strings.YearToDate}" FontSize="12" Height="30" Margin="10,5,0,5" SelectionGained="radioButton_SelectionGained" />
+          <ctrl:PushRadioButton x:Name="radioAllDates" Text="{x:Static t:Strings.AllDates}" Margin="10,5,0,5" Height="30" FontSize="12" SelectionGained="radioButton_SelectionGained" />
+        </StackPanel>
+      </GroupBox>
+    </Grid>
+  </DockPanel>
+</UserControl>

@@ -1,0 +1,19 @@
+<UserControl x:Class="TemPOS.SeatingSelectionControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="340" d:DesignWidth="655" xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel>
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="190*" />
+        <ColumnDefinition Width="460*" />
+      </Grid.ColumnDefinitions>
+      <Border />
+      <Label FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Times New Roman" Content="{x:Static t:Strings.SelectOccasion}" />
+      <ctrl:DragScrollListBox Margin="5,40,5,5" x:Name="listBoxRooms" Background="Transparent" SelectionChanged="listBoxRooms_SelectionChanged" />
+      <my:SeatingDineInControl Margin="5,0,0,0" x:Name="dineInControl" Grid.Column="1" />
+      <my:SeatingPersonInformationControl Margin="5,0,5,0" x:Name="personInformationControl" Grid.Column="1" Visibility="Hidden" />
+    </Grid>
+  </DockPanel>
+</UserControl>

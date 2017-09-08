@@ -1,0 +1,36 @@
+<UserControl x:Class="TemPOS.SeatingMaintenanceControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="660" d:DesignWidth="945" Loaded="UserControl_Loaded" xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="300*" />
+        <ColumnDefinition Width="628*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="560*" />
+        <RowDefinition Height="90" />
+      </Grid.RowDefinitions>
+      <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1">
+        <ctrl:TextBlockButton x:Name="buttonAdd" Margin="5,0,5,0" Width="70" Height="64" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{x:Static t:Strings.NewRoom}" Grid.Row="1" Click="buttonAdd_Click" />
+        <ctrl:TextBlockButton x:Name="buttonEditToggle" Margin="5,0,5,0" Width="70" Height="64" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{x:Static t:Strings.EditSeatings}" Grid.Row="1" IsEnabled="False" Click="buttonEditToggle_Click" />
+        <ctrl:TextBlockButton x:Name="buttonDelete" Margin="5,0,5,0" Width="70" Height="64" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{x:Static t:Strings.DeleteRoom}" Grid.Row="1" IsEnabled="False" Click="buttonDelete_Click" />
+      </StackPanel>
+      <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1">
+        <ctrl:TextBlockButton x:Name="buttonUpdate" Margin="0,0,5,0" Width="70" Height="64" Text="{x:Static t:Strings.UpdateRoom}" IsEnabled="False" Click="buttonUpdate_Click" />
+        <ctrl:TextBlockButton x:Name="buttonCancel" Width="70" Height="64" Text="{x:Static t:Strings.CancelChanges}" IsEnabled="False" Click="buttonCancel_Click" />
+      </StackPanel>
+      <GroupBox Name="groupBoxList" Margin="5,5,5,5" Header="{x:Static t:Strings.Rooms}" FontSize="16">
+        <ctrl:DragScrollListBox x:Name="listBox1" SelectionChanged="listBox1_SelectionChanged" />
+      </GroupBox>
+      <GroupBox Name="groupBoxSeating" Header="{x:Static t:Strings.SeatingProperties}" FontSize="16" Grid.Column="1" Margin="5,5,5,5" Visibility="Collapsed">
+        <my:SeatingEditorControl x:Name="seatingEditorControl" IsEnabled="False" ValueChanged="seatingEditorControl_ValueChanged" />
+      </GroupBox>
+      <GroupBox Name="groupBoxRoom" Header="{x:Static t:Strings.RoomProperties}" FontSize="16" Grid.Column="1" Margin="5,5,5,5">
+        <my:SeatingRoomEditorControl x:Name="roomEditorControl" IsEnabled="False" ValueChanged="roomEditorControl_ValueChanged" />
+      </GroupBox>
+    </Grid>
+  </DockPanel>
+</UserControl>

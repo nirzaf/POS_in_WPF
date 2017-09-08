@@ -1,0 +1,18 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!doctype html>
+<html lang="en">
+<head>
+	<title>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+		Your Store
+	</asp:ContentPlaceHolder>
+	</title>
+	<link rel="stylesheet" href="<%=Url.SiteRoot()%>/content/css/style.css" />
+</head>
+<body>
+<asp:ContentPlaceHolder ID="MainContent" runat="server">
+			
+</asp:ContentPlaceHolder>		
+</body>
+</html>
+

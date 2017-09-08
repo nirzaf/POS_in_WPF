@@ -1,0 +1,10 @@
+D:\Viipe.com\PointOfSale\TemposLibrary\bin\Release_Demo\TemposLibrary.dll
+D:\Viipe.com\PointOfSale\TemposLibrary\bin\Release_Demo\TemposLibrary.pdb
+D:\Viipe.com\PointOfSale\TemposLibrary\obj\Release_Demo\ResolveAssemblyReference.cache
+D:\Viipe.com\PointOfSale\TemposLibrary\obj\Release_Demo\TemposLibrary.dll
+D:\Viipe.com\PointOfSale\TemposLibrary\obj\Release_Demo\TemposLibrary.pdb
+K:\Viipe.com\TemPOS\TemposLibrary\bin\Release_Demo\TemposLibrary.dll
+K:\Viipe.com\TemPOS\TemposLibrary\bin\Release_Demo\TemposLibrary.pdb
+K:\Viipe.com\TemPOS\TemposLibrary\obj\Release_Demo\TemposLibrary.csprojResolveAssemblyReference.cache
+K:\Viipe.com\TemPOS\TemposLibrary\obj\Release_Demo\TemposLibrary.dll
+K:\Viipe.com\TemPOS\TemposLibrary\obj\Release_Demo\TemposLibrary.pdb

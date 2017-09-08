@@ -1,0 +1,202 @@
+﻿<UserControl x:Class="TemPOS.GeneralSettingsBrushSetupControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="845">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid Height="500">
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Grid Background="Transparent" Margin="50,10,50,10">                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="215*" />
+                    <ColumnDefinition Width="40*" />
+                    <ColumnDefinition Width="215*" />
+                </Grid.ColumnDefinitions>
+                <GroupBox Header="{x:Static t:Strings.BrushesForegroundColors}" FontSize="16">
+                    <ctrl:DragScrollViewer>
+                        <ctrl:DragScrollViewer.ScrollContent>
+                            <Grid Height="800">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150*" />
+                                    <ColumnDefinition Width="65*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                </Grid.RowDefinitions>
+                                <!-- Foreground Labels -->
+                                <Label Content="{x:Static t:Strings.BrushesApplication}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" />
+                                <Label Content="{x:Static t:Strings.BrushesBordersEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="1" />
+                                <Label Content="{x:Static t:Strings.BrushesBordersDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="2" />
+                                <Label Content="{x:Static t:Strings.BrushesButtonEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="3" />
+                                <Label Content="{x:Static t:Strings.BrushesButtonDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="4" />
+                                <Label Content="{x:Static t:Strings.BrushesButtonEnabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="5" />
+                                <Label Content="{x:Static t:Strings.BrushesButtonDisabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="6" />
+                                <Label Content="{x:Static t:Strings.BrushesCaret}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="7" />
+                                <Label Content="{x:Static t:Strings.BrushesComboBoxEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="8" />
+                                <Label Content="{x:Static t:Strings.BrushesComboBoxDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="9" />
+                                <Label Content="{x:Static t:Strings.BrushesLabelEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="10" />
+                                <Label Content="{x:Static t:Strings.BrushesLabelDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="11" />
+                                <Label Content="{x:Static t:Strings.BrushesListItemEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="12" />
+                                <Label Content="{x:Static t:Strings.BrushesListItemDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="13" />
+                                <Label Content="{x:Static t:Strings.BrushesListItemEnabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="14" />
+                                <Label Content="{x:Static t:Strings.BrushesListItemDisabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="15" />
+                                <Label Content="{x:Static t:Strings.BrushesTabButtonEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="16" />
+                                <Label Content="{x:Static t:Strings.BrushesTabButtonDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="17" />
+                                <Label Content="{x:Static t:Strings.BrushesTabButtonEnabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="18" />
+                                <Label Content="{x:Static t:Strings.BrushesTabButtonDisabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="19" />
+                                <Label Content="{x:Static t:Strings.BrushesTextBoxEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="20" />
+                                <Label Content="{x:Static t:Strings.BrushesTextBoxDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="21" />
+                                <!-- Foreground Colors -->
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxApplicationForeground" Margin="5" Grid.Column="1" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxBorder" Margin="5" Grid.Column="1" Grid.Row="1" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledBorder" Margin="5" Grid.Column="1" Grid.Row="2" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxButtonForeground" Margin="5" Grid.Column="1" Grid.Row="3" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledButtonForeground" Margin="5" Grid.Column="1" Grid.Row="4" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledSelectedButtonForeground" Margin="5" Grid.Column="1" Grid.Row="5" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledSelectedButtonForeground" Margin="5" Grid.Column="1" Grid.Row="6" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxCaret" Margin="5" Grid.Column="1" Grid.Row="7" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledComboBoxForeground" Margin="5" Grid.Column="1" Grid.Row="8" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledComboBoxForeground" Margin="5" Grid.Column="1" Grid.Row="9" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxLabelForeground" Margin="5" Grid.Column="1" Grid.Row="10" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledLabelForeground" Margin="5" Grid.Column="1" Grid.Row="11" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledListItemForeground" Margin="5" Grid.Column="1" Grid.Row="12" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledListItemForeground" Margin="5" Grid.Column="1" Grid.Row="13" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledSelectedListItemForeground" Margin="5" Grid.Column="1" Grid.Row="14" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledSelectedListItemForeground" Margin="5" Grid.Column="1" Grid.Row="15" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledTabForeground" Margin="5" Grid.Column="1" Grid.Row="16" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledTabForeground" Margin="5" Grid.Column="1" Grid.Row="17" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledSelectedTabForeground" Margin="5" Grid.Column="1" Grid.Row="18" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledSelectedTabForeground" Margin="5" Grid.Column="1" Grid.Row="19" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxTextboxForeground" Margin="5" Grid.Column="1" Grid.Row="20" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledTextboxForeground" Margin="5" Grid.Column="1" Grid.Row="21" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                            </Grid>
+                        </ctrl:DragScrollViewer.ScrollContent>
+                    </ctrl:DragScrollViewer>
+                </GroupBox>
+                <GroupBox Header="{x:Static t:Strings.BrushesBackgroundColors}" FontSize="16" Grid.Column="3">
+                    <ctrl:DragScrollViewer>
+                        <ctrl:DragScrollViewer.ScrollContent>
+                            <Grid Height="940">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150*" />
+                                    <ColumnDefinition Width="65*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                    <RowDefinition Height="300*"/>
+                                </Grid.RowDefinitions>
+                                <!-- Background Labels -->
+                                <Label Content="{x:Static t:Strings.BrushesApplication}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" />
+                                <Label Content="{x:Static t:Strings.BrushesButtonEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="1" />
+                                <Label Content="{x:Static t:Strings.BrushesButtonDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="2" />
+                                <Label Content="{x:Static t:Strings.BrushesButtonEnabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="3" />
+                                <Label Content="{x:Static t:Strings.BrushesButtonDisabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="4" />
+                                <Label Content="{x:Static t:Strings.BrushesCheckBoxEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="5" />
+                                <Label Content="{x:Static t:Strings.BrushesCheckBoxDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="6" />
+                                <Label Content="{x:Static t:Strings.BrushesCheckBoxEnabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="7" />
+                                <Label Content="{x:Static t:Strings.BrushesCheckBoxDisabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="8" />
+                                <Label Content="{x:Static t:Strings.BrushesComboBoxEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="9" />
+                                <Label Content="{x:Static t:Strings.BrushesComboBoxDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="10" />
+                                <Label Content="{x:Static t:Strings.BrushesListItemEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="11" />
+                                <Label Content="{x:Static t:Strings.BrushesListItemDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="12" />
+                                <Label Content="{x:Static t:Strings.BrushesListItemEnabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="13" />
+                                <Label Content="{x:Static t:Strings.BrushesListItemDisabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="14" />
+                                <Label Content="{x:Static t:Strings.BrushesRadioButtonEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="15" />
+                                <Label Content="{x:Static t:Strings.BrushesRadioButtonDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="16" />
+                                <Label Content="{x:Static t:Strings.BrushesRadioButtonEnabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="17" />
+                                <Label Content="{x:Static t:Strings.BrushesRadioButtonDisabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="18" />
+                                <Label Content="{x:Static t:Strings.BrushesTabButtonEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="19" />
+                                <Label Content="{x:Static t:Strings.BrushesTabButtonDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="20" />
+                                <Label Content="{x:Static t:Strings.BrushesTabButtonEnabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="21" />
+                                <Label Content="{x:Static t:Strings.BrushesTabButtonDisabledSelected}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="22" />
+                                <Label Content="{x:Static t:Strings.BrushesTextBoxEnabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="23" />
+                                <Label Content="{x:Static t:Strings.BrushesTextBoxDisabled}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="24" />
+                                <Label Content="{x:Static t:Strings.BrushesWindowTitleBar}" Margin="20,0,0,0" VerticalAlignment="Center" FontSize="12" Grid.Row="25" />
+                                <!-- Background Colors -->
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxApplicationBackground" Margin="5" Grid.Column="1" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxButtonBackground" Margin="5" Grid.Column="1" Grid.Row="1" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledButtonBackground" Margin="5" Grid.Column="1" Grid.Row="2" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxSelectedButtonBackground" Margin="5" Grid.Column="1" Grid.Row="3" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledSelectedButtonBackground" Margin="5" Grid.Column="1" Grid.Row="4" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledCheckBox" Margin="5" Grid.Column="1" Grid.Row="5" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledCheckBox" Margin="5" Grid.Column="1" Grid.Row="6" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledSelectedCheckBox" Margin="5" Grid.Column="1" Grid.Row="7" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledSelectedCheckBox" Margin="5" Grid.Column="1" Grid.Row="8" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledComboBoxBackground" Margin="5" Grid.Column="1" Grid.Row="9" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledComboBoxBackground" Margin="5" Grid.Column="1" Grid.Row="10" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledListItemBackground" Margin="5" Grid.Column="1" Grid.Row="11" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledListItemBackground" Margin="5" Grid.Column="1" Grid.Row="12" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxSelectedEnabledListItemBackground" Margin="5" Grid.Column="1" Grid.Row="13" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxSelectedDisabledListItemBackground" Margin="5" Grid.Column="1" Grid.Row="14" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledRadioButtonBackground" Margin="5" Grid.Column="1" Grid.Row="15" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledRadioButtonBackground" Margin="5" Grid.Column="1" Grid.Row="16" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledSelectedRadioButtonBackground" Margin="5" Grid.Column="1" Grid.Row="17" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledSelectedRadioButtonBackground" Margin="5" Grid.Column="1" Grid.Row="18" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledTabBackground" Margin="5" Grid.Column="1" Grid.Row="19" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledTabBackground" Margin="5" Grid.Column="1" Grid.Row="20" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxEnabledSelectedTabBackground" Margin="5" Grid.Column="1" Grid.Row="21" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledSelectedTabBackground" Margin="5" Grid.Column="1" Grid.Row="22" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxTextboxBackground" Margin="5" Grid.Column="1" Grid.Row="23" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxDisabledTextboxBackground" Margin="5" Grid.Column="1" Grid.Row="24" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                                <ctrl:BrushSelectBox x:Name="colorSelectBoxWindowTitleBar" Margin="5" Grid.Column="1" Grid.Row="25" SelectedBrushChanged="colorSelectBox_SelectedBrushChanged" />
+                            </Grid>
+                        </ctrl:DragScrollViewer.ScrollContent>
+                    </ctrl:DragScrollViewer>
+                </GroupBox>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</UserControl>

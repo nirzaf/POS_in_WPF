@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Menu</h2>
+@{
+    var sortList = PosModels.Category.GetAll().ToList();   
+    sortList.Sort();
+    foreach (var category in sortList)
+    {
+        if (!category.IsDiscontinued)
+        {
+            @category.NameValue<br/>
+        }
+    }    
+}

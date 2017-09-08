@@ -1,0 +1,42 @@
+﻿
+<Window x:Class="TemPOS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:my="clr-namespace:TemPOS"
+        xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+        xmlns:myh="clr-namespace:TemPOS.Helpers"
+        Title="" Background="Black"
+        HorizontalContentAlignment="Left" VerticalContentAlignment="Top"
+        ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" Left="0" Top="0"        
+        Closing="Window_Closing" Closed="Window_Closed"
+        myh:Silencer.Silence="True" Loaded="Window_Loaded">
+    <AdornerDecorator UseLayoutRounding="True">
+        <DockPanel LastChildFill="True">
+            <ctrl:ConfigurationManager x:Name="Configuration" />
+            <Grid Initialized="Grid_Initialized">
+                <Grid.Background>
+                    <Binding ElementName="Configuration" Path="BindableApplicationBackgroundBrush" />
+                </Grid.Background>
+                <Grid.LayoutTransform>
+                    <!-- Allows to zoom the control's content using the slider -->
+                    <ScaleTransform CenterX="0" 
+                         CenterY="0">
+                        <ScaleTransform.ScaleX>
+                            <Binding ElementName="Configuration" Path="BindableProgramScale" />
+                        </ScaleTransform.ScaleX>
+                        <ScaleTransform.ScaleY>
+                            <Binding ElementName="Configuration" Path="BindableProgramScale" />
+                        </ScaleTransform.ScaleY>
+                    </ScaleTransform>
+                </Grid.LayoutTransform>
+                <DockPanel LastChildFill="True" Name="mainPane">
+                    <my:OrderEntryControl x:Name="orderEntryControl" Visibility="Hidden" />
+                </DockPanel>
+                <DockPanel LastChildFill="True">
+                    <my:LoginControl x:Name="loginControl" />
+                </DockPanel>
+            </Grid>
+        </DockPanel>
+    </AdornerDecorator>
+</Window>

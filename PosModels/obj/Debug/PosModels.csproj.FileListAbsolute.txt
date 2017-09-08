@@ -1,0 +1,14 @@
+D:\Viipe.com\PointOfSale\PosModels\bin\Debug\PosModels.dll
+D:\Viipe.com\PointOfSale\PosModels\bin\Debug\PosModels.pdb
+D:\Viipe.com\PointOfSale\PosModels\bin\Debug\TemposLibrary.dll
+D:\Viipe.com\PointOfSale\PosModels\bin\Debug\TemposLibrary.pdb
+D:\Viipe.com\PointOfSale\PosModels\obj\Debug\ResolveAssemblyReference.cache
+D:\Viipe.com\PointOfSale\PosModels\obj\Debug\PosModels.dll
+D:\Viipe.com\PointOfSale\PosModels\obj\Debug\PosModels.pdb
+K:\Viipe.com\TemPOS\PosModels\bin\Debug\PosModels.dll
+K:\Viipe.com\TemPOS\PosModels\bin\Debug\PosModels.pdb
+K:\Viipe.com\TemPOS\PosModels\bin\Debug\TemposLibrary.dll
+K:\Viipe.com\TemPOS\PosModels\bin\Debug\TemposLibrary.pdb
+K:\Viipe.com\TemPOS\PosModels\obj\Debug\PosModels.csprojResolveAssemblyReference.cache
+K:\Viipe.com\TemPOS\PosModels\obj\Debug\PosModels.dll
+K:\Viipe.com\TemPOS\PosModels\obj\Debug\PosModels.pdb

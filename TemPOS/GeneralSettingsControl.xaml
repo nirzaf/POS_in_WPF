@@ -1,0 +1,49 @@
+<UserControl x:Class="TemPOS.GeneralSettingsControl" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:my="clr-namespace:TemPOS" xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls" mc:Ignorable="d" d:DesignHeight="660" d:DesignWidth="945" xmlns:t="clr-namespace:TemPOS.Types">
+  <DockPanel LastChildFill="True" Name="mainPane">
+    <ctrl:ConfigurationManager x:Name="Configuration" />
+    <Grid>
+      <Grid.Background>
+        <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+      </Grid.Background>
+      <ctrl:TabControl x:Name="tabControl">
+        <ctrl:TabControl.Tab1>
+          <ctrl:TabDetails TabName="{x:Static t:Strings.GeneralSettings}" ButtonWidth="140">
+            <ctrl:TabDetails.DockedControl>
+              <my:GeneralSettingsGeneralPreferencesControl />
+            </ctrl:TabDetails.DockedControl>
+          </ctrl:TabDetails>
+        </ctrl:TabControl.Tab1>
+        <!--
+                <ctrl:TabControl.Tab2>
+                    <ctrl:TabDetails TabName="Store Settings" ButtonWidth="130">
+                        <ctrl:TabDetails.DockedControl>
+                            <my:GeneralSettingsStoreSettingsControl />
+                        </ctrl:TabDetails.DockedControl>
+                    </ctrl:TabDetails>
+                </ctrl:TabControl.Tab2>
+                <ctrl:TabControl.Tab3>
+                    <ctrl:TabDetails TabName="Operational Preferences" ButtonWidth="175">
+                        <ctrl:TabDetails.DockedControl>
+                            <my:GeneralSettingsOperationalPreferencesControl />
+                        </ctrl:TabDetails.DockedControl>
+                    </ctrl:TabDetails>
+                </ctrl:TabControl.Tab3>
+                -->
+        <ctrl:TabControl.Tab4>
+          <ctrl:TabDetails TabName="{x:Static t:Strings.Brushes}" ButtonWidth="105">
+            <ctrl:TabDetails.DockedControl>
+              <my:GeneralSettingsBrushSetupControl />
+            </ctrl:TabDetails.DockedControl>
+          </ctrl:TabDetails>
+        </ctrl:TabControl.Tab4>
+        <ctrl:TabControl.Tab5>
+          <ctrl:TabDetails TabName="{x:Static t:Strings.SoftwareUpdates}" ButtonWidth="150">
+            <ctrl:TabDetails.DockedControl>
+              <my:GeneralSettingsUpdateControl />
+            </ctrl:TabDetails.DockedControl>
+          </ctrl:TabDetails>
+        </ctrl:TabControl.Tab5>
+      </ctrl:TabControl>
+    </Grid>
+  </DockPanel>
+</UserControl>

@@ -1,0 +1,12 @@
+2014/11/04-21:35:50.747 150 Recovering log #102
+2014/11/04-21:35:50.748 150 Level-0 table #104: started
+2014/11/04-21:35:51.372 150 Level-0 table #104: 34706 bytes OK
+2014/11/04-21:35:51.493 150 Delete type=0 #102
+2014/11/04-21:35:51.501 150 Delete type=3 #100
+2014/11/04-21:36:07.493 ef8 Compacting 2@0 + 1@1 files
+2014/11/04-21:36:08.148 ef8 Generated table #106: 3646 keys, 621142 bytes
+2014/11/04-21:36:08.149 ef8 Compacted 2@0 + 1@1 files => 621142 bytes
+2014/11/04-21:36:08.247 ef8 Delete type=2 #99
+2014/11/04-21:36:08.259 ef8 Delete type=2 #101
+2014/11/04-21:36:08.279 ef8 Delete type=2 #104
+2014/11/04-21:36:08.292 ef8 compacted to: files[ 0 1 0 0 0 0 0 ]

@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="PosControls.FormattedListBoxItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:PosControls"
+             mc:Ignorable="d"
+             Name="ThisControl"
+             d:DesignHeight="75" d:DesignWidth="350" HorizontalAlignment="Stretch">
+    <DockPanel LastChildFill="True" Name="mainPane" HorizontalAlignment="Stretch" >
+        <my:ConfigurationManager x:Name="Configuration" />
+        <Grid Name="gridControl">
+            <Grid.Width>
+                <Binding ElementName="mainPane" Path="ActualWidth" />
+            </Grid.Width>
+            <TextBlock Margin="5,5,5,5" IsEnabledChanged="textBoxItem_IsEnabledChanged" MinHeight="64" Name="textBoxItem" FontSize="14" Foreground="{Binding ElementName=ThisControl, Path=Foreground}"/>
+        </Grid>
+        <Grid MinHeight="64" Name="gridControlGradientStops" Visibility="Collapsed"  >
+            <StackPanel Orientation="Horizontal" >
+                <Label Margin="5,5,5,5" Content="Color" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" Foreground="{Binding ElementName=ThisControl, Path=Foreground}" />
+                <Border Name="borderSwatch" Height="50" Width="80" />
+                <Label Margin="5,5,0,5" Content="with an offset value of" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" Foreground="{Binding ElementName=ThisControl, Path=Foreground}" />
+                <Label Margin="0,5,5,5" Name="labelOffsetValue" Content="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" Foreground="{Binding ElementName=ThisControl, Path=Foreground}" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>

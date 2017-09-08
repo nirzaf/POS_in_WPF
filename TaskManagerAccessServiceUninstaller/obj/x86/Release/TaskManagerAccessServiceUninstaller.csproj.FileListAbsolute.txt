@@ -1,0 +1,6 @@
+K:\Viipe.com\TemPOS\TaskManagerAccessServiceUninstaller\obj\x86\Release\TaskManagerAccessServiceUninstaller.Properties.Resources.resources
+K:\Viipe.com\TemPOS\TaskManagerAccessServiceUninstaller\obj\x86\Release\TaskManagerAccessServiceUninstaller.csproj.GenerateResource.Cache
+K:\Viipe.com\TemPOS\TaskManagerAccessServiceUninstaller\bin\TaskManagerAccessServiceUninstaller.exe
+K:\Viipe.com\TemPOS\TaskManagerAccessServiceUninstaller\bin\TaskManagerAccessServiceUninstaller.pdb
+K:\Viipe.com\TemPOS\TaskManagerAccessServiceUninstaller\obj\x86\Release\TaskManagerAccessServiceUninstaller.exe
+K:\Viipe.com\TemPOS\TaskManagerAccessServiceUninstaller\obj\x86\Release\TaskManagerAccessServiceUninstaller.pdb

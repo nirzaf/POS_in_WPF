@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="PosControls.TimeEditControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:PosControls"
+             mc:Ignorable="d" x:Name="UserControl"
+             d:DesignHeight="40" d:DesignWidth="140" MouseDown="dockPanel_MouseDown">
+    <UserControl.Resources>
+        <ControlTemplate x:Key="editControlTemplate">
+            <Border Initialized="Border_Initialized">
+                <my:TimeEntryControl Margin="5,10,5,10" TimeChanged="TimeEntryControl_TimeChanged" />
+            </Border>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <DockPanel LastChildFill="True" Name="mainPane" MouseDown="dockPanel_MouseDown">
+        <my:ConfigurationManager x:Name="Configuration" Width="0" Height="0" />
+        <Grid Name="gridControl2" MouseDown="dockPanel_MouseDown">
+            <Border Name="borderControl" MouseDown="dockPanel_MouseDown" ClipToBounds="True">
+                <Border.Background>
+                    <Binding ElementName="Configuration" Path="BindableButtonBackgroundBrush" />
+                </Border.Background>
+                <Label Name="labelTime" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14" MouseDown="dockPanel_MouseDown" />
+            </Border>
+        </Grid>
+    </DockPanel>
+</UserControl>

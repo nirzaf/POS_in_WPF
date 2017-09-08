@@ -1,0 +1,8 @@
+﻿<Window x:Class="TemposLanguageProcessor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid>
+        <TextBox Name="textBox" PreviewKeyDown="textBox_PreviewKeyDown" PreviewKeyUp="textBox_PreviewKeyUp"   />
+    </Grid>
+</Window>

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="PosControls.TimeEntryTimeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="250">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <my:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="110*" />
+                <ColumnDefinition Width="110*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="211*" />
+            </Grid.RowDefinitions>
+            <Label Name="labelAmPmTime" Content="12:00" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="16" />
+            <Label Name="labelMilitaryTime" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" Visibility="Hidden" />
+            <Button x:Name="buttonAmPm" Width="35" Height="35" Grid.Column="1" Content="AM" HorizontalAlignment="Left" Margin="5,0,0,0" Click="buttonAmPm_Click" />
+            <my:TimeEntryClockControl x:Name="timeEntryClockControl" VerticalAlignment="Top" Margin="10,5,10,0" Grid.Row="1" TimeChanged="timeEntryClockControl_TimeChanged" Grid.ColumnSpan="2" />
+        </Grid>
+    </DockPanel>
+</UserControl>

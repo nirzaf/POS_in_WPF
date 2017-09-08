@@ -1,0 +1,24 @@
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.Helpers.dll
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.Helpers.pdb
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.dll
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.pdb
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.xml
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\obj\Release\ResolveAssemblyReference.cache
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\obj\Release\AuthorizeNet.Helpers.dll
+C:\@clients\LabZero\Authorize.NET\AuthorizeNet.Helpers\obj\Release\AuthorizeNet.Helpers.pdb
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.Helpers.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.Helpers.pdb
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.pdb
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.xml
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\obj\Release\AuthorizeNet.Helpers.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\Source\AuthorizeNet.Helpers\obj\Release\AuthorizeNet.Helpers.pdb
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\AuthorizeNet.Helpers\obj\Release\ResolveAssemblyReference.cache
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\AuthorizeNet.Helpers\obj\Release\AuthorizeNet.Helpers.dll
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\AuthorizeNet.Helpers\obj\Release\AuthorizeNet.Helpers.pdb
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.Helpers.dll
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.Helpers.pdb
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.dll
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.pdb
+G:\VistaUsers\Naquada\Desktop\anet_dotnet_sdk-1.1.0\SDK\AuthorizeNet.Helpers\bin\Release\AuthorizeNet.xml

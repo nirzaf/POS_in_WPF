@@ -1,0 +1,1 @@
+DotNetZlib CF v1.9 packed Thu-02-25-2010-222909.78. This is the Ionic.Zlib library packaged for the .NET Compact Framework v2.0 or later.  Use this library if you want to take advantage of ZLIB compression directly from within Smart device applications, or if you want to use the compressing stream classes like GZipStream, DeflateStream, or ZlibStream.

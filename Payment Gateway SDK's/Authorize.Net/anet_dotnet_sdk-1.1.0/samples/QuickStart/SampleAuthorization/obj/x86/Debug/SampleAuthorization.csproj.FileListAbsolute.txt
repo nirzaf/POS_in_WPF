@@ -1,0 +1,16 @@
+C:\@clients\LabZero\Authorize.NET\SampleAuthorization\bin\Debug\SampleAuthorization.exe.config
+C:\@clients\LabZero\Authorize.NET\SampleAuthorization\bin\Debug\SampleAuthorization.exe
+C:\@clients\LabZero\Authorize.NET\SampleAuthorization\bin\Debug\SampleAuthorization.pdb
+C:\@clients\LabZero\Authorize.NET\SampleAuthorization\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\@clients\LabZero\Authorize.NET\SampleAuthorization\obj\x86\Debug\SampleAuthorization.exe
+C:\@clients\LabZero\Authorize.NET\SampleAuthorization\obj\x86\Debug\SampleAuthorization.pdb
+C:\@clients\LabZero\Authorize.NET\SampleAuthorization\bin\Debug\AuthorizeNET.dll
+C:\@clients\LabZero\Authorize.NET\SampleAuthorization\bin\Debug\AuthorizeNET.pdb
+C:\@clients\LabZero\Authorize.NET\SampleAuthorization\bin\Debug\AuthorizeNet.xml
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\QuickStart\SampleAuthorization\bin\Debug\SampleAuthorization.exe.config
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\QuickStart\SampleAuthorization\obj\x86\Debug\SampleAuthorization.exe
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\QuickStart\SampleAuthorization\obj\x86\Debug\SampleAuthorization.pdb
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\QuickStart\SampleAuthorization\bin\Debug\SampleAuthorization.exe
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\QuickStart\SampleAuthorization\bin\Debug\SampleAuthorization.pdb
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\QuickStart\SampleAuthorization\bin\Debug\AuthorizeNet.dll
+C:\Users\Rob Conery\Documents\My Dropbox\LabZero\AuthorizeNET - Release 2\QuickStart\SampleAuthorization\obj\x86\Debug\ResolveAssemblyReference.cache

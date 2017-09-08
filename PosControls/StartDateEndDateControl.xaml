@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="PosControls.StartDateEndDateControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:PosControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="460" d:DesignWidth="600">
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <my:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250*" />
+                <ColumnDefinition Width="250*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37" />
+                <RowDefinition Height="232*" />
+                <RowDefinition Height="90" />
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+            </Grid.Background>
+            <Label Content="From" FontSize="20" VerticalAlignment="Center" />
+            <Label Content="To" FontSize="20" VerticalAlignment="Center" Grid.Column="1" />
+            <Border Margin="5,5,5,5" Grid.Row="1">
+                <my:DateEntryDateControl x:Name="startDateEntryDateControl" Margin="5,5,10,5" SelectedDayChanged="startDateEntryDateControl_SelectedDayChanged" />
+            </Border>
+            <Border Margin="5,5,5,5" Grid.Column="1" Grid.Row="1">
+                <my:DateEntryDateControl x:Name="endDateEntryDateControl" Margin="5,5,5,5" SelectedDayChanged="endDateEntryDateControl_SelectedDayChanged" />
+            </Border>
+            <my:TextBlockButton x:Name="buttonAllDates" Margin="0,0,10,0" Width="70" Height="64" Text="Select All Dates" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Click="buttonAllDates_Click" />
+            <my:TextBlockButton x:Name="buttonSelectRange" Width="70" Height="64" Text="Select Specified Dates" Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2" Click="buttonSelectRange_Click" />
+        </Grid>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="TemPOS.OrderEntryOrderCommandsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:TemPOS"
+             xmlns:ctrl="clr-namespace:PosControls;assembly=PosControls"
+             xmlns:t="clr-namespace:TemPOS.Types"
+             xmlns:cmd="clr-namespace:TemPOS.Commands"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="900">
+    <UserControl.Resources>
+        <t:Strings x:Key="strings" />
+    </UserControl.Resources>
+    <DockPanel LastChildFill="True" Name="mainPane">
+        <ctrl:ConfigurationManager x:Name="Configuration" />
+        <Grid>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Background>
+                    <Binding ElementName="Configuration" Path="BindableControlBackgroundBrush" />
+                </StackPanel.Background>
+                <ctrl:TextBlockButton x:Name="buttonChangeOccasion" Command="cmd:OrderEntryCommands.ChangeTicketSeating" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryChangeOccasion}" />
+                <ctrl:TextBlockButton x:Name="buttonCoupon" Command="cmd:OrderEntryCommands.Coupon" IsCheckable="True" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryCoupon}" />
+                <ctrl:TextBlockButton x:Name="buttonDiscount" Command="cmd:OrderEntryCommands.Discount" IsCheckable="True" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryDiscount}" />
+                <ctrl:TextBlockButton x:Name="buttonFutureTime" Command="cmd:OrderEntryCommands.FutureTime" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryFutureTime}" />
+                <ctrl:TextBlockButton x:Name="buttonManageParty" Command="cmd:OrderEntryCommands.ManageParty" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryManageParty}" />
+                <ctrl:TextBlockButton x:Name="buttonTicketComment" Command="cmd:OrderEntryCommands.TicketComment" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryTicketComment}" />
+                <ctrl:TextBlockButton x:Name="buttonTaxExemption" Command="cmd:OrderEntryCommands.TaxExemption" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryTaxExemption}" />
+                <ctrl:TextBlockButton x:Name="buttonCashOut" Command="cmd:OrderEntryCommands.CashOut" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryCashOut}" />
+                <ctrl:TextBlockButton x:Name="buttonCancelTicket" Command="cmd:OrderEntryCommands.CancelTicket" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryCancelTicket}" />
+                <ctrl:TextBlockButton x:Name="buttonEarlyCancelTicket" Command="cmd:OrderEntryCommands.EarlyCancelTicket" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryCancelTicket}" />
+                <ctrl:TextBlockButton x:Name="buttonVoidTicket" Command="cmd:OrderEntryCommands.VoidTicket" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryVoidTicket}" Visibility="Collapsed" />
+                <ctrl:TextBlockButton x:Name="buttonProcessReturns" Command="cmd:OrderEntryCommands.ProcessReturns" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryProcessReturns}" Visibility="Collapsed" />
+                <ctrl:TextBlockButton x:Name="buttonCloseTicket" Command="cmd:OrderEntryCommands.CloseTicket" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryCloseTicket}" Visibility="Collapsed" />
+                <ctrl:TextBlockButton x:Name="buttonCancelChanges" Command="cmd:OrderEntryCommands.CancelTicketChanges" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=CancelChanges}" Visibility="Collapsed" />
+                <ctrl:TextBlockButton x:Name="buttonPlaceOrder" Command="cmd:OrderEntryCommands.PlaceOrder" Margin="5,0,0,0" Height="64" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83" FontSize="16" Text="{Binding Source={StaticResource strings}, Path=OrderEntryPlaceOrder}" Visibility="Collapsed" />
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</UserControl>
